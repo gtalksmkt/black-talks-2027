@@ -8,19 +8,30 @@
       - Executar como: Eu
       - Quem pode acessar: Qualquer pessoa
    4. Autorize com a conta Google do Grupo Talks e copie o "URL do app da Web"
-      (termina em /exec).
-   5. Cole esse endereço em js/roleta.js, no campo leadsUrl, e publique o site.
+      (termina em /exec). Na tela de permissões, marque a caixinha das planilhas:
+      sem ela o Google não libera o acesso e o script dá erro de permissão.
+   5. No editor, escolha a função "configurar" e clique em Executar: isso cria a
+      aba "Roleta" com os títulos e confirma que a permissão está certa.
+   6. Cole o endereço em js/roleta.js, no campo leadsUrl, e publique o site.
+
+   A planilha em uso na Black Talks 2026 é "Roleta Black Talks · cadastros", no Drive
+   da conta yuriyvvieira@gmail.com (o script fica em script.google.com, projeto
+   "Roleta Black Talks", com o ID da planilha preenchido em PLANILHA_ID).
 
    A partir daí, cada cadastro vira uma linha na aba "Roleta", e o mesmo e-mail
    ou WhatsApp não consegue girar de novo em outro celular ou computador.
    A coluna "Resgatado" fica para o time comercial marcar quem já pegou o prêmio.
    ================================================================== */
 
+/* Se o script foi criado fora da planilha (em script.google.com), cole aqui o ID dela:
+   o trecho do endereço entre /d/ e /edit. Vazio = usa a planilha onde o script foi criado. */
+var PLANILHA_ID = '';
+
 var ABA = 'Roleta';
 var COLUNAS = ['Data', 'Nome', 'E-mail', 'WhatsApp', 'Prêmio', 'Código do prêmio', 'Resgatado', 'Chave', 'Origem'];
 
 function aba_(){
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var ss = PLANILHA_ID ? SpreadsheetApp.openById(PLANILHA_ID) : SpreadsheetApp.getActiveSpreadsheet();
   var sh = ss.getSheetByName(ABA);
   if(!sh){
     sh = ss.insertSheet(ABA);
@@ -90,3 +101,6 @@ function doPost(e){
 
 /* Abrir o endereço /exec no navegador só mostra que está funcionando */
 function doGet(){ return json_({ ok: true, roleta: 'Black Talks' }); }
+
+/* Rode esta uma vez pelo editor: cria a aba Roleta com os títulos das colunas */
+function configurar(){ aba_(); }

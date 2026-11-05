@@ -30,7 +30,8 @@ gira uma vez e recebe um prêmio com código (ex.: `BT-7K3Q9`), que resgata com 
 - Prêmios, fatias e WhatsApp do time comercial ficam em `js/roleta.js` (`ROLETA`, `PREMIOS`, `FATIAS`).
   Cada fatia tem a mesma chance; o prêmio de 6 meses tem uma fatia só.
 - Um giro por aparelho. Recarregar a página mostra o mesmo prêmio.
-- **Planilha de cadastros:** siga as instruções no topo de `leads-planilha.gs` e cole o endereço em
-  `leadsUrl` (`js/roleta.js`). Com isso os cadastros vão para o Google Planilhas e o mesmo e-mail ou
-  WhatsApp não gira de novo em outro aparelho. Sem a planilha, os dados chegam só na mensagem do resgate.
+- **Planilha de cadastros (ligada):** cada giro vira uma linha na aba "Roleta" da planilha
+  "Roleta Black Talks · cadastros" (Drive da conta yuriyvvieira@gmail.com), e o mesmo e-mail ou
+  WhatsApp não gira de novo em outro aparelho. O endereço do script fica em `leadsUrl` (`js/roleta.js`);
+  como refazer está no topo de `leads-planilha.gs`. A coluna "Resgatado" é para o time comercial.
 - Para testar de novo no mesmo navegador, use uma janela anônima.

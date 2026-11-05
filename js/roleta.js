@@ -15,7 +15,7 @@ var ROLETA = {
   whats: '5585998302705',   // time comercial que entrega o prêmio
   /* Endereço do Apps Script da planilha de cadastros (instruções em leads-planilha.gs).
      Enquanto estiver vazio, os dados da pessoa chegam só na mensagem de WhatsApp do resgate. */
-  leadsUrl: '',
+  leadsUrl: 'https://script.google.com/macros/s/AKfycbySD1NLCA_rMPrCjmwcvqxZ3nDs--0bzZudLgcCiEXW495M4F25xEc_qXBOdMqMzuPg/exec',
   inicio: '2026-11-23T00:00:00-03:00',
   fim:    '2026-11-30T23:59:59-03:00',
   produto: 'Atualiza Talks ME'
