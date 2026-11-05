@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Black Talks | A Black Friday do Grupo Talks · 30% OFF nos cursos online</title>
-<meta name="description" content="Black Talks, a Black Friday do Grupo Talks: de 23 a 30 de novembro, 30% OFF em qualquer curso online com o cupom BLACKTALKS e o Atualiza Talks ME com o 1º mês por R$ 9,90." />
+<title>Black Talks | A Black Friday do Grupo Talks · Atualiza Talks ME por R$ 9,90</title>
+<meta name="description" content="Black Talks, a Black Friday do Grupo Talks: de 23 a 30 de novembro, o Atualiza Talks ME com o 1º mês por R$ 9,90 e 30% OFF em qualquer curso online com o cupom BLACKTALKS." />
 <!-- Enquanto a página estiver em revisão, fica fora do Google. Tirar esta linha quando for ao ar. -->
 <meta name="robots" content="noindex, nofollow" />
 <meta name="theme-color" content="#050505" />
 <meta property="og:title" content="Black Talks · A Black Friday do Grupo Talks" />
-<meta property="og:description" content="30% OFF em qualquer curso online e o Atualiza Talks ME com o 1º mês por R$ 9,90. Só de 23 a 30 de novembro." />
+<meta property="og:description" content="Atualiza Talks ME com o 1º mês por R$ 9,90 e 30% OFF em qualquer curso online. Só de 23 a 30 de novembro." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://gtalksmkt.github.io/black-talks-2027/img/og-black-talks.jpg" />
 <meta property="og:image:width" content="1200" />
@@ -141,6 +141,10 @@ body.ganhou .bar-cup{display:inline-flex}
 .cd-fim{color:var(--muted)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
 .hero-cta .btn-ghost .i{color:var(--red-hi)}
+.hero-gift{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:.9rem;color:var(--muted);text-align:left}
+.hero-gift .i{color:var(--red-hi);font-size:1.15rem}
+.hero-gift b{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.hero-gift:hover b{color:var(--red-text)}
 
 /* ===== Carrossel de banners ===== */
 .car{position:relative}
@@ -259,6 +263,23 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
 .at-price .btn + .btn{margin-top:10px}
 .at-lanc{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;font-size:.82rem;color:var(--muted)}
 .at-lanc .i{color:var(--red-hi)}
+/* destaque do Atualiza (vem antes dos cursos) */
+.at-sec{padding-top:clamp(50px,6vw,90px)}
+.at-sec .at-box{border:2px solid rgba(232,48,63,.65);padding-top:clamp(56px,6vw,76px);
+  background:radial-gradient(70% 90% at 100% 0%,rgba(211,28,43,.42),transparent 60%),radial-gradient(60% 80% at 0% 100%,rgba(158,10,22,.35),transparent 60%),linear-gradient(180deg,#151517,#0A0A0B);
+  box-shadow:0 50px 120px -50px rgba(211,28,43,.75),0 0 0 8px rgba(211,28,43,.07)}
+.at-sec .at-box::after{width:520px;height:520px;right:-90px;bottom:-120px}
+.at-flag{position:absolute;top:0;left:50%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:0 0 14px 14px;background:var(--red);color:#fff;font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;z-index:2}
+.at-flag .i{width:14px;height:14px}
+.at-sec .at-brand svg{width:64px;height:64px}
+.at-sec .at-brand .wm{font-size:2.1rem}
+.at-sec .at-l h2{font-size:clamp(2.4rem,4.6vw,4.2rem)}
+.at-sec .at-price{padding:34px 28px;border:2px solid rgba(232,48,63,.5)}
+.at-sec .at-val b{font-size:clamp(5rem,9vw,7.2rem);color:#fff;text-shadow:0 0 50px rgba(232,48,63,.5)}
+.at-rl{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;padding:12px 14px;border-radius:12px;background:rgba(211,28,43,.12);border:1px dashed rgba(232,48,63,.6);font-size:.88rem;color:var(--text);transition:background .2s}
+.at-rl:hover{background:rgba(211,28,43,.25)}
+.at-rl b{color:#fff}
+.at-rl .i{color:var(--red-hi);flex:none}
 
 /* ===== Roleta ===== */
 .rl-box{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,4vw,60px);align-items:center;padding:clamp(28px,4.4vw,60px);border-radius:28px;overflow:hidden;
@@ -543,8 +564,8 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
 <div class="bar" id="bar" role="region" aria-label="Prazo da Black Talks">
   <span class="bar-dot" aria-hidden="true"></span>
   <span data-show="live">
-    <span class="l"><b>BLACK TALKS</b> · 30% OFF em qualquer curso online · termina em</span>
-    <span class="s"><b>30% OFF</b> · termina em</span>
+    <span class="l"><b>BLACK TALKS</b> · Atualiza Talks ME por R$ 9,90 e 30% OFF nos cursos online · termina em</span>
+    <span class="s"><b>BLACK TALKS</b> · termina em</span>
   </span>
   <span data-show="pre">
     <span class="l">A <b>BLACK TALKS</b> começa em</span>
@@ -564,9 +585,9 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
       <span class="bt-wm"><b>Black</b><i>Talks</i></span>
     </a>
     <nav class="nav" aria-label="Seções">
-      <a href="#cursos">Cursos online</a>
       <a href="#atualiza">Atualiza Talks ME</a>
       <a href="#roleta" data-show="live pre">Roleta</a>
+      <a href="#cursos">Cursos online</a>
       <a href="#como">Como funciona</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
@@ -585,7 +606,7 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
     <div class="hero-a">
       <span class="chip"><span class="dot"></span>23 a 30 de novembro</span>
       <h1 class="hero-t"><span class="l1">Black</span><span class="l2">Talks<small>30% OFF</small></span></h1>
-      <p class="hero-lead">A Black Friday do Grupo Talks chegou: <b>30% OFF em qualquer curso online</b> e o <b>Atualiza Talks ME com o 1º mês por R$ 9,90</b>.</p>
+      <p class="hero-lead">A Black Friday do Grupo Talks chegou: o <b>Atualiza Talks ME com o 1º mês por R$ 9,90</b> e <b>30% OFF em qualquer curso online</b>.</p>
     </div>
 
     <div class="hero-car">
@@ -617,9 +638,10 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
       </div>
       <p class="cd cd-fim" data-show="fim">A Black Talks terminou no dia 30 de novembro. Fale com a nossa central para conhecer as condições atuais.</p>
       <div class="hero-cta">
-        <a class="btn btn-red" href="#cursos">Ver cursos com 30% OFF <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
-        <button class="btn btn-ghost" type="button" data-open-gift data-show="live pre"><svg class="i"><use href="#i-gift"/></svg>Abrir meu presente</button>
+        <a class="btn btn-red" href="#atualiza">Atualiza Talks ME por R$ 9,90 <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="#cursos">Cursos com 30% OFF</a>
       </div>
+      <button class="hero-gift" type="button" data-open-gift data-show="live pre"><svg class="i"><use href="#i-gift"/></svg><span>Tem um presente esperando por você: <b>abrir agora</b></span></button>
     </div>
   </div>
 </section>
@@ -630,30 +652,18 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
   <div class="tape t1"><div class="tape-in" id="tape1"></div></div>
 </div>
 
-<!-- ===== Cursos online ===== -->
-<section class="sec" id="cursos">
-  <div class="wrap">
-    <div class="sec-h rv">
-      <span class="eyebrow">Cursos online</span>
-      <h2>30% OFF em <span class="red">qualquer</span> curso online</h2>
-      <p>Escolha o seu, clique em garantir e use o cupom <span class="cup-inline">BLACKTALKS</span> no checkout. O desconto aparece na hora.</p>
-    </div>
-    <div class="grid" id="grid"></div>
-  </div>
-</section>
-
 <!-- ===== Atualiza Talks ===== -->
-<section class="sec" id="atualiza" style="padding-top:0">
+<section class="sec at-sec" id="atualiza">
   <div class="wrap">
     <div class="at-box rv">
+      <span class="at-flag"><svg class="i"><use href="#i-star"/></svg>Destaque da Black Talks</span>
       <div class="at-l">
         <div class="at-brand">
           <svg aria-hidden="true"><use href="#glyph"/></svg>
           <span class="wm" aria-label="Atualiza Talks ME"><span>atualiza</span><b>talks <em>me</em></b></span>
         </div>
-        <span class="eyebrow">Também na Black Talks</span>
-        <h2>Atualiza Talks ME: <span class="red">1º mês por R$ 9,90</span></h2>
-        <p>Atualização continuada em Medicina de Emergência, o ano inteiro, para médicos com ou sem título de especialista. Um curso Emergency Talks.</p>
+        <h2>O ano inteiro de Medicina de Emergência atualizada, com o <span class="red">1º mês por R$ 9,90</span></h2>
+        <p>Artigos, pesquisas, procedimentos e notícias da especialidade, para médicos com ou sem título de especialista. Um curso Emergency Talks.</p>
         <ul class="at-list">
           <li><svg class="i"><use href="#i-news"/></svg><span>Artigo comentado toda segunda-feira, com áudio e flashcards</span></li>
           <li><svg class="i"><use href="#i-video"/></svg><span>Um encontro ao vivo por mês, aos sábados, das 9h às 12h</span></li>
@@ -669,6 +679,7 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
           <a class="btn btn-red btn-block" href="#" data-wa="atualiza"><svg class="i"><use href="#i-wa"/></svg>Quero o 1º mês por R$ 9,90</a>
           <a class="btn btn-ghost btn-block" id="atLanding" href="#" target="_blank" rel="noopener">Conhecer o Atualiza Talks ME <svg class="i"><use href="#i-ext"/></svg></a>
           <span class="at-lanc" id="atLanc"><svg class="i"><use href="#i-star"/></svg>Lançamento no dia 25 de novembro</span>
+          <a class="at-rl" href="roleta.html" data-show="live pre"><svg class="i"><use href="#i-gift"/></svg><span>Ou <b>gire a roleta</b> e ganhe até 6 meses grátis</span><svg class="i"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
     </div>
@@ -695,6 +706,18 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
         <span class="rl-hub">GIRE</span>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- ===== Cursos online ===== -->
+<section class="sec" id="cursos">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow">Cursos online</span>
+      <h2>30% OFF em <span class="red">qualquer</span> curso online</h2>
+      <p>Escolha o seu, clique em garantir e use o cupom <span class="cup-inline">BLACKTALKS</span> no checkout. O desconto aparece na hora.</p>
+    </div>
+    <div class="grid" id="grid"></div>
   </div>
 </section>
 
@@ -742,7 +765,7 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
       </details>
       <details>
         <summary>Quais cursos entram na Black?<svg class="i"><use href="#i-plus"/></svg></summary>
-        <div class="a"><p>Os cursos online do Grupo Talks: <span id="faqCursos">Emergências Pediátricas, Choque, Emergency POCUS Cardíaco e Emergency POCUS 2.0</span>, todos com 30% OFF. E o Atualiza Talks ME, com o 1º mês por R$ 9,90.</p></div>
+        <div class="a"><p>O Atualiza Talks ME, com o 1º mês por R$ 9,90, e os cursos online do Grupo Talks: <span id="faqCursos">Emergências Pediátricas, Choque, Emergency POCUS Cardíaco e Emergency POCUS 2.0</span>, todos com 30% OFF.</p></div>
       </details>
       <details>
         <summary>Como eu uso o cupom?<svg class="i"><use href="#i-plus"/></svg></summary>
@@ -934,7 +957,7 @@ var ATUALIZA = {
   preco: 'R$ 9,90',
   lancamento: '2026-11-25T00:00:00-03:00',
   landing: 'https://gtalksmkt.github.io/atualiza-talks-2027/',
-  posicao: 2           // em que lugar o banner dele entra no carrossel (0 = primeiro)
+  posicao: 0           // em que lugar o banner dele entra no carrossel (0 = primeiro; a roleta vem logo depois)
 };
 
 /* ==================================================================
@@ -1011,8 +1034,8 @@ var ATUALIZA = {
     var um = itens.map(function(t){ return '<span>' + t + star + '</span>'; }).join('');
     return um + um + um + um;
   }
-  $('#tape1').innerHTML = fita(['Black Talks', BLACK.desconto + '% OFF', 'Cursos online', 'Cupom ' + BLACK.cupom, 'Atualiza Talks ME ' + ATUALIZA.preco, 'Gire a roleta', 'Até 6 meses grátis', 'Só até 30/11']);
-  $('#tape2').innerHTML = fita(['Emergências Pediátricas', 'Emergency POCUS 2.0', 'POCUS Cardíaco', 'Choque', 'Atualiza Talks ME', 'Black Talks']);
+  $('#tape1').innerHTML = fita(['Black Talks', 'Atualiza Talks ME ' + ATUALIZA.preco, 'Gire a roleta', 'Até 6 meses grátis', BLACK.desconto + '% OFF nos cursos online', 'Cupom ' + BLACK.cupom, 'Só até 30/11']);
+  $('#tape2').innerHTML = fita(['Atualiza Talks ME', '1º mês ' + ATUALIZA.preco, 'Emergências Pediátricas', 'Emergency POCUS 2.0', 'POCUS Cardíaco', 'Choque', 'Black Talks']);
 
   /* ---------- Carrossel ---------- */
   var slides = CURSOS.map(function(c){
