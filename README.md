@@ -1,6 +1,6 @@
 # Black Talks 2026
 
-Landing da Black Friday do Grupo Talks: de 23 a 30/11/2026, 30% OFF nos cursos online
+Landing da Black Friday do Grupo Talks: de 23 a 30/11/2026, 30% OFF nos cursos virtuais
 (cupom `BLACKTALKS`) e o Atualiza Talks ME com o 1º mês por R$ 9,90.
 
 No ar: https://gtalksmkt.github.io/black-talks-2027/
