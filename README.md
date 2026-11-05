@@ -21,3 +21,16 @@ Tudo fica no começo do `<script>` do `index.html`:
 - O presente aparece depois de 8 segundos na página, uma vez por aparelho.
 
 Para ver cada fase antes da hora: `?preview=pre`, `?preview=live` ou `?preview=fim` no fim do link.
+
+## Roleta (`roleta.html`)
+
+"Gire e ganhe até 6 meses grátis do Atualiza Talks ME". A pessoa cadastra nome, e-mail e WhatsApp,
+gira uma vez e recebe um prêmio com código (ex.: `BT-7K3Q9`), que resgata com o time comercial pelo WhatsApp.
+
+- Prêmios, fatias e WhatsApp do time comercial ficam em `js/roleta.js` (`ROLETA`, `PREMIOS`, `FATIAS`).
+  Cada fatia tem a mesma chance; o prêmio de 6 meses tem uma fatia só.
+- Um giro por aparelho. Recarregar a página mostra o mesmo prêmio.
+- **Planilha de cadastros:** siga as instruções no topo de `leads-planilha.gs` e cole o endereço em
+  `leadsUrl` (`js/roleta.js`). Com isso os cadastros vão para o Google Planilhas e o mesmo e-mail ou
+  WhatsApp não gira de novo em outro aparelho. Sem a planilha, os dados chegam só na mensagem do resgate.
+- Para testar de novo no mesmo navegador, use uma janela anônima.
