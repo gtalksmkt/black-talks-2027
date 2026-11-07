@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Roleta Black Talks | Gire e ganhe até 6 meses grátis do Atualiza Talks ME</title>
-<meta name="description" content="Roleta da Black Talks: cadastre seu nome, e-mail e WhatsApp, gire uma vez e ganhe de 1 aula de degustação a 6 meses grátis do Atualiza Talks ME." />
+<title>Roleta Black Talks | Comprou? Gire e ganhe até 6 meses grátis do Atualiza Talks ME</title>
+<meta name="description" content="Roleta exclusiva para quem comprou na Black Talks: informe o número do pedido, gire uma vez e ganhe de 1 aula de degustação a 6 meses grátis do Atualiza Talks ME." />
 <!-- Enquanto a página estiver em revisão, fica fora do Google. Tirar esta linha quando for ao ar. -->
 <meta name="robots" content="noindex, nofollow" />
 <meta name="theme-color" content="#050505" />
-<meta property="og:title" content="Roleta Black Talks · Ganhe até 6 meses grátis" />
-<meta property="og:description" content="Cadastre-se, gire a roleta e ganhe de 1 aula de degustação a 6 meses grátis do Atualiza Talks ME." />
+<meta property="og:title" content="Roleta Black Talks · Comprou? Ganhe até 6 meses grátis" />
+<meta property="og:description" content="Toda compra na Black Talks dá direito a um giro: ganhe de 1 aula de degustação a 6 meses grátis do Atualiza Talks ME." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://gtalksmkt.github.io/black-talks-2027/img/og-roleta.jpg" />
+<meta property="og:image" content="https://gtalksmkt.github.io/black-talks-2027/img/og-roleta.jpg?v=2" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -119,7 +119,12 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
 .chk input:checked{background:var(--red);border-color:var(--red)}
 .chk input:checked::after{content:'';width:6px;height:10px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:translateY(-1px) rotate(45deg)}
 .chk.err input{border-color:#FF5A66}
-.f-note{display:block;text-align:center;font-size:.76rem;color:var(--dim)}
+.f-note{display:block;text-align:center;font-size:.76rem;color:var(--dim);line-height:1.45}
+.fld .hint{display:block;margin-top:6px;font-size:.76rem;color:var(--dim);line-height:1.4}
+.fld.err .hint{display:none}
+.nao-comprou{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:9px 14px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid var(--line2);font-size:.88rem;color:var(--muted)}
+.nao-comprou a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.nao-comprou .i{color:var(--red-text)}
 .shake{animation:shake .45s linear}
 @keyframes shake{20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(4px)}}
 
@@ -254,7 +259,7 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
 
 <div class="bar">
   <span class="bar-dot" aria-hidden="true"></span>
-  <span data-show="live pre"><b>ROLETA BLACK TALKS</b> · 1 giro por pessoa · ganhe até 6 meses grátis</span>
+  <span data-show="live pre"><b>ROLETA BLACK TALKS</b> · para quem comprou na Black · ganhe até 6 meses grátis</span>
   <span data-show="fim">A roleta da Black Talks terminou</span>
 </div>
 
@@ -273,9 +278,10 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
 <section class="hero">
   <div class="wrap hero-in">
     <div class="h-t">
-      <span class="eyebrow">Roleta Black Talks</span>
+      <span class="eyebrow">Só para quem comprou</span>
       <h1>Gire e ganhe até <span class="big">6 meses grátis</span>do Atualiza Talks ME</h1>
-      <p class="lead">Cadastre seu nome, e-mail e WhatsApp, gire <b>uma vez</b> e descubra o seu prêmio: de <b>1 aula de degustação</b> a <b>6 meses grátis</b>. E a fatia de 6 meses é uma só.</p>
+      <p class="lead">A roleta é o presente de quem comprou na Black Talks: <b>toda compra dá direito a um giro</b>. Informe seus dados e o número do pedido, gire e descubra o seu prêmio: de <b>1 aula de degustação</b> a <b>6 meses grátis</b>.</p>
+      <p class="nao-comprou" data-show="live pre"><svg class="i"><use href="#i-gift"/></svg><span>Ainda não comprou? <a href="./#cursos">Ver os cursos com 50% OFF</a></span></p>
     </div>
 
     <div class="h-w">
@@ -292,7 +298,7 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
     <div class="h-p">
       <div class="panel" id="panel">
         <ol class="steps" aria-label="Etapas">
-          <li id="st1" class="on"><span>1</span>Cadastro</li>
+          <li id="st1" class="on"><span>1</span>Sua compra</li>
           <li id="st2"><span>2</span>Girar</li>
           <li id="st3"><span>3</span>Resgatar</li>
         </ol>
@@ -300,7 +306,7 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
         <!-- 1. cadastro -->
         <div id="pForm" data-show="live pre">
           <h2>Libere o seu giro</h2>
-          <p>Preencha os 3 campos para girar a roleta.</p>
+          <p>Use o e-mail e o número do pedido da sua compra na Black Talks.</p>
           <form class="f" id="form" novalidate>
             <div class="fld" id="fNome">
               <label for="nome">Nome completo</label>
@@ -308,7 +314,7 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
               <span class="msg">Digite o seu nome completo.</span>
             </div>
             <div class="fld" id="fEmail">
-              <label for="email">E-mail</label>
+              <label for="email">E-mail usado na compra</label>
               <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="voce@email.com" maxlength="120" required />
               <span class="msg">Digite um e-mail válido.</span>
             </div>
@@ -317,9 +323,15 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
               <input id="tel" name="tel" type="tel" autocomplete="tel-national" inputmode="numeric" placeholder="(85) 99999-9999" maxlength="16" required />
               <span class="msg">Digite o número com DDD.</span>
             </div>
-            <label class="chk" id="fOk"><input type="checkbox" id="ok" required /><span>Aceito que o Grupo Talks use estes dados para entregar o meu prêmio e falar comigo sobre os cursos.</span></label>
+            <div class="fld" id="fPed">
+              <label for="pedido">Número do pedido</label>
+              <input id="pedido" name="pedido" type="text" inputmode="numeric" autocomplete="off" placeholder="Ex.: 24871" maxlength="24" required />
+              <span class="msg">Digite o número do pedido da sua compra.</span>
+              <span class="hint">Está no e-mail de confirmação da compra. Comprou pela nossa central? Peça o número ao atendente.</span>
+            </div>
+            <label class="chk" id="fOk"><input type="checkbox" id="ok" required /><span>Autorizo o Grupo Talks a usar estes dados para conferir a minha compra, entregar o meu prêmio e me enviar e-mails e mensagens no WhatsApp com informações e promoções.</span></label>
             <button class="btn btn-red btn-block" id="fBtn" type="submit">Liberar meu giro <svg class="i"><use href="#i-arrow"/></svg></button>
-            <span class="f-note">1 giro por pessoa</span>
+            <span class="f-note">1 giro por pessoa. O prêmio é liberado depois que o nosso time confere o pedido.</span>
           </form>
         </div>
 
@@ -348,11 +360,11 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
 <section class="rules">
   <div class="wrap">
     <div class="rules-in">
-      <div class="rule"><span class="ic"><svg class="i"><use href="#i-user"/></svg></span><h3>Cadastre-se</h3><p>Nome, e-mail e WhatsApp liberam o seu giro. Cada pessoa gira uma vez só.</p></div>
+      <div class="rule"><span class="ic"><svg class="i"><use href="#i-user"/></svg></span><h3>Compre na Black</h3><p>Qualquer compra na Black Talks dá direito a um giro. Para liberar, use o e-mail e o número do pedido da compra.</p></div>
       <div class="rule"><span class="ic"><svg class="i"><use href="#i-spin"/></svg></span><h3>Gire a roleta</h3><p>Todas as fatias têm a mesma chance. Os prêmios vão de 1 aula de degustação a 6 meses grátis.</p></div>
-      <div class="rule"><span class="ic"><svg class="i"><use href="#i-gift"/></svg></span><h3>Resgate o prêmio</h3><p>Fale com o nosso time comercial pelo WhatsApp com o seu código e garanta o prêmio no <a href="https://gtalksmkt.github.io/atualiza-talks-2027/" target="_blank" rel="noopener">Atualiza Talks ME</a>.</p></div>
+      <div class="rule"><span class="ic"><svg class="i"><use href="#i-gift"/></svg></span><h3>Resgate o prêmio</h3><p>Fale com o nosso time comercial pelo WhatsApp com o seu código. A gente confere o pedido e libera o prêmio no <a href="https://gtalksmkt.github.io/atualiza-talks-2027/" target="_blank" rel="noopener">Atualiza Talks ME</a>.</p></div>
     </div>
-    <p class="fine">Ação da Black Talks, de 23 a 30 de novembro de 2026. Um giro por pessoa. Os prêmios valem para o Atualiza Talks ME, curso da Emergency Talks.</p>
+    <p class="fine">Ação da Black Talks, de 23 a 30 de novembro de 2026, exclusiva para quem comprou na Black. Um giro por pessoa. O prêmio só é liberado depois que o time comercial confere o pedido. Os prêmios valem para o Atualiza Talks ME, curso da Emergency Talks.</p>
   </div>
 </section>
 </main>
@@ -385,7 +397,7 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
   var $ = function(s, c){ return (c || document).querySelector(s); };
   var $$ = function(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
   var RM = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var KEY = 'bt_roleta_v1', KEY_LEAD = 'bt_roleta_lead_v1';
+  var KEY = 'bt_roleta_v2', KEY_LEAD = 'bt_roleta_lead_v2';
   function load(k){ try{ return JSON.parse(localStorage.getItem(k) || 'null'); }catch(e){ return null; } }
   function save(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
   function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
@@ -459,12 +471,12 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
   function primeiroNome(s){ return String(s || '').trim().split(/\s+/)[0] || ''; }
   function htmlResultado(r){
     var p = PREMIOS[r.premio] || PREMIOS.m1;
-    var msg = 'Olá! Girei a roleta da Black Talks e ganhei ' + p.nome + ' do ' + ROLETA.produto + '. Meu código é ' + r.codigo + '.\n\nNome: ' + r.nome + '\nE-mail: ' + r.email + '\nWhatsApp: ' + fmtTel(r.tel);
+    var msg = 'Olá! Girei a roleta da Black Talks e ganhei ' + p.nome + ' do ' + ROLETA.produto + '. Meu código é ' + r.codigo + '.\n\nNome: ' + r.nome + '\nE-mail da compra: ' + r.email + '\nWhatsApp: ' + fmtTel(r.tel) + (r.pedido ? '\nPedido: ' + r.pedido : '');
     return '<span class="res-k">' + (r.repetido ? 'Você já girou a roleta' : 'Parabéns, ' + esc(primeiroNome(r.nome)) + '! Você ganhou') + '</span>' +
       '<div class="res-p">' + p.nome + '</div>' +
       '<p class="res-d">do <b>' + ROLETA.produto + '</b></p>' +
       '<div class="res-code"><small>Código do prêmio</small><b>' + esc(r.codigo) + '</b></div>' +
-      '<p class="res-txt">Agora é só falar com o nosso <b>time comercial</b> e resgatar o seu prêmio.</p>' +
+      '<p class="res-txt">Agora é só falar com o nosso <b>time comercial</b>: a gente confere o seu pedido e libera o prêmio.</p>' +
       '<a class="btn btn-wa btn-block" href="' + waLink(msg) + '" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg>Resgatar meu prêmio</a>' +
       '<a class="btn btn-ghost btn-block" href="./#cursos">Ver as ofertas da Black</a>' +
       '<span class="res-note">Guarde o seu código. Um giro por pessoa.</span>';
@@ -485,31 +497,46 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
   }
 
   /* ---------- formulário ---------- */
-  var tel = $('#tel');
+  var tel = $('#tel'), ped = $('#pedido');
+  function limpaPedido(s){ return String(s || '').replace(/[^0-9A-Za-z-]/g, '').toUpperCase().slice(0, 20); }
+  /* o link da roleta pode vir com o pedido preenchido: roleta.html?pedido=24871 */
+  if(Q.get('pedido')) ped.value = limpaPedido(Q.get('pedido'));
+  /* quem pegou os cupons do presente nesta mesma página já vem com nome, e-mail e WhatsApp preenchidos */
+  var cad = load('bt_cupons_v2');
+  if(cad && !lead){
+    if(cad.nome) $('#nome').value = cad.nome;
+    if(cad.email) $('#email').value = cad.email;
+    if(cad.tel) tel.value = fmtTel(cad.tel);
+  }
   tel.addEventListener('input', function(){ var p = tel.selectionStart === tel.value.length; tel.value = fmtTel(tel.value); if(p) tel.setSelectionRange(tel.value.length, tel.value.length); });
-  $$('#form input').forEach(function(i){ i.addEventListener('input', function(){ var f = i.closest('.fld, .chk'); if(f) f.classList.remove('err'); }); });
+  $$('#form input').forEach(function(i){
+    i.addEventListener('input', function(){ var f = i.closest('.fld, .chk'); if(f) f.classList.remove('err'); });
+    i.addEventListener('change', function(){ var f = i.closest('.fld, .chk'); if(f) f.classList.remove('err'); });
+  });
   $('#form').addEventListener('submit', function(e){
     e.preventDefault();
     var nome = $('#nome').value.trim().replace(/\s+/g, ' ');
     var email = $('#email').value.trim().toLowerCase();
     var t = tel.value.replace(/\D/g, '');
+    var pedido = limpaPedido(ped.value);
     var ok = true, first = null;
     function bad(id, inp){ $(id).classList.add('err'); ok = false; if(!first) first = inp; }
     if(nome.length < 3 || nome.split(' ').length < 2) bad('#fNome', $('#nome'));
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) bad('#fEmail', $('#email'));
     if(t.length < 10 || t.length > 11) bad('#fTel', tel);
+    if(pedido.length < 3 || !/\d/.test(pedido)) bad('#fPed', ped);
     if(!$('#ok').checked) bad('#fOk', $('#ok'));
     if(!ok){ first.focus(); $('#panel').classList.remove('shake'); void $('#panel').offsetWidth; $('#panel').classList.add('shake'); return; }
     var btn = $('#fBtn'); btn.disabled = true; btn.textContent = 'Conferindo…';
-    enviar({acao:'verificar', email:email, telefone:t}).then(function(r){
+    enviar({acao:'verificar', email:email, telefone:t, pedido:pedido}).then(function(r){
       btn.disabled = false; btn.innerHTML = 'Liberar meu giro <svg class="i"><use href="#i-arrow"/></svg>';
       if(r && r.jaGirou && r.premio){
-        res = {nome:nome, email:email, tel:t, premio:r.premio, codigo:r.codigo || '', fatia:FATIAS.indexOf(r.premio), repetido:true};
+        res = {nome:nome, email:email, tel:t, pedido:pedido, premio:r.premio, codigo:r.codigo || '', fatia:FATIAS.indexOf(r.premio), repetido:true};
         save(KEY, res); setRot(-res.fatia * ANG); idle = false;
         mostrarResultado(res, true);
         return;
       }
-      lead = {nome:nome, email:email, tel:t};
+      lead = {nome:nome, email:email, tel:t, pedido:pedido};
       save(KEY_LEAD, lead);
       pronto();
       if(innerWidth < 920) $('#wheelBox').scrollIntoView({behavior: RM ? 'auto' : 'smooth', block:'start'});
@@ -528,9 +555,9 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
     girando = true; idle = false;
     var i = Math.floor(rnd() * n), key = FATIAS[i];
     var delta = (rnd() * 2 - 1) * (ANG / 2 - 4);
-    res = {nome:lead.nome, email:lead.email, tel:lead.tel, premio:key, codigo:codigo(), fatia:i, data:new Date().toISOString()};
+    res = {nome:lead.nome, email:lead.email, tel:lead.tel, pedido:lead.pedido, premio:key, codigo:codigo(), fatia:i, data:new Date().toISOString()};
     save(KEY, res);   /* salvo antes do giro: recarregar a página não dá outro giro */
-    enviar({acao:'registrar', nome:res.nome, email:res.email, telefone:res.tel, premio:key, premioNome:PREMIOS[key].nome, codigo:res.codigo, origem:location.href});
+    enviar({acao:'registrar', nome:res.nome, email:res.email, telefone:res.tel, pedido:res.pedido, premio:key, premioNome:PREMIOS[key].nome, codigo:res.codigo, origem:'Pedido ' + res.pedido + ' · ' + location.href});
     $('#btnGirar').disabled = true; $('#btnGirar').classList.remove('pulse');
     hub.disabled = true; hub.className = 'hub';
     $('#wheel').classList.add('girando');
@@ -556,7 +583,7 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
   hub.addEventListener('click', function(){
     if(res) return;
     if(!lead){
-      toast('Preencha seus dados para liberar o giro');
+      toast('Informe os dados da sua compra para liberar o giro');
       var p = $('#panel'); p.scrollIntoView({behavior: RM ? 'auto' : 'smooth', block:'center'});
       setTimeout(function(){ $('#nome').focus({preventScroll:true}); }, 450);
       return;

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Imagens de compartilhamento · Black Talks</title>
+<!-- Fonte das imagens img/og-black-talks.jpg (?a=black) e img/og-roleta.jpg (?a=roleta).
+     Gerar de novo: powershell -ExecutionPolicy Bypass -File fontes/gerar-og.ps1 -->
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,800;0,900;1,800;1,900&family=Inter:wght@500;600;700;800;900&display=block" rel="stylesheet" />
+<style>
+:root{--red:#D31C2B;--red-hi:#E8303F;--red-deep:#9E0A16;--red-text:#FF4D5A;--muted:#B4B6BE;--dim:#83858F;
+  --display:'Barlow Condensed',Impact,sans-serif;--body:'Inter',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1200px;height:630px;overflow:hidden;background:#050505}
+body{font-family:var(--body);color:#fff;-webkit-font-smoothing:antialiased}
+.og{position:relative;width:1200px;height:630px;overflow:hidden;
+  background:radial-gradient(60% 90% at 78% 40%,rgba(211,28,43,.38),transparent 62%),radial-gradient(50% 70% at 0% 100%,rgba(158,10,22,.3),transparent 60%),#050505}
+.og::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 2px,transparent 2px 18px)}
+.og > *{position:absolute}
+.chip{display:inline-flex;align-items:center;gap:10px;padding:9px 18px 9px 16px;border-radius:999px;border:1.5px solid rgba(232,48,63,.55);background:rgba(211,28,43,.14);font-size:19px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--red-hi);box-shadow:0 0 12px var(--red-hi)}
+.t{font-family:var(--display);font-weight:900;font-style:italic;text-transform:uppercase;line-height:.84}
+.red{color:var(--red-hi)}
+.logo{right:48px;bottom:40px;height:46px}
+[hidden]{display:none!important}
+
+/* ===== Black ===== */
+.b-chip{left:64px;top:52px}
+.b-t{left:60px;top:106px;font-size:118px;letter-spacing:-.005em}
+.b-box{left:64px;top:252px;width:600px;height:206px;border-radius:22px;border:2px solid rgba(232,48,63,.55);background:linear-gradient(180deg,rgba(26,8,11,.95),rgba(12,12,14,.95));box-shadow:0 30px 70px -30px rgba(211,28,43,.7)}
+.b-flag{position:absolute;left:26px;top:-17px;padding:6px 14px;border-radius:9px;background:var(--red);font-size:15px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.b-at{position:absolute;left:30px;top:30px;display:flex;align-items:center;gap:14px}
+.b-at svg{width:56px;height:56px;color:var(--red-hi)}
+.wm{display:flex;flex-direction:column;line-height:.92;letter-spacing:-.03em;font-size:36px}
+.wm span{font-weight:500}.wm b{font-weight:800}.wm em{font-style:normal;font-weight:900;color:var(--red-hi)}
+.b-preco{position:absolute;left:30px;bottom:22px;display:flex;align-items:baseline;gap:14px}
+.b-preco small{font-size:22px;font-weight:600;color:var(--muted)}
+.b-preco b{font-family:var(--display);font-weight:900;font-style:italic;font-size:96px;line-height:.8;color:var(--red-hi);text-shadow:0 0 40px rgba(232,48,63,.45)}
+.b-off{left:64px;top:478px;display:flex;align-items:baseline;gap:12px;font-size:25px;font-weight:600;color:var(--muted)}
+.b-off b{font-family:var(--display);font-weight:900;font-style:italic;font-size:44px;color:#fff;letter-spacing:.01em}
+.b-cad{left:64px;top:536px;display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:12px;background:var(--red);font-size:20px;font-weight:800}
+.b-cad svg{width:22px;height:22px}
+.card{width:380px;aspect-ratio:700/430;border-radius:18px;overflow:hidden;border:2px solid rgba(255,255,255,.14);box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.card img{width:100%;height:100%;object-fit:cover;display:block}
+.c1{left:770px;top:110px;transform:rotate(6deg)}
+.c2{left:700px;top:308px;transform:rotate(-4deg)}
+.stk{left:672px;top:58px;width:178px;height:178px;border-radius:50%;background:var(--red);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-10deg);
+  box-shadow:0 0 0 6px #fff inset,0 0 0 10px var(--red) inset,0 20px 40px rgba(0,0,0,.55);font-family:var(--display);font-weight:900;font-style:italic;line-height:.85;text-align:center;z-index:3}
+.stk b{font-size:70px}
+.stk small{font-size:21px;font-style:normal;font-weight:800;letter-spacing:.02em}
+
+/* ===== Roleta ===== */
+.r-chip{left:64px;top:70px}
+.r-t{left:60px;top:136px;font-size:76px}
+.r-t span{display:block;font-size:92px;color:var(--red-hi);text-shadow:0 0 50px rgba(232,48,63,.45)}
+.r-d{left:64px;top:318px;width:540px;font-size:23px;line-height:1.4;color:var(--muted)}
+.r-d b{color:#fff}
+.r-comprou{left:64px;top:436px;display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:12px;background:var(--red);font-size:20px;font-weight:800}
+.r-comprou svg{width:22px;height:22px}
+.r-foot{left:64px;bottom:44px;display:flex;align-items:center;gap:22px;font-size:20px;color:var(--dim);font-weight:600}
+.r-foot img{height:44px}
+.r-foot b{color:#fff}
+.wheel{right:64px;top:88px;width:470px;height:470px;filter:drop-shadow(0 30px 50px rgba(0,0,0,.6)) drop-shadow(0 0 60px rgba(211,28,43,.35))}
+.wheel svg.roda{width:100%;height:100%;display:block}
+.pin{position:absolute;left:50%;top:-22px;width:52px;margin-left:-26px;z-index:2}
+.hub{position:absolute;left:50%;top:50%;width:104px;height:104px;margin:-52px 0 0 -52px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#FF4A59,#B70412);
+  font-family:var(--display);font-weight:900;font-style:italic;font-size:40px;box-shadow:0 0 0 5px #050505,0 0 0 9px rgba(255,255,255,.9)}
+.rl-l{fill:#fff}
+.rl-l.b{fill:#4A0610}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="glyph" viewBox="0 0 64 64">
+    <path d="M48.85 17.86A22 22 0 1 1 35.82 10.33" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+    <path d="M43.2 11.6 33.7 16.9 36 3.5Z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M27 22.5v19L43 32Z" fill="currentColor" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="gift" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></g></symbol>
+  <symbol id="cart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></g></symbol>
+</svg>
+
+<!-- ===== og-black-talks.jpg ===== -->
+<div class="og" id="black" hidden>
+  <span class="chip b-chip"><i></i>23 a 30 de novembro</span>
+  <div class="t b-t">Black <span class="red">Talks</span></div>
+  <div class="b-box">
+    <span class="b-flag">Destaque da Black</span>
+    <div class="b-at"><svg><use href="#glyph"/></svg><span class="wm"><span>atualiza</span><b>talks <em>me</em></b></span></div>
+    <div class="b-preco"><small>1º mês por</small><b>R$ 9,90</b></div>
+  </div>
+  <div class="b-off"><b>+50% OFF</b>em qualquer curso virtual</div>
+  <div class="b-cad"><svg><use href="#gift"/></svg>Cadastre-se e ganhe os 2 cupons</div>
+  <div class="card c1"><img src="../img/pocus-2-0.webp" alt="" /></div>
+  <div class="card c2"><img src="../img/pediatria.webp" alt="" /></div>
+  <div class="stk"><b>-50%</b><small>cursos virtuais</small></div>
+  <img class="logo" src="../img/logo-grupo-talks.webp" alt="" />
+</div>
+
+<!-- ===== og-roleta.jpg ===== -->
+<div class="og" id="roleta" hidden>
+  <span class="chip r-chip"><i></i>Roleta Black Talks</span>
+  <div class="t r-t">Gire e ganhe até<span>6 meses grátis</span></div>
+  <p class="r-d"><b>do Atualiza Talks ME.</b> Toda compra na Black Talks dá direito a um giro, de 1 aula de degustação a 6 meses grátis.</p>
+  <div class="r-comprou"><svg><use href="#cart"/></svg>Comprou na Black? Gire a roleta</div>
+  <div class="r-foot"><img src="../img/logo-grupo-talks.webp" alt="" /><span>Black Talks · <b>23 a 30/11</b></span></div>
+  <div class="wheel">
+    <span class="pin"><svg viewBox="0 0 60 78"><path d="M30 76 6 30A26 26 0 1 1 54 30Z" fill="#fff"/><path d="M30 66 12 30A19 19 0 1 1 48 30Z" fill="#D31C2B"/><circle cx="30" cy="27" r="7" fill="#fff"/></svg></span>
+    <svg class="roda" viewBox="-200 -200 400 400"></svg>
+    <span class="hub">GIRE</span>
+  </div>
+</div>
+
+<script src="../js/roleta.js"></script>
+<script>
+  var a = new URLSearchParams(location.search).get('a') === 'roleta' ? 'roleta' : 'black';
+  document.getElementById(a).hidden = false;
+  if(a === 'roleta'){
+    var g = desenharRoleta(document.querySelector('.roda'));
+    /* mesma posição da imagem antiga: 6 meses perto do ponteiro */
+    g.setAttribute('transform', 'rotate(-75)');
+  }
+</script>
+</body>
+</html>

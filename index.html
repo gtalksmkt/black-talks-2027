@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Black Talks | A Black Friday do Grupo Talks · Atualiza Talks ME por R$ 9,90</title>
-<meta name="description" content="Black Talks, a Black Friday do Grupo Talks: de 23 a 30 de novembro, o Atualiza Talks ME com o 1º mês por R$ 9,90 e 30% OFF em qualquer curso virtual com o cupom BLACKTALKS." />
+<title>Black Talks | A Black Friday do Grupo Talks · 50% OFF e Atualiza Talks ME por R$ 9,90</title>
+<meta name="description" content="Black Talks, a Black Friday do Grupo Talks: de 23 a 30 de novembro. Cadastre-se e ganhe 2 cupons: 50% OFF em qualquer curso virtual e o Atualiza Talks ME com o 1º mês por R$ 9,90." />
 <!-- Enquanto a página estiver em revisão, fica fora do Google. Tirar esta linha quando for ao ar. -->
 <meta name="robots" content="noindex, nofollow" />
 <meta name="theme-color" content="#050505" />
 <meta property="og:title" content="Black Talks · A Black Friday do Grupo Talks" />
-<meta property="og:description" content="Atualiza Talks ME com o 1º mês por R$ 9,90 e 30% OFF em qualquer curso virtual. Só de 23 a 30 de novembro." />
+<meta property="og:description" content="Cadastre-se e ganhe 50% OFF em qualquer curso virtual e o Atualiza Talks ME com o 1º mês por R$ 9,90. Só de 23 a 30 de novembro." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://gtalksmkt.github.io/black-talks-2027/img/og-black-talks.jpg" />
+<meta property="og:image" content="https://gtalksmkt.github.io/black-talks-2027/img/og-black-talks.jpg?v=2" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -71,6 +71,9 @@ body[data-fase=pre] [data-show]:not([data-show~=pre]),
 body[data-fase=live] [data-show]:not([data-show~=live]),
 body[data-fase=fim] [data-show]:not([data-show~=fim]){display:none!important}
 body[data-fase=fim] .stk:not(.atb-p){display:none}
+/* antes do cadastro do presente (.sem-cupom) e depois (.so-ganhou) */
+body:not(.ganhou) .so-ganhou,
+body.ganhou .sem-cupom{display:none!important}
 
 /* ===== Botões ===== */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:12px;font-weight:700;font-size:1rem;letter-spacing:.01em;transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s;white-space:nowrap}
@@ -241,6 +244,92 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
 .card-more{display:inline-flex;align-items:center;justify-content:center;gap:6px;margin-top:12px;font-size:.88rem;font-weight:600;color:var(--muted);transition:color .2s}
 .card-more:hover{color:#fff}
 .buy-note{margin-top:8px;text-align:center;font-size:.76rem;color:var(--dim)}
+.cup-link{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.cup-link:hover{color:var(--red-text)}
+.sec-h p a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+/* ===== Presente: cadastre-se e ganhe ===== */
+.pr-sec{padding-top:clamp(40px,5vw,70px)}
+.pr-box{position:relative;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(28px,4vw,56px);align-items:center;padding:clamp(28px,4.4vw,60px);border-radius:28px;overflow:hidden;
+  background:radial-gradient(70% 90% at 0% 0%,rgba(211,28,43,.34),transparent 60%),radial-gradient(60% 80% at 100% 100%,rgba(158,10,22,.3),transparent 60%),linear-gradient(180deg,#151517,#0A0A0B);
+  border:2px solid rgba(232,48,63,.6);box-shadow:0 50px 120px -50px rgba(211,28,43,.7),0 0 0 8px rgba(211,28,43,.06)}
+.pr-box::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 2px,transparent 2px 18px);pointer-events:none}
+.pr-box > *{position:relative}
+.pr-l h2{font-size:clamp(2.4rem,4.6vw,4.1rem)}
+.pr-l > p{margin-top:14px;color:var(--muted);font-size:1.06rem;max-width:34em}
+.pr-l > p b{color:#fff}
+.tks{display:grid;gap:14px;margin-top:26px}
+.tk{position:relative;display:grid;grid-template-columns:132px minmax(0,1fr);min-height:124px;border-radius:18px;background:#0B0B0D;border:1px solid var(--line2);overflow:hidden;
+  -webkit-mask:radial-gradient(circle 12px at 132px 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 12px at 132px 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+          mask:radial-gradient(circle 12px at 132px 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 12px at 132px 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+  transition:border-color .4s,box-shadow .4s}
+.tk-v{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px 8px;background:linear-gradient(160deg,var(--red-hi),var(--red-deep));color:#fff;font-family:var(--display);font-weight:900;font-style:italic;line-height:.85;text-align:center;border-right:2px dashed rgba(5,5,5,.55)}
+.tk-v b{font-size:3.3rem;font-weight:900}
+.tk-v span{font-size:1.5rem}
+.tk-v small{font-size:1.15rem;font-style:normal;font-weight:800;letter-spacing:.04em}
+.tk-r{display:flex;flex-direction:column;justify-content:center;gap:10px;padding:14px 18px 14px 20px;min-width:0}
+.tk-t b{display:block;color:#fff;font-weight:800;font-size:1.04rem;line-height:1.25}
+.tk-t span{display:block;margin-top:2px;color:var(--dim);font-size:.84rem;line-height:1.35}
+.tk-c{display:flex;align-items:center}
+.tk-lock{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:9px;border:1px dashed rgba(255,255,255,.28);color:var(--muted);font-size:.8rem;font-weight:700}
+.tk-lock i{font-style:normal;letter-spacing:.2em;color:#5C5E67}
+.tk-lock .i{color:var(--red-text)}
+.tk-code{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border-radius:9px;border:1.5px dashed var(--red-hi);background:rgba(211,28,43,.14);color:#fff;font-family:var(--display);font-weight:900;font-size:1.6rem;letter-spacing:.08em;line-height:1.1;transition:background .2s}
+.tk-code:hover{background:rgba(211,28,43,.3)}
+.tk-code .i{font-size:.75em;color:var(--red-text)}
+body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgba(211,28,43,.8)}
+.tk.rev{animation:tkRev .8s var(--spring) both}
+.tk.rev + .tk.rev{animation-delay:.14s}
+@keyframes tkRev{0%{transform:scale(.9) rotate(-2deg)}55%{transform:scale(1.04) rotate(1deg)}100%{transform:none}}
+
+.pr-card{padding:28px;border-radius:22px;background:#08080A;border:1px solid var(--line2);box-shadow:0 30px 70px -30px rgba(211,28,43,.6)}
+.pr-card h3{font-family:var(--display);font-weight:800;font-size:2rem;line-height:1;text-transform:uppercase;color:#fff}
+.pr-card h3 + p{margin-top:6px;color:var(--muted);font-size:.95rem}
+.f{display:grid;gap:14px;margin-top:20px}
+.fld label{display:block;font-size:.8rem;font-weight:700;color:var(--muted);margin-bottom:6px;letter-spacing:.02em}
+.fld input{width:100%;height:52px;padding:0 16px;border-radius:12px;border:1.5px solid var(--line2);background:#111114;color:#fff;font:inherit;font-size:1rem;transition:border-color .2s,box-shadow .2s}
+.fld input::placeholder{color:#5C5E67}
+.fld input:focus{outline:none;border-color:var(--red-hi);box-shadow:0 0 0 4px rgba(232,48,63,.18)}
+.fld.err input{border-color:#FF5A66}
+.fld .msg{display:none;margin-top:6px;font-size:.8rem;color:#FF7A84;font-weight:600}
+.fld.err .msg{display:block}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;color:var(--muted);line-height:1.45;cursor:pointer}
+.chk input{appearance:none;-webkit-appearance:none;flex:none;width:20px;height:20px;margin-top:1px;border-radius:6px;border:1.5px solid var(--line2);background:#111114;display:grid;place-items:center;cursor:pointer}
+.chk input:checked{background:var(--red);border-color:var(--red)}
+.chk input:checked::after{content:'';width:6px;height:10px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:translateY(-1px) rotate(45deg)}
+.chk.err input{border-color:#FF5A66}
+.chk.err span{color:#FF9AA2}
+.f-note{display:block;text-align:center;font-size:.76rem;color:var(--dim)}
+.btn[disabled]{opacity:.65;cursor:progress;transform:none}
+.pr-card.shake{animation:fShake .45s linear}
+@keyframes fShake{20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(4px)}}
+.pr-ok{text-align:center}
+.pr-ok .ok-ic{display:grid;place-items:center;width:58px;height:58px;margin:0 auto 14px;border-radius:50%;background:var(--red);color:#fff;font-size:1.7rem;box-shadow:0 0 0 6px rgba(232,48,63,.18),0 0 40px rgba(232,48,63,.6)}
+.pr-ok h3{font-size:2.2rem}
+.pr-ok h3 em{display:block;font-style:normal}
+.pr-ok h3 span{display:block;color:var(--red-hi)}
+.pr-ok p{margin:10px 0 20px}
+.pr-ok .btn + .btn{margin-top:10px}
+.pr-ok .btn{white-space:normal;line-height:1.25;padding:10px 18px}
+.pr-ok .f-note{margin-top:14px}
+
+/* banner do presente no carrossel */
+.prb{position:absolute;inset:0;container-type:inline-size;background:radial-gradient(110% 100% at 80% 50%,#5A0812 0%,#1A0609 48%,#050505 82%);overflow:hidden}
+.prb::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 2px,transparent 2px 18px)}
+.prb-t{position:absolute;left:6cqw;top:50%;transform:translateY(-50%);width:42cqw}
+.prb-k{display:flex;align-items:center;gap:1.4cqw;font-size:2.3cqw;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--red-text)}
+.prb-k svg{width:3.4cqw;height:3.4cqw}
+.prb-t b{display:block;margin-top:1.6cqw;font-family:var(--display);font-weight:900;font-style:italic;text-transform:uppercase;color:#fff;font-size:8.2cqw;line-height:.86}
+.prb-t b em{font-style:italic;color:var(--red-hi)}
+.prb-pill{display:inline-block;margin-top:3cqw;padding:1.3cqw 3cqw;border-radius:99cqw;background:var(--red);color:#fff;font-size:2.4cqw;font-weight:800;letter-spacing:.04em}
+.prb-tks{position:absolute;right:5cqw;top:50%;width:42cqw;transform:translateY(-50%);display:grid;gap:3cqw}
+.prb-tk{display:grid;grid-template-columns:15cqw 1fr;height:13cqw;border-radius:2.4cqw;overflow:hidden;background:#0B0B0D;border:.3cqw solid rgba(255,255,255,.18);box-shadow:0 3cqw 6cqw rgba(0,0,0,.5)}
+.prb-tk:first-child{transform:rotate(-5deg) translateX(-2cqw)}
+.prb-tk:last-child{transform:rotate(3deg) translateX(2cqw)}
+.prb-tk > span{display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(160deg,var(--red-hi),var(--red-deep));color:#fff;font-family:var(--display);font-weight:900;font-style:italic;line-height:.85;border-right:.4cqw dashed rgba(5,5,5,.55)}
+.prb-tk > span b{font-size:5.6cqw}
+.prb-tk > span small{font-size:2.3cqw;font-style:normal;font-weight:800}
+.prb-tk > i{display:flex;flex-direction:column;justify-content:center;padding:0 2.6cqw;font-style:normal;color:#fff;font-weight:800;font-size:2.7cqw;line-height:1.2}
 
 /* ===== Atualiza Talks ===== */
 .at-box{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:clamp(28px,4vw,56px);align-items:center;padding:clamp(28px,4.4vw,60px);border-radius:28px;overflow:hidden;
@@ -316,7 +405,7 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
 .rlb-pill{display:inline-block;margin-top:3cqw;padding:1.3cqw 3cqw;border-radius:99cqw;background:var(--red);color:#fff;font-size:2.4cqw;font-weight:800;letter-spacing:.04em}
 
 /* ===== Passos ===== */
-.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:s}
 .step{position:relative;padding:28px 26px;border-radius:20px;background:var(--surface);border:1px solid var(--line);overflow:hidden}
 .step::before{counter-increment:s;content:counter(s);position:absolute;right:16px;top:-14px;font-family:var(--display);font-weight:900;font-style:italic;font-size:7.5rem;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(232,48,63,.28)}
 .step-ic{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:rgba(211,28,43,.14);border:1px solid rgba(232,48,63,.35);color:var(--red-hi);font-size:1.5rem;margin-bottom:18px}
@@ -374,6 +463,9 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
 .gift-fab[hidden]{display:none}
 .gift-fab:hover{transform:translateY(-2px)}
 .gift-fab span.ic{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--red);font-size:1.2rem;animation:wig 2.6s ease-in-out infinite}
+.gift-fab .tx{display:flex;flex-direction:column;line-height:1.15;text-align:left}
+.gift-fab .tx small{font-size:.72rem;font-weight:600;color:var(--muted)}
+.gift-fab.off{opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .25s,transform .25s}
 @keyframes fabIn{from{transform:translateY(30px);opacity:0}}
 @keyframes wig{0%,70%,100%{transform:rotate(0)}75%{transform:rotate(-14deg)}80%{transform:rotate(12deg)}85%{transform:rotate(-8deg)}90%{transform:rotate(5deg)}}
 
@@ -435,6 +527,17 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
 .gm-code{display:inline-flex;align-items:center;gap:10px;margin-top:4px;font-family:var(--display);font-weight:900;font-size:2.2rem;letter-spacing:.08em;color:#fff;line-height:1.1}
 .gm-code .i{font-size:1.2rem;color:var(--red-text)}
 .gm-val{display:block;margin-top:12px;font-size:.8rem;color:var(--dim)}
+.gm-s2 h2{margin-top:6px}
+.gm-tks{display:grid;gap:10px;margin:20px 0 16px}
+.mtk{display:grid;grid-template-columns:104px minmax(0,1fr);align-items:stretch;min-height:66px;border-radius:14px;overflow:hidden;background:#0B0B0D;border:1px solid rgba(232,48,63,.5);text-align:left}
+.mtk b{display:flex;align-items:center;justify-content:center;gap:6px;background:linear-gradient(160deg,var(--red-hi),var(--red-deep));color:#fff;font-family:var(--display);font-weight:900;font-style:italic;font-size:1.7rem;line-height:.9;border-right:2px dashed rgba(5,5,5,.55)}
+.mtk > span{display:flex;flex-direction:column;justify-content:center;padding:8px 14px;color:#fff;font-weight:700;font-size:.92rem;line-height:1.25}
+.mtk > span i{display:inline-flex;align-items:center;gap:5px;margin-top:3px;font-style:normal;font-weight:600;font-size:.74rem;color:var(--dim)}
+.mtk > span i .i{color:var(--red-text)}
+.gm-no{display:block;margin:12px auto 0;padding:6px 12px;font-size:.86rem;font-weight:600;color:var(--dim);text-decoration:underline;text-underline-offset:3px}
+.gm-no:hover{color:#fff}
+.rl-lock{display:inline-flex;align-items:center;gap:8px;margin-top:4px;padding:7px 12px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid var(--line2);font-size:.84rem;font-weight:700;color:#fff}
+.rl-lock .i{color:var(--red-text)}
 .pop{animation:pop .6s var(--spring) both}
 .pop2{animation:pop .6s var(--spring) .12s both}
 .pop3{animation:pop .6s var(--spring) .24s both}
@@ -453,6 +556,7 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
 /* ===== Responsivo ===== */
 @media (max-width:1060px){
   .nav{display:none}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:920px){
   .hero{padding-top:6px}
@@ -466,7 +570,10 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
   .at-box{grid-template-columns:minmax(0,1fr)}
   .rl-box{grid-template-columns:minmax(0,1fr)}
   .rl-mini{width:min(86%,340px);grid-row:1}
-  .steps{grid-template-columns:1fr}
+  .pr-box{grid-template-columns:minmax(0,1fr)}
+  .pr-l{text-align:center}
+  .pr-l > p{margin-left:auto;margin-right:auto}
+  .tks{max-width:560px;margin-left:auto;margin-right:auto;text-align:left}
   .ft-in{grid-template-columns:1fr 1fr}
   .ft-in > div:first-child{grid-column:1/-1}
 }
@@ -497,6 +604,22 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
   .tapes{height:120px}
   .tape{height:44px;margin-top:-22px}
   .tape-in span{font-size:1.3rem}
+  .steps{grid-template-columns:1fr}
+  .pr-box{padding:26px 16px 18px;border-radius:22px}
+  .tk{grid-template-columns:100px minmax(0,1fr);min-height:112px;
+    -webkit-mask:radial-gradient(circle 10px at 100px 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 10px at 100px 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+            mask:radial-gradient(circle 10px at 100px 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle 10px at 100px 100%,#0000 98%,#000) bottom/100% 51% no-repeat}
+  .tk-v b{font-size:2.6rem}
+  .tk-v span{font-size:1.2rem}
+  .tk-r{padding:12px 12px 12px 14px;gap:8px}
+  .tk-t b{font-size:.95rem}
+  .tk-t span{font-size:.78rem}
+  .tk-code{font-size:1.35rem;padding:5px 11px}
+  .tk-lock{font-size:.76rem;padding:5px 10px}
+  .tk-lock i{display:none}
+  .pr-card{padding:22px 16px}
+  .pr-ok h3{font-size:1.9rem}
+  .gift-fab .tx{font-size:.84rem}
   .card-b{padding:20px 18px 18px}
   .card h3{font-size:1.75rem}
   .price .por{font-size:2.7rem}
@@ -504,7 +627,8 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
   .at-price{padding:22px 16px}
   .at-price .btn{white-space:normal;padding:8px 14px;line-height:1.25}
   .ft-in{grid-template-columns:1fr}
-  .wa-wrap{right:14px;bottom:14px}
+  .wa-wrap{right:14px;bottom:14px;flex-direction:column;align-items:flex-end;gap:10px}
+  .wa-bub{margin-bottom:0}
   .wa{width:56px;height:56px}
   .wa svg{width:29px;height:29px}
   .wa-bub{max-width:210px;font-size:.84rem}
@@ -557,6 +681,7 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
   <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.22 3.48a.5.5 0 0 0 .78-.42V7.87a.5.5 0 0 0-.75-.43L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
   <symbol id="i-cal" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
   <symbol id="i-user" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect width="16" height="11" x="4" y="11" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 1.5 14.6 9.4H23l-6.8 4.9 2.6 8L12 17.4l-6.8 4.9 2.6-8L1 9.4h8.4Z"/></symbol>
 </svg>
 
@@ -564,7 +689,7 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
 <div class="bar" id="bar" role="region" aria-label="Prazo da Black Talks">
   <span class="bar-dot" aria-hidden="true"></span>
   <span data-show="live">
-    <span class="l"><b>BLACK TALKS</b> · Atualiza Talks ME por R$ 9,90 e 30% OFF nos cursos virtuais · termina em</span>
+    <span class="l"><b>BLACK TALKS</b> · 50% OFF nos cursos virtuais e Atualiza Talks ME por R$ 9,90 · termina em</span>
     <span class="s"><b>BLACK TALKS</b> · termina em</span>
   </span>
   <span data-show="pre">
@@ -572,8 +697,9 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
     <span class="s"><b>BLACK TALKS</b> em</span>
   </span>
   <span data-show="live pre" class="bar-t"><svg class="i"><use href="#i-clock"/></svg><span data-timer>20:00:00</span></span>
-  <span data-show="live" class="bar-cup" title="Seu cupom">Seu cupom: BLACKTALKS</span>
-  <a data-show="live pre" class="bar-go" href="#cursos">Ver ofertas <svg class="i"><use href="#i-arrow"/></svg></a>
+  <span data-show="live" class="bar-cup" title="Seu cupom dos cursos virtuais">Seu cupom: <span data-cupom></span></span>
+  <a data-show="live pre" class="bar-go sem-cupom" href="#presente">Ganhar meus cupons <svg class="i"><use href="#i-arrow"/></svg></a>
+  <a data-show="live pre" class="bar-go so-ganhou" href="#cursos">Ver ofertas <svg class="i"><use href="#i-arrow"/></svg></a>
   <span data-show="fim">A Black Talks terminou. <a class="bar-go" style="display:inline-flex" href="#" data-wa="duvida">Fale com a nossa central</a></span>
 </div>
 
@@ -585,9 +711,10 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
       <span class="bt-wm"><b>Black</b><i>Talks</i></span>
     </a>
     <nav class="nav" aria-label="Seções">
+      <a href="#presente" data-show="live pre">Presente</a>
       <a href="#atualiza">Atualiza Talks ME</a>
-      <a href="#roleta" data-show="live pre">Roleta</a>
       <a href="#cursos">Cursos virtuais</a>
+      <a href="#roleta" data-show="live pre">Roleta</a>
       <a href="#como">Como funciona</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
@@ -605,8 +732,8 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
   <div class="wrap hero-in">
     <div class="hero-a">
       <span class="chip"><span class="dot"></span>23 a 30 de novembro</span>
-      <h1 class="hero-t"><span class="l1">Black</span><span class="l2">Talks<small>30% OFF</small></span></h1>
-      <p class="hero-lead">A Black Friday do Grupo Talks chegou: o <b>Atualiza Talks ME com o 1º mês por R$ 9,90</b> e <b>30% OFF em qualquer curso virtual</b>.</p>
+      <h1 class="hero-t"><span class="l1">Black</span><span class="l2">Talks<small>50% OFF</small></span></h1>
+      <p class="hero-lead">A Black Friday do Grupo Talks chegou. Faça um cadastro rápido e ganhe 2 cupons: <b>50% OFF em qualquer curso virtual</b> e o <b>Atualiza Talks ME com o 1º mês por R$ 9,90</b>.</p>
     </div>
 
     <div class="hero-car">
@@ -638,10 +765,12 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
       </div>
       <p class="cd cd-fim" data-show="fim">A Black Talks terminou no dia 30 de novembro. Fale com a nossa central para conhecer as condições atuais.</p>
       <div class="hero-cta">
-        <a class="btn btn-red" href="#atualiza">Atualiza Talks ME por R$ 9,90 <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn-ghost" href="#cursos">Cursos com 30% OFF</a>
+        <a class="btn btn-red sem-cupom" href="#presente" data-show="live pre"><svg class="i"><use href="#i-gift"/></svg>Quero meus cupons <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-red so-ganhou" href="#cursos" data-show="live pre">Usar meus 50% OFF <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="#atualiza" data-show="live pre">Atualiza Talks ME por R$ 9,90</a>
+        <a class="btn btn-red" href="#cursos" data-show="fim">Ver os cursos <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
       </div>
-      <button class="hero-gift" type="button" data-open-gift data-show="live pre"><svg class="i"><use href="#i-gift"/></svg><span>Tem um presente esperando por você: <b>abrir agora</b></span></button>
+      <a class="hero-gift sem-cupom" href="#presente" data-show="live pre"><svg class="i"><use href="#i-gift"/></svg><span>Só nome, e-mail e WhatsApp: <b>liberar meus cupons</b></span></a>
     </div>
   </div>
 </section>
@@ -651,6 +780,80 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
   <div class="tape t2"><div class="tape-in" id="tape2"></div></div>
   <div class="tape t1"><div class="tape-in" id="tape1"></div></div>
 </div>
+
+<!-- ===== Presente: cadastre-se e ganhe ===== -->
+<section class="sec pr-sec" id="presente" data-show="live pre">
+  <div class="wrap">
+    <div class="pr-box rv">
+      <div class="pr-l">
+        <span class="eyebrow">Presente Black Talks</span>
+        <h2 class="sem-cupom">Cadastre-se e ganhe <span class="red">seu presente</span></h2>
+        <h2 class="so-ganhou">Seus cupons estão <span class="red">liberados</span></h2>
+        <p class="sem-cupom">São <b>2 cupons</b> para usar na Black Talks. Para liberar, é só deixar seu nome, e-mail e WhatsApp.</p>
+        <p class="so-ganhou">Toque no cupom para copiar. Os dois valem de 23 a 30 de novembro.</p>
+        <div class="tks">
+          <div class="tk">
+            <div class="tk-v"><b data-desc>50%</b><span>OFF</span></div>
+            <div class="tk-r">
+              <div class="tk-t"><b>em qualquer curso virtual</b><span id="tkCursos">Emergências Pediátricas, POCUS 2.0, POCUS Cardíaco e Choque</span></div>
+              <div class="tk-c">
+                <span class="tk-lock sem-cupom"><svg class="i"><use href="#i-lock"/></svg>Liberado no cadastro <i aria-hidden="true">••••••</i></span>
+                <button class="tk-code so-ganhou" type="button" data-copy="cursos"><span data-cupom></span><svg class="i"><use href="#i-copy"/></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="tk">
+            <div class="tk-v"><small>R$</small><b data-at-preco>9,90</b><small>1º mês</small></div>
+            <div class="tk-r">
+              <div class="tk-t"><b>no Atualiza Talks ME</b><span>Medicina de Emergência atualizada o ano todo</span></div>
+              <div class="tk-c">
+                <span class="tk-lock sem-cupom"><svg class="i"><use href="#i-lock"/></svg>Liberado no cadastro <i aria-hidden="true">••••••</i></span>
+                <button class="tk-code so-ganhou" type="button" data-copy="atualiza"><span data-cupom-at></span><svg class="i"><use href="#i-copy"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pr-r">
+        <div class="pr-card" id="prCard">
+          <div class="sem-cupom">
+            <h3>Libere seus 2 cupons</h3>
+            <p>Leva 10 segundos.</p>
+            <form class="f" id="prForm" novalidate>
+              <div class="fld" id="prNomeF">
+                <label for="prNome">Nome completo</label>
+                <input id="prNome" name="nome" type="text" autocomplete="name" placeholder="Seu nome" maxlength="80" required />
+                <span class="msg">Digite o seu nome completo.</span>
+              </div>
+              <div class="fld" id="prEmailF">
+                <label for="prEmail">E-mail</label>
+                <input id="prEmail" name="email" type="email" autocomplete="email" inputmode="email" placeholder="voce@email.com" maxlength="120" required />
+                <span class="msg">Digite um e-mail válido.</span>
+              </div>
+              <div class="fld" id="prTelF">
+                <label for="prTel">WhatsApp com DDD</label>
+                <input id="prTel" name="tel" type="tel" autocomplete="tel-national" inputmode="numeric" placeholder="(85) 99999-9999" maxlength="16" required />
+                <span class="msg">Digite o número com DDD.</span>
+              </div>
+              <label class="chk" id="prOkF"><input type="checkbox" id="prOk" required /><span>Autorizo o Grupo Talks a me enviar e-mails e mensagens no WhatsApp com informações das minhas compras e promoções, desta e de futuras ações.</span></label>
+              <button class="btn btn-red btn-block" id="prBtn" type="submit"><svg class="i"><use href="#i-gift"/></svg>Liberar meus cupons</button>
+              <span class="f-note">Seus dados ficam só com o Grupo Talks.</span>
+            </form>
+          </div>
+          <div class="pr-ok so-ganhou" id="prOkBox" tabindex="-1">
+            <span class="ok-ic"><svg class="i"><use href="#i-check"/></svg></span>
+            <h3><em id="prOla">Parabéns!</em><span>Você ganhou seus cupons</span></h3>
+            <p>Agora é só escolher. Nos cursos virtuais, o cupom é copiado sozinho e você vai direto para o carrinho.</p>
+            <a class="btn btn-red btn-block" id="prGo" href="#cursos">Escolher meu curso com 50% OFF <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost btn-block" href="#" data-wa="atualiza" data-at-buy><svg class="i"><use href="#i-wa"/></svg>Garantir o Atualiza Talks ME por R$ 9,90</a>
+            <span class="f-note">Seus cupons ficam salvos nesta página, neste aparelho.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===== Atualiza Talks ===== -->
 <section class="sec at-sec" id="atualiza">
@@ -675,29 +878,44 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
         <div class="at-price">
           <span class="at-pl">Condição Black Talks</span>
           <div class="at-val"><small>1º mês por</small><b id="atPreco">R$ 9,90</b></div>
-          <span class="at-note">Garanta com a nossa central de atendimento</span>
-          <a class="btn btn-red btn-block" href="#" data-wa="atualiza"><svg class="i"><use href="#i-wa"/></svg>Quero o 1º mês por R$ 9,90</a>
+          <span class="at-note sem-cupom" data-show="live pre">Com o cupom do presente, pela nossa central de atendimento</span>
+          <span class="at-note so-ganhou" data-show="live pre">Seu cupom: <b class="cup-inline" data-cupom-at></b> · garanta pela nossa central</span>
+          <a class="btn btn-red btn-block" href="#" data-wa="atualiza" data-at-buy><svg class="i"><use href="#i-wa"/></svg>Quero o 1º mês por R$ 9,90</a>
           <a class="btn btn-ghost btn-block" id="atLanding" href="#" target="_blank" rel="noopener">Conhecer o Atualiza Talks ME <svg class="i"><use href="#i-ext"/></svg></a>
           <span class="at-lanc" id="atLanc"><svg class="i"><use href="#i-star"/></svg>Lançamento no dia 25 de novembro</span>
-          <a class="at-rl" href="roleta.html" data-show="live pre"><svg class="i"><use href="#i-gift"/></svg><span>Ou <b>gire a roleta</b> e ganhe até 6 meses grátis</span><svg class="i"><use href="#i-arrow"/></svg></a>
+          <a class="at-rl" href="#roleta" data-show="live pre"><svg class="i"><use href="#i-gift"/></svg><span>Comprou na Black? <b>Gire a roleta</b> e ganhe até 6 meses grátis</span><svg class="i"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== Roleta ===== -->
+<!-- ===== Cursos virtuais ===== -->
+<section class="sec" id="cursos">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow">Cursos virtuais</span>
+      <h2><span data-desc>50%</span> OFF em <span class="red">qualquer</span> curso virtual</h2>
+      <p class="sem-cupom" data-show="live pre">Pague metade com o cupom do presente. Ainda não pegou o seu? <a href="#presente">Cadastre-se e ganhe</a>.</p>
+      <p class="so-ganhou" data-show="live pre">Seu cupom <span class="cup-inline" data-cupom></span> já está liberado. Clique em comprar: ele é copiado sozinho e você vai direto para o carrinho.</p>
+      <p data-show="fim">Os cursos virtuais do Grupo Talks, para estudar no seu ritmo.</p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- ===== Roleta (só para quem comprou) ===== -->
 <section class="sec" id="roleta" style="padding-top:0" data-show="live pre">
   <div class="wrap">
     <div class="rl-box rv">
       <div class="rl-txt">
-        <span class="eyebrow">Roleta Black Talks</span>
-        <h2>Gire a roleta e ganhe até <span class="red">6 meses grátis</span> do Atualiza Talks ME</h2>
-        <p>Cadastre seu nome, e-mail e WhatsApp, gire uma vez e descubra o seu prêmio. Tem de 1 aula de degustação a 6 meses grátis, e a fatia de 6 meses é uma só.</p>
+        <span class="eyebrow">Roleta · só para quem comprou</span>
+        <h2>Comprou? Gire a roleta e ganhe até <span class="red">6 meses grátis</span> do Atualiza Talks ME</h2>
+        <p>Toda compra na Black Talks dá direito a um giro. Depois de comprar, entre na roleta com o número do seu pedido e descubra o seu prêmio: de 1 aula de degustação a 6 meses grátis.</p>
         <ul class="rl-chips" id="rlChips"></ul>
         <div class="rl-cta">
-          <a class="btn btn-red" href="roleta.html">Quero girar a roleta <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
-          <span class="rl-note">1 giro por pessoa</span>
+          <a class="btn btn-red" href="roleta.html">Já comprei, quero girar <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
+          <span class="rl-lock"><svg class="i"><use href="#i-lock"/></svg>Liberada depois da compra</span>
         </div>
       </div>
       <a class="rl-mini" href="roleta.html" aria-label="Ir para a roleta">
@@ -709,44 +927,37 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
   </div>
 </section>
 
-<!-- ===== Cursos virtuais ===== -->
-<section class="sec" id="cursos">
-  <div class="wrap">
-    <div class="sec-h rv">
-      <span class="eyebrow">Cursos virtuais</span>
-      <h2>30% OFF em <span class="red">qualquer</span> curso virtual</h2>
-      <p>Escolha o seu, clique em garantir e use o cupom <span class="cup-inline">BLACKTALKS</span> no checkout. O desconto aparece na hora.</p>
-    </div>
-    <div class="grid" id="grid"></div>
-  </div>
-</section>
-
 <!-- ===== Como funciona ===== -->
 <section class="sec" id="como" style="padding-top:0">
   <div class="wrap">
     <div class="sec-h rv">
       <span class="eyebrow">Como funciona</span>
-      <h2>Seu desconto em <span class="red">3 passos</span></h2>
+      <h2>Seu desconto em <span class="red">4 passos</span></h2>
     </div>
     <div class="steps">
       <div class="step rv">
         <span class="step-ic"><svg class="i"><use href="#i-gift"/></svg></span>
-        <h3>Abra seu presente</h3>
-        <p>Toque na caixinha e libere 30% OFF para usar em qualquer curso virtual.</p>
+        <h3>Ganhe os cupons</h3>
+        <p>Deixe nome, e-mail e WhatsApp e libere 50% OFF nos cursos virtuais e o Atualiza Talks ME por R$ 9,90.</p>
       </div>
       <div class="step rv">
         <span class="step-ic"><svg class="i"><use href="#i-cart"/></svg></span>
         <h3>Escolha o curso</h3>
-        <p>Pediatria, Choque, POCUS Cardio ou POCUS 2.0: todos os cursos virtuais entram na Black.</p>
+        <p>Clique em comprar: o cupom é copiado sozinho e você vai direto para o carrinho, com o curso dentro.</p>
       </div>
       <div class="step rv">
         <span class="step-ic"><svg class="i"><use href="#i-tag"/></svg></span>
         <h3>Use o cupom</h3>
-        <p>No checkout, digite <b style="color:#fff">BLACKTALKS</b> no campo de cupom e o valor cai na hora.</p>
+        <p>No carrinho, cole o cupom no campo "Código do cupom" e clique em aplicar. O valor cai pela metade.</p>
+      </div>
+      <div class="step rv">
+        <span class="step-ic"><svg class="i"><use href="#i-star"/></svg></span>
+        <h3>Gire a roleta</h3>
+        <p>Comprou? Use o número do pedido para girar a roleta e ganhar até 6 meses grátis do Atualiza Talks ME.</p>
       </div>
     </div>
-    <div style="text-align:center;margin-top:30px" class="rv" data-show="live pre">
-      <button class="btn btn-ghost" type="button" data-open-gift><svg class="i" style="color:var(--red-hi)"><use href="#i-gift"/></svg>Abrir meu presente</button>
+    <div style="text-align:center;margin-top:30px" class="rv sem-cupom" data-show="live pre">
+      <a class="btn btn-ghost" href="#presente"><svg class="i" style="color:var(--red-hi)"><use href="#i-gift"/></svg>Quero meus cupons</a>
     </div>
   </div>
 </section>
@@ -765,26 +976,30 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
       </details>
       <details>
         <summary>Quais cursos entram na Black?<svg class="i"><use href="#i-plus"/></svg></summary>
-        <div class="a"><p>O Atualiza Talks ME, com o 1º mês por R$ 9,90, e os cursos virtuais do Grupo Talks: <span id="faqCursos">Emergências Pediátricas, Choque, Emergency POCUS Cardíaco e Emergency POCUS 2.0</span>, todos com 30% OFF.</p></div>
+        <div class="a"><p>O Atualiza Talks ME, com o 1º mês por R$ 9,90, e os cursos virtuais do Grupo Talks: <span id="faqCursos">Emergências Pediátricas, Choque, Emergency POCUS Cardíaco e Emergency POCUS 2.0</span>, todos com <span data-desc>50%</span> OFF.</p></div>
+      </details>
+      <details data-show="live pre">
+        <summary>Como eu ganho os cupons?<svg class="i"><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>No <a href="#presente">presente da Black Talks</a>, aqui na página, você deixa seu nome, e-mail e WhatsApp e libera na hora 2 cupons: <span data-desc>50%</span> OFF em qualquer curso virtual e o 1º mês do Atualiza Talks ME por R$ 9,90. É grátis e leva 10 segundos.</p></div>
       </details>
       <details>
         <summary>Como eu uso o cupom?<svg class="i"><use href="#i-plus"/></svg></summary>
-        <div class="a"><p>Clique em <b>Garantir com 30% OFF</b> no curso que você quer. O cupom é copiado sozinho e você vai direto para o checkout. Lá, cole <b>BLACKTALKS</b> no campo de cupom e o desconto aparece na hora.</p></div>
+        <div class="a"><p>Com os cupons liberados, clique em <b>Comprar com <span data-desc>50%</span> OFF</b> no curso que você quer. O cupom é copiado sozinho e você vai direto para o carrinho, com o curso dentro. Lá, cole o cupom no campo <b>Código do cupom</b>, clique em aplicar e o valor cai pela metade.</p></div>
       </details>
       <details>
         <summary>O cupom vale para o Atualiza Talks ME?<svg class="i"><use href="#i-plus"/></svg></summary>
-        <div class="a"><p>O Atualiza Talks ME tem uma condição própria na Black: o 1º mês por R$ 9,90. Para garantir, <a href="#" data-wa="atualiza">fale com a nossa central pelo WhatsApp</a>.</p></div>
+        <div class="a"><p>O Atualiza Talks ME tem um cupom só dele, que também vem no presente: o 1º mês por R$ 9,90. Com o cupom em mãos, <a href="#" data-wa="atualiza" data-at-buy>fale com a nossa central pelo WhatsApp</a> para garantir.</p></div>
       </details>
       <details data-show="live pre">
         <summary>Como funciona a roleta?<svg class="i"><use href="#i-plus"/></svg></summary>
-        <div class="a"><p>Na <a href="roleta.html">página da roleta</a>, você cadastra nome, e-mail e WhatsApp e gira uma vez. Os prêmios vão de 1 aula de degustação a 6 meses grátis do Atualiza Talks ME. Depois é só falar com o nosso time comercial pelo WhatsApp, com o código do prêmio, para resgatar.</p></div>
+        <div class="a"><p>A roleta é para quem comprou na Black Talks: toda compra dá direito a um giro. Depois de comprar, entre na <a href="roleta.html">página da roleta</a> com seu nome, o e-mail da compra, o WhatsApp e o número do pedido, que está no e-mail de confirmação. Os prêmios vão de 1 aula de degustação a 6 meses grátis do Atualiza Talks ME. Para resgatar, fale com o nosso time comercial pelo WhatsApp com o código do prêmio: a gente confere o pedido e libera.</p></div>
       </details>
       <details>
         <summary>E os outros cursos do Grupo Talks?<svg class="i"><use href="#i-plus"/></svg></summary>
         <div class="a"><p>A Black Talks é para os cursos virtuais e o Atualiza Talks ME. Se você tem interesse em outro curso, <a href="#" data-wa="duvida">chame a nossa central</a> que a gente te ajuda.</p></div>
       </details>
       <details>
-        <summary>Tive um problema no checkout. E agora?<svg class="i"><use href="#i-plus"/></svg></summary>
+        <summary>Tive um problema no carrinho ou no pagamento. E agora?<svg class="i"><use href="#i-plus"/></svg></summary>
         <div class="a"><p>Fale com um dos nossos atendentes <a href="#" data-wa="duvida">pelo WhatsApp</a> ou escreva para <a href="mailto:atendimento@grupotalks.com.br">atendimento@grupotalks.com.br</a>.</p></div>
       </details>
     </div>
@@ -797,10 +1012,11 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
     <h2 data-show="live">A Black Talks acaba em<br /><span class="final-t" data-timer>20:00:00</span></h2>
     <h2 data-show="pre">A Black Talks começa em<br /><span class="final-t" data-timer>00:00:00</span></h2>
     <h2 data-show="fim">A Black Talks terminou</h2>
-    <p data-show="live">Depois disso, o cupom BLACKTALKS deixa de valer e os cursos voltam ao preço normal.</p>
-    <p data-show="pre">De 23 a 30 de novembro: 30% OFF em qualquer curso virtual e o Atualiza Talks ME com o 1º mês por R$ 9,90.</p>
+    <p data-show="live">Depois disso, os cupons deixam de valer e os cursos voltam ao preço normal.</p>
+    <p data-show="pre">De 23 a 30 de novembro: 50% OFF em qualquer curso virtual e o Atualiza Talks ME com o 1º mês por R$ 9,90.</p>
     <p data-show="fim">Obrigado por participar! Fale com a nossa central para conhecer as condições atuais.</p>
-    <a class="btn" href="#cursos" data-show="live pre">Quero meu desconto <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
+    <a class="btn sem-cupom" href="#presente" data-show="live pre"><svg class="i"><use href="#i-gift"/></svg>Quero meus cupons <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
+    <a class="btn so-ganhou" href="#cursos" data-show="live pre">Quero meu desconto <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
     <a class="btn" href="#" data-wa="duvida" data-show="fim"><svg class="i"><use href="#i-wa"/></svg>Falar com a central</a>
   </div>
 </section>
@@ -833,7 +1049,7 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
     </div>
     <div class="ft-bot">
       <span>© 2026 Grupo Talks. Todos os direitos reservados.</span>
-      <span>Ofertas válidas de 23 a 30/11/2026 ou enquanto o cupom estiver ativo.</span>
+      <span>Ofertas válidas de 23 a 30/11/2026 ou enquanto os cupons estiverem ativos.</span>
     </div>
   </div>
 </footer>
@@ -849,7 +1065,7 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
 </div>
 
 <!-- ===== Botão do presente ===== -->
-<button class="gift-fab" id="giftFab" type="button" data-open-gift hidden><span class="ic"><svg class="i"><use href="#i-gift"/></svg></span>Abrir meu presente</button>
+<a class="gift-fab" id="giftFab" href="#presente" hidden><span class="ic"><svg class="i"><use href="#i-gift"/></svg></span><span class="tx">Garanta seu presente<small><span data-desc>50%</span> OFF + Atualiza R$ 9,90</small></span></a>
 
 <!-- ===== Pop-up do presente ===== -->
 <div class="gm" id="gm" role="dialog" aria-modal="true" aria-labelledby="gmT" hidden>
@@ -871,16 +1087,15 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
     </div>
 
     <div class="gm-s2" id="gmS2" hidden>
-      <span class="gm-k pop">Parabéns! Você ganhou</span>
-      <div class="gm-off pop2"><b>30%</b><span>OFF</span></div>
-      <p class="gm-d pop2">em <b>qualquer curso virtual</b> do Grupo Talks</p>
-      <div class="gm-cup pop3">
-        <small>Seu cupom</small>
-        <button class="gm-code" type="button" data-copy aria-label="Copiar o cupom BLACKTALKS">BLACKTALKS<svg class="i"><use href="#i-copy"/></svg></button>
+      <span class="gm-k pop">Seu presente chegou!</span>
+      <h2 class="pop2">2 cupons <span class="red">para você</span></h2>
+      <div class="gm-tks pop3">
+        <div class="mtk"><b><span data-desc>50%</span> OFF</b><span>em qualquer curso virtual<i><svg class="i"><use href="#i-lock"/></svg>Liberado no cadastro</i></span></div>
+        <div class="mtk"><b>R$ 9,90</b><span>no 1º mês do Atualiza Talks ME<i><svg class="i"><use href="#i-lock"/></svg>Liberado no cadastro</i></span></div>
       </div>
-      <a class="btn btn-red btn-block pop3" href="#cursos" data-close>Usar meu desconto agora <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
-      <span class="gm-val" data-show="live">Válido até 30/11, às 23h59. Toque no cupom para copiar.</span>
-      <span class="gm-val" data-show="pre">Válido de 23 a 30 de novembro. Toque no cupom para copiar.</span>
+      <p class="gm-d pop3">Para liberar, é só um cadastro rápido: <b>nome, e-mail e WhatsApp</b>.</p>
+      <a class="btn btn-red btn-block pop3" href="#presente" data-go-presente style="margin-top:18px">Liberar meus cupons <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
+      <button class="gm-no pop3" type="button" data-close>Agora não</button>
     </div>
   </div>
 </div>
@@ -896,58 +1111,62 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
 var BLACK = {
   inicio: '2026-11-23T00:00:00-03:00',   // começo da Black (horário de Brasília)
   fim:    '2026-11-30T23:59:59-03:00',   // fim da Black
-  cupom: 'BLACKTALKS',
-  desconto: 30,                          // % de desconto do cupom nos cursos virtuais
+  cupom: 'BLACK50',                      // cupom dos cursos virtuais (criar igual no WooCommerce), liberado no cadastro do presente
+  desconto: 50,                          // % de desconto do cupom nos cursos virtuais
   timerHoras: 20,                        // contador de urgência: recomeça a cada 20h para cada visitante
-  popupSegundos: 8,                      // tempo na página até o presente aparecer
+  popupSegundos: 8,                      // tempo na página até o pop-up do presente aparecer (1 vez por visita)
   parcelas: 6,                           // "em até 6x sem juros"
   whats: '5585998302705',                // central de atendimento
   msgs: {
     duvida:   'Olá! Vim pela Black Talks e tenho uma dúvida.',
-    atualiza: 'Olá! Vim pela Black Talks e quero garantir o 1º mês do Atualiza Talks ME por R$ 9,90.'
+    atualiza: 'Olá! Vim pela Black Talks e quero garantir o 1º mês do Atualiza Talks ME por R$ 9,90 com o cupom {cupom}.'
   }
 };
 
-/* Cursos virtuais: preço cheio (o mesmo do site) e links do checkout */
+/* Cursos virtuais: preço cheio (o mesmo do site) e link que já coloca o curso no carrinho */
 var CURSOS = [
   {
     id: 'pediatria',
     nome: 'Emergências Pediátricas',
+    curto: 'Emergências Pediátricas',
     img: 'img/pediatria.webp',
     preco: 899.90,
     tag: 'Curso virtual · Pediatria',
     desc: 'Para quem atende criança no plantão e quer conduzir as emergências pediátricas com mais segurança, no seu ritmo.',
-    comprar: 'https://emergencytalks.com.br/checkout/?add-to-cart=18527',
+    comprar: 'https://emergencytalks.com.br/carrinho/?add-to-cart=18527',
     saiba: 'https://emergencytalks.com.br/produto/emergencias-pediatricas/'
   },
   {
     id: 'pocus-2-0',
     nome: 'Emergency POCUS 2.0',
+    curto: 'POCUS 2.0',
     img: 'img/pocus-2-0.webp',
     preco: 899.90,
     tag: 'Curso virtual · Ultrassom',
     desc: 'Do fundamental ao avançado: POCUS pulmonar, cardíaco, na PCR e no trauma, TVP, via aérea, procedimentos guiados e bloqueios.',
-    comprar: 'https://emergencytalks.com.br/checkout/?add-to-cart=21908',
+    comprar: 'https://emergencytalks.com.br/carrinho/?add-to-cart=21908',
     saiba: 'https://emergencytalks.com.br/produto/emergency-pocus-2-0/'
   },
   {
     id: 'pocus-cardio',
     nome: 'Emergency POCUS Cardíaco',
+    curto: 'POCUS Cardíaco',
     img: 'img/pocus-cardio.webp',
     preco: 899.90,
     tag: 'Curso virtual · Ultrassom',
     desc: 'Ultrassom cardíaco à beira-leito com o Dr. Khalil Feitosa, com a flexibilidade do formato virtual.',
-    comprar: 'https://emergencytalks.com.br/checkout/?add-to-cart=11069',
+    comprar: 'https://emergencytalks.com.br/carrinho/?add-to-cart=11069',
     saiba: 'https://emergencytalks.com.br/produto/emergency-pocus-cardiaco-medicos-virtual-perpetuo/'
   },
   {
     id: 'choque',
     nome: 'Choque',
+    curto: 'Choque',
     img: 'img/choque.webp',
     preco: 599.90,
     tag: 'Curso virtual · 20 horas',
     desc: 'Com o Dr. Khalil Feitosa: 14 aulas em 2 módulos sobre o paciente em choque na sala de emergência.',
-    comprar: 'https://emergencytalks.com.br/checkout/?add-to-cart=11440',
+    comprar: 'https://emergencytalks.com.br/carrinho/?add-to-cart=11440',
     saiba: 'https://emergencytalks.com.br/produto/curso-de-choque-online/'
   }
 ];
@@ -955,10 +1174,12 @@ var CURSOS = [
 /* Atualiza Talks ME na Black */
 var ATUALIZA = {
   preco: 'R$ 9,90',
+  cupom: 'ATUALIZA990',  // cupom do 1º mês por R$ 9,90, liberado no cadastro do presente (vai na mensagem para a central)
   lancamento: '2026-11-25T00:00:00-03:00',
   landing: 'https://gtalksmkt.github.io/atualiza-talks-2027/',
-  posicao: 0           // em que lugar o banner dele entra no carrossel (0 = primeiro; a roleta vem logo depois)
+  posicao: 0           // em que lugar o banner dele entra no carrossel (0 = primeiro; o do presente vem logo depois)
 };
+/* Os cadastros do presente vão para a mesma planilha da roleta (endereço em js/roleta.js, campo leadsUrl) */
 
 /* ==================================================================
    Daqui para baixo é o funcionamento da página
@@ -977,7 +1198,8 @@ var ATUALIZA = {
   }
   function brl(v){ return 'R$ ' + v.toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2}); }
   function pad(n){ return (n < 10 ? '0' : '') + n; }
-  function waLink(key){ return 'https://wa.me/' + BLACK.whats + '?text=' + encodeURIComponent(BLACK.msgs[key] || BLACK.msgs.duvida); }
+  function waLink(key){ return 'https://wa.me/' + BLACK.whats + '?text=' + encodeURIComponent((BLACK.msgs[key] || BLACK.msgs.duvida).replace('{cupom}', ATUALIZA.cupom)); }
+  function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
   function comDesconto(p){ return Math.round(p * (100 - BLACK.desconto)) / 100; }
 
   /* ---------- Fase da Black (pre | live | fim) ---------- */
@@ -1000,6 +1222,12 @@ var ATUALIZA = {
   $('#atLanding').href = ATUALIZA.landing;
   $('#atPreco').textContent = ATUALIZA.preco;
   if(Date.now() >= Date.parse(ATUALIZA.lancamento) && PREVIEW !== 'pre') $('#atLanc').innerHTML = '<svg class="i"><use href="#i-star"/></svg>Inscrições abertas';
+  /* textos que vêm da configuração */
+  $$('[data-cupom]').forEach(function(el){ el.textContent = BLACK.cupom; });
+  $$('[data-cupom-at]').forEach(function(el){ el.textContent = ATUALIZA.cupom; });
+  $$('[data-desc]').forEach(function(el){ el.textContent = BLACK.desconto + '%'; });
+  $$('[data-at-preco]').forEach(function(el){ el.textContent = ATUALIZA.preco.replace('R$ ', ''); });
+  $('#tkCursos').textContent = CURSOS.map(function(c){ return c.curto || c.nome; }).join(', ').replace(/, ([^,]*)$/, ' e $1');
 
   /* ---------- Cards dos cursos ---------- */
   var grid = $('#grid');
@@ -1016,12 +1244,14 @@ var ATUALIZA = {
           '<span class="de" data-show="live pre">De <s>' + brl(c.preco) + '</s></span>' +
           '<span class="por" data-show="live pre"><small>por</small>' + brl(novo) + '</span>' +
           '<span class="por" data-show="fim">' + brl(c.preco) + '</span>' +
-          '<span class="cup" data-show="live pre">com o cupom <button class="cup-btn" type="button" data-copy aria-label="Copiar o cupom ' + BLACK.cupom + '">' + BLACK.cupom + '<svg class="i"><use href="#i-copy"/></svg></button></span>' +
+          '<span class="cup sem-cupom" data-show="live pre">com o cupom do presente · <a class="cup-link" href="#presente">pegar o meu</a></span>' +
+          '<span class="cup so-ganhou" data-show="live pre">com o seu cupom <button class="cup-btn" type="button" data-copy="cursos" aria-label="Copiar o cupom ' + BLACK.cupom + '">' + BLACK.cupom + '<svg class="i"><use href="#i-copy"/></svg></button></span>' +
           '<span class="parc">em até ' + BLACK.parcelas + 'x sem juros no cartão</span>' +
         '</div>' +
-        '<a class="btn btn-red btn-block" href="' + c.comprar + '" data-buy data-show="live pre">Garantir com ' + BLACK.desconto + '% OFF <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>' +
+        '<a class="btn btn-red btn-block" href="' + c.comprar + '" data-buy="' + c.id + '" data-show="live pre"><svg class="i"><use href="#i-cart"/></svg>Comprar com ' + BLACK.desconto + '% OFF <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>' +
         '<a class="btn btn-red btn-block" href="' + c.comprar + '" data-show="fim">Comprar <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>' +
-        '<span class="buy-note" data-show="live pre">O cupom é copiado sozinho ao clicar</span>' +
+        '<span class="buy-note sem-cupom" data-show="live pre">Primeiro, um cadastro rápido libera o seu cupom</span>' +
+        '<span class="buy-note so-ganhou" data-show="live pre">O cupom é copiado e você vai direto para o carrinho</span>' +
         '<a class="card-more" href="' + c.saiba + '" target="_blank" rel="noopener">Ver detalhes do curso <svg class="i"><use href="#i-ext"/></svg></a>' +
       '</div>' +
     '</article>';
@@ -1034,7 +1264,7 @@ var ATUALIZA = {
     var um = itens.map(function(t){ return '<span>' + t + star + '</span>'; }).join('');
     return um + um + um + um;
   }
-  $('#tape1').innerHTML = fita(['Black Talks', 'Atualiza Talks ME ' + ATUALIZA.preco, 'Gire a roleta', 'Até 6 meses grátis', BLACK.desconto + '% OFF nos cursos virtuais', 'Cupom ' + BLACK.cupom, 'Só até 30/11']);
+  $('#tape1').innerHTML = fita(['Black Talks', 'Cadastre-se e ganhe', BLACK.desconto + '% OFF nos cursos virtuais', 'Atualiza Talks ME ' + ATUALIZA.preco, 'Comprou? Gire a roleta', 'Até 6 meses grátis', 'Só até 30/11']);
   $('#tape2').innerHTML = fita(['Atualiza Talks ME', '1º mês ' + ATUALIZA.preco, 'Emergências Pediátricas', 'Emergency POCUS 2.0', 'POCUS Cardíaco', 'Choque', 'Black Talks']);
 
   /* ---------- Carrossel ---------- */
@@ -1042,7 +1272,9 @@ var ATUALIZA = {
     var novo = comDesconto(c.preco);
     return {
       html: '<a class="sl" href="#c-' + c.id + '" aria-label="' + c.nome + ': de ' + brl(c.preco) + ' por ' + brl(novo) + '"><img src="' + c.img + '" alt="" width="700" height="430" draggable="false" /><span class="stk">-' + BLACK.desconto + '%</span></a>',
-      cap: '<div class="car-cap-t"><b>' + c.nome + '</b><span>de <s>' + brl(c.preco) + '</s> por <strong>' + brl(novo) + '</strong></span><em>com o cupom ' + BLACK.cupom + '</em></div><a class="btn btn-red" href="#c-' + c.id + '">Quero esse</a>'
+      cap: F === 'fim'
+        ? '<div class="car-cap-t"><b>' + c.nome + '</b><span>' + brl(c.preco) + '</span></div><a class="btn btn-red" href="' + c.comprar + '">Comprar</a>'
+        : '<div class="car-cap-t"><b>' + c.nome + '</b><span>de <s>' + brl(c.preco) + '</s> por <strong>' + brl(novo) + '</strong></span><em>com o cupom do presente</em></div><a class="btn btn-red" href="' + c.comprar + '" data-buy="' + c.id + '"><svg class="i"><use href="#i-cart"/></svg>Comprar</a>'
     };
   });
   slides.splice(Math.min(ATUALIZA.posicao, slides.length), 0, {
@@ -1053,14 +1285,26 @@ var ATUALIZA = {
           '</div></div></a>',
     cap: '<div class="car-cap-t"><b>Atualiza Talks ME</b><span>1º mês por <strong>' + ATUALIZA.preco + '</strong></span><em>condição exclusiva da Black</em></div><a class="btn btn-red" href="#atualiza">Quero esse</a>'
   });
-  /* banner da roleta (some depois que a Black acaba) */
-  if(F !== 'fim') slides.splice(Math.min(ATUALIZA.posicao + 1, slides.length), 0, {
-    html: '<a class="sl" href="roleta.html" aria-label="Roleta Black Talks: gire e ganhe até 6 meses grátis do Atualiza Talks ME"><div class="rlb">' +
-            '<div class="rlb-w"><svg viewBox="-200 -200 400 400" data-roleta></svg></div>' +
-            '<div class="rlb-t"><span class="rlb-k">Roleta Black Talks</span><b>Gire e ganhe<br />até <em>6 meses</em><br />grátis</b><span class="rlb-s">do Atualiza Talks ME</span><span class="rlb-pill">Cadastre-se e gire</span></div>' +
-          '</div></a>',
-    cap: '<div class="car-cap-t"><b>Roleta Black Talks</b><span>Ganhe até <strong>6 meses grátis</strong> do Atualiza Talks ME</span><em>1 giro por pessoa</em></div><a class="btn btn-red" href="roleta.html">Girar</a>'
-  });
+  /* banner do presente e da roleta (somem depois que a Black acaba) */
+  if(F !== 'fim'){
+    slides.splice(Math.min(ATUALIZA.posicao + 1, slides.length), 0, {
+      html: '<a class="sl" href="#presente" aria-label="Presente Black Talks: cadastre-se e ganhe ' + BLACK.desconto + '% OFF nos cursos virtuais e o Atualiza Talks ME por ' + ATUALIZA.preco + '"><div class="prb">' +
+              '<div class="prb-t"><span class="prb-k"><svg class="i"><use href="#i-gift"/></svg>Presente Black Talks</span><b>Cadastre-se<br />e ganhe <em>2<br />cupons</em></b><span class="prb-pill">Liberação na hora</span></div>' +
+              '<div class="prb-tks">' +
+                '<div class="prb-tk"><span><b>' + BLACK.desconto + '%</b><small>OFF</small></span><i>em qualquer curso virtual</i></div>' +
+                '<div class="prb-tk"><span><small>R$</small><b>' + ATUALIZA.preco.replace('R$ ', '') + '</b></span><i>no 1º mês do Atualiza Talks ME</i></div>' +
+              '</div>' +
+            '</div></a>',
+      cap: '<div class="car-cap-t"><b>Presente Black Talks</b><span><strong>' + BLACK.desconto + '% OFF</strong> nos cursos + Atualiza por <strong>' + ATUALIZA.preco + '</strong></span><em>cadastro grátis em 10 segundos</em></div><a class="btn btn-red" href="#presente">Quero</a>'
+    });
+    slides.push({
+      html: '<a class="sl" href="roleta.html" aria-label="Roleta Black Talks: comprou, gire e ganhe até 6 meses grátis do Atualiza Talks ME"><div class="rlb">' +
+              '<div class="rlb-w"><svg viewBox="-200 -200 400 400" data-roleta></svg></div>' +
+              '<div class="rlb-t"><span class="rlb-k">Roleta Black Talks</span><b>Comprou?<br />Gire e ganhe<br />até <em>6 meses</em></b><span class="rlb-s">grátis do Atualiza Talks ME</span><span class="rlb-pill">Para quem comprou na Black</span></div>' +
+            '</div></a>',
+      cap: '<div class="car-cap-t"><b>Roleta Black Talks</b><span>Comprou? Ganhe até <strong>6 meses grátis</strong> do Atualiza Talks ME</span><em>liberada depois da compra</em></div><a class="btn btn-red" href="roleta.html">Girar</a>'
+    });
+  }
 
   var track = $('#carTrack'), dots = $('#carDots'), cap = $('#carCap'), prog = $('#carProg');
   track.innerHTML = slides.map(function(s){ return s.html; }).join('');
@@ -1142,29 +1386,42 @@ var ATUALIZA = {
     toastEl.classList.add('on');
     clearTimeout(toastT); toastT = setTimeout(function(){ toastEl.classList.remove('on'); }, 2600);
   }
-  function copiar(cb){
+  function copiar(txt, cb){
     var feito = function(){ if(cb) cb(); };
     var fallback = function(){
       var ta = document.createElement('textarea');
-      ta.value = BLACK.cupom; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      ta.value = txt; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
       document.body.appendChild(ta); ta.select();
       try{ document.execCommand('copy'); }catch(e){}
       document.body.removeChild(ta); feito();
     };
     if(navigator.clipboard && window.isSecureContext){
-      navigator.clipboard.writeText(BLACK.cupom).then(feito, fallback);
+      navigator.clipboard.writeText(txt).then(feito, fallback);
     }else fallback();
   }
+  function curso(id){ for(var i = 0; i < CURSOS.length; i++) if(CURSOS[i].id === id) return CURSOS[i]; return null; }
   document.addEventListener('click', function(e){
     var c = e.target.closest('[data-copy]');
-    if(c){ e.preventDefault(); copiar(function(){ toast('Cupom ' + BLACK.cupom + ' copiado! Cole no checkout.'); }); return; }
-    var b = e.target.closest('[data-buy]');
-    if(b && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0){
+    if(c){
       e.preventDefault();
-      var href = b.href;
-      copiar(function(){ toast('Cupom ' + BLACK.cupom + ' copiado! Levando você ao checkout…'); });
-      setTimeout(function(){ location.href = href; }, 900);
+      var at = c.getAttribute('data-copy') === 'atualiza', cod = at ? ATUALIZA.cupom : BLACK.cupom;
+      copiar(cod, function(){ toast('Cupom ' + cod + ' copiado! ' + (at ? 'Envie para a nossa central.' : 'Cole no carrinho.')); });
+      return;
     }
+    if(F === 'fim' || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+    /* comprar curso: sem cadastro, vai antes para o presente; com cadastro, copia o cupom e vai ao carrinho */
+    var b = e.target.closest('[data-buy]');
+    if(b){
+      e.preventDefault();
+      if(!ganhou){ irPresente(b.getAttribute('data-buy')); return; }
+      var href = b.href;
+      copiar(BLACK.cupom, function(){ toast('Cupom ' + BLACK.cupom + ' copiado! Levando você ao carrinho…'); });
+      setTimeout(function(){ location.href = href; }, 900);
+      return;
+    }
+    /* Atualiza Talks ME pela central: sem cadastro, vai antes para o presente */
+    var a = e.target.closest('[data-at-buy]');
+    if(a && !ganhou){ e.preventDefault(); irPresente('atualiza'); }
   });
 
   /* ---------- Confete ---------- */
@@ -1215,27 +1472,25 @@ var ATUALIZA = {
     setTimeout(function(){ burst(x, y - 40, 80, 3.2, 17); }, 260);
   }
 
-  /* ---------- Presente ---------- */
+  /* ---------- Presente: pop-up que leva ao cadastro ---------- */
   var gm = $('#gm'), card = $('.gm-card', gm), s1 = $('#gmS1'), s2 = $('#gmS2'), box = $('#giftBox'), fab = $('#giftFab');
-  var ganhou = store('bt_presente') === '1';
-  var lastFocus = null, abriu = false;
-  function marcarGanhou(){
-    ganhou = true; store('bt_presente', '1');
-    document.body.classList.add('ganhou');
-    fab.hidden = true;
-  }
+  var KEY_CUP = 'bt_cupons_v2', lead = null;
+  try{ lead = JSON.parse(store(KEY_CUP) || 'null'); }catch(e){ lead = null; }
+  var ganhou = !!(lead && lead.email);
+  var lastFocus = null, abriu = false, pend = null;
   if(ganhou) document.body.classList.add('ganhou');
   function mostrar(){
-    if(!gm.hidden) return;
+    if(!gm.hidden || ganhou) return;
     lastFocus = document.activeElement;
-    s1.hidden = ganhou; s2.hidden = !ganhou;
-    card.classList.toggle('won', ganhou);
-    if(!ganhou){ box.classList.remove('open', 'shake'); }
+    s1.hidden = false; s2.hidden = true;
+    card.classList.remove('won');
+    box.classList.remove('open', 'shake');
     gm.hidden = false;
     document.body.classList.add('lock');
     requestAnimationFrame(function(){ gm.classList.add('on'); });
-    setTimeout(function(){ (ganhou ? card : box).focus({preventScroll:true}); }, 60);
+    setTimeout(function(){ box.focus({preventScroll:true}); }, 60);
     fab.hidden = true;
+    try{ sessionStorage.setItem('bt_pop', '1'); }catch(e){}
   }
   function fechar(){
     if(gm.hidden) return;
@@ -1250,27 +1505,103 @@ var ATUALIZA = {
     box.classList.add('shake');
     setTimeout(function(){
       box.classList.remove('shake'); box.classList.add('open');
-      festa(box);
       if(navigator.vibrate) try{ navigator.vibrate([40, 30, 60]); }catch(e){}
       setTimeout(function(){
         s1.hidden = true; s2.hidden = false;
         card.classList.add('won');
-        marcarGanhou();
         card.focus({preventScroll:true});
         abriu = false;
       }, 520);
     }, RM ? 0 : 480);
   });
-  $$('[data-close]', gm).forEach(function(el){
-    el.addEventListener('click', function(e){
-      if(el.getAttribute('href') === '#cursos'){
-        e.preventDefault(); fechar();
-        setTimeout(function(){ $('#cursos').scrollIntoView({behavior: RM ? 'auto' : 'smooth'}); }, 120);
-        return;
-      }
-      fechar();
-    });
+  $$('[data-close]', gm).forEach(function(el){ el.addEventListener('click', fechar); });
+  $('[data-go-presente]', gm).addEventListener('click', function(e){
+    e.preventDefault(); fechar();
+    setTimeout(function(){ irPresente(null, true); }, 120);
   });
+
+  /* leva para a seção do presente; "quer" = o que a pessoa ia comprar (id do curso ou 'atualiza') */
+  function irPresente(quer, semAviso){
+    if(quer) pend = quer;
+    var sec = $('#presente');
+    sec.scrollIntoView({behavior: RM ? 'auto' : 'smooth', block: innerWidth < 920 ? 'start' : 'center'});
+    if(!semAviso) toast(quer === 'atualiza' ? 'Libere o cupom do Atualiza no cadastro rápido' : 'Falta só o cadastro para liberar seus ' + BLACK.desconto + '% OFF');
+    if(innerWidth >= 920) setTimeout(function(){ try{ $('#prNome').focus({preventScroll:true}); }catch(e){} }, 650);
+  }
+
+  /* o botão "Garanta seu presente" some quando a seção do presente está na tela */
+  var prVis = false;
+  function fabUpdate(){ fab.classList.toggle('off', prVis); }
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ prVis = es[es.length - 1].isIntersecting; fabUpdate(); }, {threshold: .25}).observe($('#presente'));
+  }
+
+  /* ---------- Presente: cadastro e cupons ---------- */
+  function fmtTel(d){
+    d = String(d).replace(/\D/g, '').slice(0, 11);
+    if(d.length <= 2) return d.length ? '(' + d : '';
+    if(d.length <= 6) return '(' + d.slice(0, 2) + ') ' + d.slice(2);
+    if(d.length <= 10) return '(' + d.slice(0, 2) + ') ' + d.slice(2, 6) + '-' + d.slice(6);
+    return '(' + d.slice(0, 2) + ') ' + d.slice(2, 7) + '-' + d.slice(7);
+  }
+  function primeiroNome(s){ return String(s || '').trim().split(/\s+/)[0] || ''; }
+  function enviar(dados){
+    var url = window.ROLETA && ROLETA.leadsUrl;
+    if(!url) return Promise.resolve(null);
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var to = setTimeout(function(){ if(ctrl) ctrl.abort(); }, 8000);
+    return fetch(url, {method:'POST', body:JSON.stringify(dados), headers:{'Content-Type':'text/plain;charset=utf-8'}, signal:ctrl ? ctrl.signal : undefined, keepalive:true})
+      .then(function(r){ return r.json(); })
+      .catch(function(){ return null; })
+      .then(function(r){ clearTimeout(to); return r; });
+  }
+  function mostrarCupons(festejar){
+    document.body.classList.add('ganhou');
+    fab.hidden = true;
+    $('#prOla').textContent = lead && lead.nome ? 'Parabéns, ' + primeiroNome(lead.nome) + '!' : 'Parabéns!';
+    var go = $('#prGo'), c = pend && pend !== 'atualiza' ? curso(pend) : null;
+    if(c){
+      go.href = c.comprar; go.setAttribute('data-buy', c.id);
+      go.innerHTML = '<svg class="i"><use href="#i-cart"/></svg>Continuar: ' + esc(c.curto || c.nome) + ' com ' + BLACK.desconto + '% OFF';
+    }
+    if(festejar){
+      $$('.tk').forEach(function(t){ t.classList.remove('rev'); void t.offsetWidth; t.classList.add('rev'); });
+      var okBox = $('#prOkBox');
+      if(innerWidth < 920) $('#presente .tks').scrollIntoView({behavior: RM ? 'auto' : 'smooth', block: 'start'});
+      setTimeout(function(){ festa(okBox); okBox.focus({preventScroll:true}); }, RM ? 0 : 380);
+      if(navigator.vibrate) try{ navigator.vibrate([40, 30, 60]); }catch(e){}
+    }
+  }
+  var prTel = $('#prTel');
+  prTel.addEventListener('input', function(){ var p = prTel.selectionStart === prTel.value.length; prTel.value = fmtTel(prTel.value); if(p) prTel.setSelectionRange(prTel.value.length, prTel.value.length); });
+  $$('#prForm input').forEach(function(i){
+    i.addEventListener('input', function(){ var f = i.closest('.fld, .chk'); if(f) f.classList.remove('err'); });
+    i.addEventListener('change', function(){ var f = i.closest('.fld, .chk'); if(f) f.classList.remove('err'); });
+  });
+  $('#prForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var nome = $('#prNome').value.trim().replace(/\s+/g, ' ');
+    var email = $('#prEmail').value.trim().toLowerCase();
+    var t = prTel.value.replace(/\D/g, '');
+    var ok = true, first = null;
+    function bad(id, inp){ $(id).classList.add('err'); ok = false; if(!first) first = inp; }
+    if(nome.length < 3 || nome.split(' ').length < 2) bad('#prNomeF', $('#prNome'));
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) bad('#prEmailF', $('#prEmail'));
+    if(t.length < 10 || t.length > 11) bad('#prTelF', prTel);
+    if(!$('#prOk').checked) bad('#prOkF', $('#prOk'));
+    var pc = $('#prCard');
+    if(!ok){ first.focus(); pc.classList.remove('shake'); void pc.offsetWidth; pc.classList.add('shake'); return; }
+    var btn = $('#prBtn'); btn.disabled = true; btn.textContent = 'Liberando seus cupons…';
+    lead = {nome:nome, email:email, tel:t, data:new Date().toISOString()};
+    store(KEY_CUP, JSON.stringify(lead));
+    ganhou = true;
+    var pronto = false;
+    function libera(){ if(pronto) return; pronto = true; mostrarCupons(true); }
+    /* a planilha recebe o cadastro; se ela demorar, os cupons aparecem mesmo assim */
+    enviar({acao:'presente', nome:nome, email:email, telefone:t, aceite:true, interesse:pend || '', origem:location.href}).then(libera);
+    setTimeout(libera, 2500);
+  });
+  if(ganhou) mostrarCupons(false);
   document.addEventListener('keydown', function(e){
     if(gm.hidden) return;
     if(e.key === 'Escape') fechar();
@@ -1282,9 +1613,17 @@ var ATUALIZA = {
       else if(!e.shiftKey && document.activeElement === z){ e.preventDefault(); a.focus(); }
     }
   });
-  $$('[data-open-gift]').forEach(function(b){ b.addEventListener('click', mostrar); });
-  if(F !== 'fim'){
-    if(!ganhou) setTimeout(mostrar, BLACK.popupSegundos * 1000);
+  /* pop-up: 1 vez por visita, só para quem ainda não pegou os cupons e não está já no cadastro */
+  if(F !== 'fim' && !ganhou){
+    var jaViu = false;
+    try{ jaViu = sessionStorage.getItem('bt_pop') === '1'; }catch(e){}
+    if(jaViu || location.hash === '#presente') fab.hidden = false;
+    else setTimeout(function(){
+      var ae = document.activeElement;
+      if(ganhou) return;
+      if(prVis || (ae && ae.closest && ae.closest('#prForm'))){ fab.hidden = false; return; }
+      mostrar();
+    }, BLACK.popupSegundos * 1000);
   }
 
   /* ---------- Balão do WhatsApp ---------- */
