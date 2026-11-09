@@ -83,7 +83,9 @@ body[data-fase=fim] [data-show]:not([data-show~=fim]){display:none!important}
 .by img{height:28px;width:auto}
 
 /* hero */
-.hero{position:relative;padding:10px 0 80px;overflow:hidden}
+.hero{position:relative;padding:10px 0 80px;overflow:hidden;
+  /* foto do Atualiza Talks ME (os prêmios da roleta são do Atualiza) */
+  background:linear-gradient(90deg,rgba(5,5,5,.9) 0%,rgba(5,5,5,.66) 50%,rgba(5,5,5,.5) 100%),linear-gradient(180deg,rgba(5,5,5,.2) 60%,var(--bg) 100%),url(img/atualiza-corredor.webp) 60% 40%/cover no-repeat}
 .hero::before{content:'';position:absolute;right:-12%;top:-8%;width:72vw;height:72vw;max-width:980px;max-height:980px;border-radius:50%;background:radial-gradient(circle,rgba(211,28,43,.32),rgba(211,28,43,0) 62%);pointer-events:none}
 .hero-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"t w" "p w";column-gap:clamp(28px,5vw,80px);align-items:center}
 .h-t{grid-area:t;align-self:end}

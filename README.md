@@ -73,3 +73,10 @@ janela anônima.
 
 `img/og-black-talks.jpg` e `img/og-roleta.jpg` são geradas a partir de `fontes/og.html` com
 `fontes/gerar-og.ps1` (Edge em modo headless). Mudou preço ou texto? Edite o HTML e rode o script.
+
+## Foto do Atualiza Talks ME
+
+`img/atualiza-corredor.webp` (corredor de emergência em vermelho) vai por trás de tudo que fala do Atualiza:
+banner do Atualiza e da roleta no carrossel do topo, seção `#atualiza`, cupom do Atualiza no presente e no pop-up,
+seção da roleta, topo do `roleta.html` e as imagens de compartilhamento. No `index.html` ela entra pela variável
+CSS `--foto-at` (no `:root`): para trocar a foto, substitua o arquivo ou mude a variável.

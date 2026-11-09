@@ -21,6 +21,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
 :root{
+  /* foto do Atualiza Talks ME (corredor de emergência em vermelho): vai por trás de tudo que fala do Atualiza */
+  --foto-at:url(img/atualiza-corredor.webp);
   --bg:#050505;
   --bg2:#0B0B0D;
   --surface:#121214;
@@ -179,7 +181,7 @@ body.ganhou .bar-cup{display:inline-flex}
 .car-dots button[aria-current=true]{width:28px;background:var(--red-hi)}
 
 /* banner do Atualiza Talks (feito em código, mesma proporção 700x430) */
-.atb{position:absolute;inset:0;container-type:inline-size;background:radial-gradient(120% 90% at 85% 50%,#4A0610 0%,#16070A 45%,#050505 75%);overflow:hidden}
+.atb{position:absolute;inset:0;container-type:inline-size;background:linear-gradient(90deg,rgba(5,5,5,.9) 0%,rgba(5,5,5,.62) 50%,rgba(5,5,5,.3) 100%),var(--foto-at) 60% 45%/cover no-repeat,#050505;overflow:hidden}
 .atb::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 2px,transparent 2px 18px)}
 .atb-in{position:absolute;inset:0;display:grid;grid-template-columns:1fr auto;align-items:center;gap:4cqw;padding:0 7cqw}
 .atb-brand{display:flex;align-items:center;gap:3cqw}
@@ -268,6 +270,7 @@ h2{font-family:var(--display);font-weight:900;font-style:italic;text-transform:u
 .tk-v span{font-size:1.5rem}
 .tk-v small{font-size:1.15rem;font-style:normal;font-weight:800;letter-spacing:.04em}
 .tk-r{display:flex;flex-direction:column;justify-content:center;gap:10px;padding:14px 18px 14px 20px;min-width:0}
+.tk-at .tk-r{background:linear-gradient(90deg,rgba(11,11,13,.95) 0%,rgba(11,11,13,.82) 55%,rgba(11,11,13,.5) 100%),var(--foto-at) 50% 42%/cover no-repeat}
 .tk-t b{display:block;color:#fff;font-weight:800;font-size:1.04rem;line-height:1.25}
 .tk-t span{display:block;margin-top:2px;color:var(--dim);font-size:.84rem;line-height:1.35}
 .tk-c{display:flex;align-items:center}
@@ -326,6 +329,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 .prb-tk{display:grid;grid-template-columns:15cqw 1fr;height:13cqw;border-radius:2.4cqw;overflow:hidden;background:#0B0B0D;border:.3cqw solid rgba(255,255,255,.18);box-shadow:0 3cqw 6cqw rgba(0,0,0,.5)}
 .prb-tk:first-child{transform:rotate(-5deg) translateX(-2cqw)}
 .prb-tk:last-child{transform:rotate(3deg) translateX(2cqw)}
+.prb-tk:last-child > i{background:linear-gradient(90deg,rgba(11,11,13,.92) 0%,rgba(11,11,13,.6) 100%),var(--foto-at) 50% 42%/cover no-repeat}
 .prb-tk > span{display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(160deg,var(--red-hi),var(--red-deep));color:#fff;font-family:var(--display);font-weight:900;font-style:italic;line-height:.85;border-right:.4cqw dashed rgba(5,5,5,.55)}
 .prb-tk > span b{font-size:5.6cqw}
 .prb-tk > span small{font-size:2.3cqw;font-style:normal;font-weight:800}
@@ -355,9 +359,9 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 /* destaque do Atualiza (vem antes dos cursos) */
 .at-sec{padding-top:clamp(50px,6vw,90px)}
 .at-sec .at-box{border:2px solid rgba(232,48,63,.65);padding-top:clamp(56px,6vw,76px);
-  background:radial-gradient(70% 90% at 100% 0%,rgba(211,28,43,.42),transparent 60%),radial-gradient(60% 80% at 0% 100%,rgba(158,10,22,.35),transparent 60%),linear-gradient(180deg,#151517,#0A0A0B);
+  background:linear-gradient(90deg,rgba(10,10,11,.94) 0%,rgba(10,10,11,.8) 45%,rgba(10,10,11,.42) 100%),var(--foto-at) 62% 45%/cover no-repeat,#0A0A0B;
   box-shadow:0 50px 120px -50px rgba(211,28,43,.75),0 0 0 8px rgba(211,28,43,.07)}
-.at-sec .at-box::after{width:520px;height:520px;right:-90px;bottom:-120px}
+.at-sec .at-box::after{display:none}
 .at-flag{position:absolute;top:0;left:50%;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:0 0 14px 14px;background:var(--red);color:#fff;font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;z-index:2}
 .at-flag .i{width:14px;height:14px}
 .at-sec .at-brand svg{width:64px;height:64px}
@@ -372,7 +376,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 
 /* ===== Roleta ===== */
 .rl-box{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,4vw,60px);align-items:center;padding:clamp(28px,4.4vw,60px);border-radius:28px;overflow:hidden;
-  background:radial-gradient(80% 110% at 85% 50%,rgba(211,28,43,.4),transparent 60%),linear-gradient(180deg,#141416,#0A0A0B);border:1px solid rgba(232,48,63,.35)}
+  background:linear-gradient(90deg,rgba(10,10,11,.92) 0%,rgba(10,10,11,.74) 50%,rgba(10,10,11,.55) 100%),var(--foto-at) 60% 45%/cover no-repeat,#0A0A0B;border:1px solid rgba(232,48,63,.35)}
 .rl-txt h2{font-size:clamp(2.3rem,4.4vw,3.8rem)}
 .rl-txt > p{margin-top:16px;color:var(--muted);font-size:1.05rem;max-width:34em}
 .rl-chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 26px}
@@ -393,7 +397,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 .rl-l.b{animation-delay:.55s}
 @keyframes luz{50%{fill:#4A0610}}
 /* banner da roleta no carrossel */
-.rlb{position:absolute;inset:0;container-type:inline-size;background:radial-gradient(110% 100% at 20% 50%,#5A0812 0%,#1A0609 45%,#050505 80%);overflow:hidden}
+.rlb{position:absolute;inset:0;container-type:inline-size;background:linear-gradient(270deg,rgba(5,5,5,.9) 0%,rgba(5,5,5,.62) 50%,rgba(5,5,5,.45) 100%),var(--foto-at) 45% 45%/cover no-repeat,#050505;overflow:hidden}
 .rlb::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 2px,transparent 2px 18px)}
 .rlb-w{position:absolute;left:-12cqw;top:50%;width:66cqw;height:66cqw;margin-top:-33cqw;animation:spin 22s linear infinite;filter:drop-shadow(0 0 4cqw rgba(232,48,63,.45))}
 .rlb-w svg{width:100%;height:100%;display:block}
@@ -532,6 +536,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 .mtk{display:grid;grid-template-columns:104px minmax(0,1fr);align-items:stretch;min-height:66px;border-radius:14px;overflow:hidden;background:#0B0B0D;border:1px solid rgba(232,48,63,.5);text-align:left}
 .mtk b{display:flex;align-items:center;justify-content:center;gap:6px;background:linear-gradient(160deg,var(--red-hi),var(--red-deep));color:#fff;font-family:var(--display);font-weight:900;font-style:italic;font-size:1.7rem;line-height:.9;border-right:2px dashed rgba(5,5,5,.55)}
 .mtk > span{display:flex;flex-direction:column;justify-content:center;padding:8px 14px;color:#fff;font-weight:700;font-size:.92rem;line-height:1.25}
+.mtk-at > span{background:linear-gradient(90deg,rgba(11,11,13,.94) 0%,rgba(11,11,13,.62) 100%),var(--foto-at) 50% 42%/cover no-repeat}
 .mtk > span i{display:inline-flex;align-items:center;gap:5px;margin-top:3px;font-style:normal;font-weight:600;font-size:.74rem;color:var(--dim)}
 .mtk > span i .i{color:var(--red-text)}
 .gm-no{display:block;margin:12px auto 0;padding:6px 12px;font-size:.86rem;font-weight:600;color:var(--dim);text-decoration:underline;text-underline-offset:3px}
@@ -568,7 +573,9 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
   .hero-cta{justify-content:center}
   .car-nav{opacity:1}
   .at-box{grid-template-columns:minmax(0,1fr)}
+  .at-sec .at-box{background:linear-gradient(180deg,rgba(10,10,11,.55) 0%,rgba(10,10,11,.86) 38%,rgba(10,10,11,.94) 100%),var(--foto-at) 60% 0/auto 520px no-repeat,#0A0A0B}
   .rl-box{grid-template-columns:minmax(0,1fr)}
+  .rl-box{background:linear-gradient(180deg,rgba(10,10,11,.6) 0%,rgba(10,10,11,.86) 45%,rgba(10,10,11,.94) 100%),var(--foto-at) 55% 0/auto 520px no-repeat,#0A0A0B}
   .rl-mini{width:min(86%,340px);grid-row:1}
   .pr-box{grid-template-columns:minmax(0,1fr)}
   .pr-l{text-align:center}
@@ -802,7 +809,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
               </div>
             </div>
           </div>
-          <div class="tk">
+          <div class="tk tk-at">
             <div class="tk-v"><small>R$</small><b data-at-preco>9,90</b><small>1º mês</small></div>
             <div class="tk-r">
               <div class="tk-t"><b>no Atualiza Talks ME</b><span>Medicina de Emergência atualizada o ano todo</span></div>
@@ -1091,7 +1098,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
       <h2 class="pop2">2 cupons <span class="red">para você</span></h2>
       <div class="gm-tks pop3">
         <div class="mtk"><b><span data-desc>50%</span> OFF</b><span>em qualquer curso virtual<i><svg class="i"><use href="#i-lock"/></svg>Liberado no cadastro</i></span></div>
-        <div class="mtk"><b>R$ 9,90</b><span>no 1º mês do Atualiza Talks ME<i><svg class="i"><use href="#i-lock"/></svg>Liberado no cadastro</i></span></div>
+        <div class="mtk mtk-at"><b>R$ 9,90</b><span>no 1º mês do Atualiza Talks ME<i><svg class="i"><use href="#i-lock"/></svg>Liberado no cadastro</i></span></div>
       </div>
       <p class="gm-d pop3">Para liberar, é só um cadastro rápido: <b>nome, e-mail e WhatsApp</b>.</p>
       <a class="btn btn-red btn-block pop3" href="#presente" data-go-presente style="margin-top:18px">Liberar meus cupons <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
