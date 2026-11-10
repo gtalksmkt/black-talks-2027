@@ -351,7 +351,7 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
         <!-- Black encerrada -->
         <div data-show="fim" class="ready">
           <h2>A roleta terminou</h2>
-          <p>A Black Talks foi até 30 de novembro. Fale com o nosso time comercial para conhecer as condições atuais do Atualiza Talks ME.</p>
+          <p>A Black Talks terminou. Fale com o nosso time comercial para conhecer as condições atuais do Atualiza Talks ME.</p>
           <a class="btn btn-wa btn-block" href="#" data-wa><svg class="i"><use href="#i-wa"/></svg>Falar com o time comercial</a>
         </div>
       </div>
@@ -366,7 +366,7 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
       <div class="rule"><span class="ic"><svg class="i"><use href="#i-spin"/></svg></span><h3>Gire a roleta</h3><p>Todas as fatias têm a mesma chance. Os prêmios vão de 1 aula de degustação a 6 meses grátis.</p></div>
       <div class="rule"><span class="ic"><svg class="i"><use href="#i-gift"/></svg></span><h3>Resgate o prêmio</h3><p>Fale com o nosso time comercial pelo WhatsApp com o seu código. A gente confere o pedido e libera o prêmio no <a href="https://gtalksmkt.github.io/atualiza-talks-2027/" target="_blank" rel="noopener">Atualiza Talks ME</a>.</p></div>
     </div>
-    <p class="fine">Ação da Black Talks, de 23 a 30 de novembro de 2026, exclusiva para quem comprou na Black. Um giro por pessoa. O prêmio só é liberado depois que o time comercial confere o pedido. Os prêmios valem para o Atualiza Talks ME, curso da Emergency Talks.</p>
+    <p class="fine">Ação da Black Talks, por tempo limitado, exclusiva para quem comprou na Black. Um giro por pessoa. O prêmio só é liberado depois que o time comercial confere o pedido. Os prêmios valem para o Atualiza Talks ME, curso da Emergency Talks.</p>
   </div>
 </section>
 </main>
@@ -408,7 +408,7 @@ h1 .big{display:block;color:var(--red-hi);font-size:1.22em;white-space:nowrap;li
   /* ---------- fase ---------- */
   var Q = new URLSearchParams(location.search);
   var PREVIEW = /^(pre|live|fim)$/.test(Q.get('preview') || '') ? Q.get('preview') : null;
-  var T0 = Date.parse(ROLETA.inicio), T1 = Date.parse(ROLETA.fim);
+  var T0 = ROLETA.inicio ? Date.parse(ROLETA.inicio) : 0, T1 = ROLETA.fim ? Date.parse(ROLETA.fim) : Infinity;
   var F = PREVIEW || (Date.now() < T0 ? 'pre' : (Date.now() > T1 ? 'fim' : 'live'));
   document.body.setAttribute('data-fase', F);
 

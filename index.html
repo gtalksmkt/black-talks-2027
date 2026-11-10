@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Black Talks | A Black Friday do Grupo Talks · 50% OFF e Atualiza Talks ME por R$ 9,90</title>
-<meta name="description" content="Black Talks, a Black Friday do Grupo Talks: de 23 a 30 de novembro. Cadastre-se e ganhe 2 cupons: 50% OFF em qualquer curso virtual e o Atualiza Talks ME com o 1º mês por R$ 9,90." />
+<meta name="description" content="Black Talks, a Black Friday do Grupo Talks, já está no ar. Cadastre-se e ganhe 2 cupons: 50% OFF em qualquer curso virtual e o Atualiza Talks ME com o 1º mês por R$ 9,90." />
 <!-- Enquanto a página estiver em revisão, fica fora do Google. Tirar esta linha quando for ao ar. -->
 <meta name="robots" content="noindex, nofollow" />
 <meta name="theme-color" content="#050505" />
 <meta property="og:title" content="Black Talks · A Black Friday do Grupo Talks" />
-<meta property="og:description" content="Cadastre-se e ganhe 50% OFF em qualquer curso virtual e o Atualiza Talks ME com o 1º mês por R$ 9,90. Só de 23 a 30 de novembro." />
+<meta property="og:description" content="Cadastre-se e ganhe 50% OFF em qualquer curso virtual e o Atualiza Talks ME com o 1º mês por R$ 9,90. Já disponível, por tempo limitado." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://gtalksmkt.github.io/black-talks-2027/img/og-black-talks.jpg?v=2" />
 <meta property="og:image:width" content="1200" />
@@ -94,8 +94,6 @@ body.ganhou .sem-cupom{display:none!important}
 .bar-dot{width:8px;height:8px;border-radius:50%;background:#fff;flex:none;animation:ping 1.6s ease-out infinite}
 @keyframes ping{0%{box-shadow:0 0 0 0 rgba(255,255,255,.8)}80%,100%{box-shadow:0 0 0 9px rgba(255,255,255,0)}}
 .bar b{font-weight:800;letter-spacing:.04em}
-.bar-t{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:7px;background:#050505;font-variant-numeric:tabular-nums;font-weight:700;letter-spacing:.03em;white-space:nowrap}
-.bar-t .i{color:var(--red-text);font-size:.95em}
 .bar a.bar-go{display:inline-flex;align-items:center;gap:4px;text-decoration:underline;text-underline-offset:3px;font-weight:700;white-space:nowrap}
 .bar .s{display:none}
 .bar-cup{display:none;align-items:center;gap:6px;padding:3px 9px;border-radius:7px;border:1px dashed rgba(255,255,255,.7);font-weight:800;letter-spacing:.06em;font-size:.8rem}
@@ -136,13 +134,9 @@ body.ganhou .bar-cup{display:inline-flex}
 .hero-lead{max-width:34em;color:var(--muted);font-size:clamp(1.02rem,1.25vw,1.15rem)}
 .hero-lead b{color:#fff;font-weight:700}
 
-.cd{margin:30px 0 26px}
-.cd-l{display:block;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red-text);margin-bottom:10px}
-.cd-b{display:flex;align-items:flex-start;gap:8px}
-.cd-u{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:82px}
-.cd-u b{display:block;width:100%;padding:10px 0 8px;text-align:center;border-radius:12px;background:linear-gradient(180deg,#1C1C20,#101012);border:1px solid var(--line2);font-family:var(--display);font-weight:800;font-size:3rem;line-height:1;color:#fff;font-variant-numeric:tabular-nums;box-shadow:inset 0 -18px 24px -18px rgba(211,28,43,.45)}
-.cd-u small{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
-.cd-sep{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1;padding-top:12px;color:var(--red-hi);animation:blink 1s steps(1) infinite}
+/* sem contador desde 10/11: a Black não divulga mais data */
+.hero-b{padding-top:30px}
+.cd{margin:0 0 26px}
 .cd-fim{color:var(--muted)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px}
 .hero-cta .btn-ghost .i{color:var(--red-hi)}
@@ -175,6 +169,7 @@ body.ganhou .bar-cup{display:inline-flex}
 .car-cap-t s{color:var(--dim)}
 .car-cap-t strong{color:#fff;font-weight:800}
 .car-cap-t em{display:block;font-style:normal;color:var(--red-text);font-weight:700;font-size:.8rem;letter-spacing:.02em}
+.car-cap-t em.cap-mi{color:var(--dim);font-weight:600;font-size:.74rem}
 .car-cap .btn{min-height:44px;padding:0 16px;font-size:.9rem;border-radius:10px;flex:none}
 .car-dots{display:flex;justify-content:center;gap:8px;margin-top:14px}
 .car-dots button{width:9px;height:9px;border-radius:999px;background:rgba(255,255,255,.22);transition:width .3s var(--ease),background .3s}
@@ -354,8 +349,8 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 .at-val b{font-size:clamp(4.2rem,7vw,5.6rem);font-weight:900;font-style:italic}
 .at-note{display:block;font-size:.86rem;color:var(--dim);margin-bottom:22px}
 .at-price .btn + .btn{margin-top:10px}
-.at-lanc{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;font-size:.82rem;color:var(--muted)}
-.at-lanc .i{color:var(--red-hi)}
+/* valor do Atualiza depois do 1º mês, em letras miúdas logo abaixo do R$ 9,90 (só no site; as artes falam só do 1º mês) */
+.at-depois{display:block;margin:2px 0 10px;font-size:.78rem;font-weight:600;color:var(--muted);letter-spacing:.01em}
 /* destaque do Atualiza (vem antes dos cursos) */
 .at-sec{padding-top:clamp(50px,6vw,90px)}
 .at-sec .at-box{border:2px solid rgba(232,48,63,.65);padding-top:clamp(56px,6vw,76px);
@@ -432,7 +427,6 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 .final::before{content:'BLACK TALKS';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-4deg);font-family:var(--display);font-weight:900;font-style:italic;font-size:22vw;line-height:1;white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.12);pointer-events:none}
 .final-in{text-align:center}
 .final h2{font-size:clamp(2.6rem,6vw,5rem)}
-.final-t{display:inline-block;margin-top:10px;padding:4px 18px;border-radius:14px;background:#050505;color:#fff;font-variant-numeric:tabular-nums;font-style:normal}
 .final p{margin:18px auto 28px;max-width:34em;color:rgba(255,255,255,.88);font-size:1.08rem}
 .final .btn{background:#050505;color:#fff;box-shadow:0 14px 40px -10px rgba(0,0,0,.6)}
 .final .btn:hover{transform:translateY(-2px);background:#111}
@@ -569,7 +563,6 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
   .hero-a{text-align:center}
   .hero-lead{margin:0 auto}
   .hero-b{text-align:center}
-  .cd-b{justify-content:center}
   .hero-cta{justify-content:center}
   .car-nav{opacity:1}
   .at-box{grid-template-columns:minmax(0,1fr)}
@@ -600,9 +593,6 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
   .by img{height:24px}
   .bt-wm{font-size:1.25rem}
   .hero-t{font-size:clamp(4.6rem,25vw,7rem)}
-  .cd-u{min-width:0;flex:1}
-  .cd-u b{font-size:2.5rem;padding:9px 0 7px}
-  .cd-sep{font-size:2rem;padding-top:10px}
   .hero-cta .btn{width:100%}
   .car-cap{flex-direction:column;align-items:stretch;text-align:left}
   .car-cap .btn{width:100%}
@@ -692,18 +682,17 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 1.5 14.6 9.4H23l-6.8 4.9 2.6 8L12 17.4l-6.8 4.9 2.6-8L1 9.4h8.4Z"/></symbol>
 </svg>
 
-<!-- ===== Barra de urgência ===== -->
-<div class="bar" id="bar" role="region" aria-label="Prazo da Black Talks">
+<!-- ===== Barra do topo (sem data e sem contador desde 10/11) ===== -->
+<div class="bar" id="bar" role="region" aria-label="Black Talks">
   <span class="bar-dot" aria-hidden="true"></span>
   <span data-show="live">
-    <span class="l"><b>BLACK TALKS</b> · 50% OFF nos cursos virtuais e Atualiza Talks ME por R$ 9,90 · termina em</span>
-    <span class="s"><b>BLACK TALKS</b> · termina em</span>
+    <span class="l"><b>BLACK TALKS NO AR</b> · 50% OFF nos cursos virtuais e Atualiza Talks ME por R$ 9,90 no 1º mês</span>
+    <span class="s"><b>BLACK TALKS NO AR</b> · 50% OFF</span>
   </span>
   <span data-show="pre">
-    <span class="l">A <b>BLACK TALKS</b> começa em</span>
-    <span class="s"><b>BLACK TALKS</b> em</span>
+    <span class="l">A <b>BLACK TALKS</b> vem aí</span>
+    <span class="s"><b>BLACK TALKS</b> vem aí</span>
   </span>
-  <span data-show="live pre" class="bar-t"><svg class="i"><use href="#i-clock"/></svg><span data-timer>20:00:00</span></span>
   <span data-show="live" class="bar-cup" title="Seu cupom dos cursos virtuais">Seu cupom: <span data-cupom></span></span>
   <a data-show="live pre" class="bar-go sem-cupom" href="#presente">Ganhar meus cupons <svg class="i"><use href="#i-arrow"/></svg></a>
   <a data-show="live pre" class="bar-go so-ganhou" href="#cursos">Ver ofertas <svg class="i"><use href="#i-arrow"/></svg></a>
@@ -738,7 +727,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
   <div class="hero-ghost" aria-hidden="true">BLACK</div>
   <div class="wrap hero-in">
     <div class="hero-a">
-      <span class="chip"><span class="dot"></span>23 a 30 de novembro</span>
+      <span class="chip"><span class="dot"></span>Já disponível</span>
       <h1 class="hero-t"><span class="l1">Black</span><span class="l2">Talks<small>50% OFF</small></span></h1>
       <p class="hero-lead">A Black Friday do Grupo Talks chegou. Faça um cadastro rápido e ganhe 2 cupons: <b>50% OFF em qualquer curso virtual</b> e o <b>Atualiza Talks ME com o 1º mês por R$ 9,90</b>.</p>
     </div>
@@ -757,20 +746,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
     </div>
 
     <div class="hero-b">
-      <div class="cd" data-show="live pre">
-        <span class="cd-l" data-show="live">Os preços da Black acabam em</span>
-        <span class="cd-l" data-show="pre">A Black Talks começa em</span>
-        <div class="cd-b" role="timer" aria-live="off">
-          <div class="cd-u" id="cdDu" hidden><b id="cdD">00</b><small>dias</small></div>
-          <span class="cd-sep" id="cdDs" hidden>:</span>
-          <div class="cd-u"><b id="cdH">20</b><small>horas</small></div>
-          <span class="cd-sep">:</span>
-          <div class="cd-u"><b id="cdM">00</b><small>min</small></div>
-          <span class="cd-sep">:</span>
-          <div class="cd-u"><b id="cdS">00</b><small>seg</small></div>
-        </div>
-      </div>
-      <p class="cd cd-fim" data-show="fim">A Black Talks terminou no dia 30 de novembro. Fale com a nossa central para conhecer as condições atuais.</p>
+      <p class="cd cd-fim" data-show="fim">A Black Talks terminou. Fale com a nossa central para conhecer as condições atuais.</p>
       <div class="hero-cta">
         <a class="btn btn-red sem-cupom" href="#presente" data-show="live pre"><svg class="i"><use href="#i-gift"/></svg>Quero meus cupons <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
         <a class="btn btn-red so-ganhou" href="#cursos" data-show="live pre">Usar meus 50% OFF <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
@@ -797,7 +773,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
         <h2 class="sem-cupom">Cadastre-se e ganhe <span class="red">seu presente</span></h2>
         <h2 class="so-ganhou">Seus cupons estão <span class="red">liberados</span></h2>
         <p class="sem-cupom">São <b>2 cupons</b> para usar na Black Talks. Para liberar, é só deixar seu nome, e-mail e WhatsApp.</p>
-        <p class="so-ganhou">Toque no cupom para copiar. Os dois valem de 23 a 30 de novembro.</p>
+        <p class="so-ganhou">Toque no cupom para copiar. Os dois valem enquanto a Black Talks estiver no ar.</p>
         <div class="tks">
           <div class="tk">
             <div class="tk-v"><b data-desc>50%</b><span>OFF</span></div>
@@ -812,7 +788,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
           <div class="tk tk-at">
             <div class="tk-v"><small>R$</small><b data-at-preco>9,90</b><small>1º mês</small></div>
             <div class="tk-r">
-              <div class="tk-t"><b>no Atualiza Talks ME</b><span>Medicina de Emergência atualizada o ano todo</span></div>
+              <div class="tk-t"><b>no Atualiza Talks ME</b><span data-at-depois>Depois, R$ 299,90/mês · residentes: R$ 199,90/mês</span></div>
               <div class="tk-c">
                 <span class="tk-lock sem-cupom"><svg class="i"><use href="#i-lock"/></svg>Liberado no cadastro <i aria-hidden="true">••••••</i></span>
                 <button class="tk-code so-ganhou" type="button" data-copy="atualiza"><span data-cupom-at></span><svg class="i"><use href="#i-copy"/></svg></button>
@@ -885,11 +861,11 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
         <div class="at-price">
           <span class="at-pl">Condição Black Talks</span>
           <div class="at-val"><small>1º mês por</small><b id="atPreco">R$ 9,90</b></div>
+          <span class="at-depois" data-at-depois>Depois, R$ 299,90/mês · residentes: R$ 199,90/mês</span>
           <span class="at-note sem-cupom" data-show="live pre">Com o cupom do presente, pela nossa central de atendimento</span>
           <span class="at-note so-ganhou" data-show="live pre">Seu cupom: <b class="cup-inline" data-cupom-at></b> · garanta pela nossa central</span>
           <a class="btn btn-red btn-block" href="#" data-wa="atualiza" data-at-buy><svg class="i"><use href="#i-wa"/></svg>Quero o 1º mês por R$ 9,90</a>
           <a class="btn btn-ghost btn-block" id="atLanding" href="#" target="_blank" rel="noopener">Conhecer o Atualiza Talks ME <svg class="i"><use href="#i-ext"/></svg></a>
-          <span class="at-lanc" id="atLanc"><svg class="i"><use href="#i-star"/></svg>Lançamento no dia 25 de novembro</span>
           <a class="at-rl" href="#roleta" data-show="live pre"><svg class="i"><use href="#i-gift"/></svg><span>Comprou na Black? <b>Gire a roleta</b> e ganhe até 6 meses grátis</span><svg class="i"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
@@ -979,7 +955,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
     <div class="faq rv">
       <details>
         <summary>Até quando vale a Black Talks?<svg class="i"><use href="#i-plus"/></svg></summary>
-        <div class="a"><p>De 23 a 30 de novembro de 2026, até as 23h59 (horário de Brasília) do dia 30.</p></div>
+        <div class="a"><p>A Black Talks já está no ar e é por tempo limitado: os cupons valem enquanto a ação estiver ativa. Quando ela acabar, os cursos voltam ao preço normal. Por isso, se já quer, garanta o seu agora.</p></div>
       </details>
       <details>
         <summary>Quais cursos entram na Black?<svg class="i"><use href="#i-plus"/></svg></summary>
@@ -995,7 +971,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
       </details>
       <details>
         <summary>O cupom vale para o Atualiza Talks ME?<svg class="i"><use href="#i-plus"/></svg></summary>
-        <div class="a"><p>O Atualiza Talks ME tem um cupom só dele, que também vem no presente: o 1º mês por R$ 9,90. Com o cupom em mãos, <a href="#" data-wa="atualiza" data-at-buy>fale com a nossa central pelo WhatsApp</a> para garantir.</p></div>
+        <div class="a"><p>O Atualiza Talks ME tem um cupom só dele, que também vem no presente: o 1º mês por R$ 9,90. Depois, o valor é de <span data-at-valores>R$ 299,90 por mês (R$ 199,90 por mês para residentes)</span>. Com o cupom em mãos, <a href="#" data-wa="atualiza" data-at-buy>fale com a nossa central pelo WhatsApp</a> para garantir.</p></div>
       </details>
       <details data-show="live pre">
         <summary>Como funciona a roleta?<svg class="i"><use href="#i-plus"/></svg></summary>
@@ -1016,11 +992,11 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 <!-- ===== CTA final ===== -->
 <section class="final">
   <div class="wrap final-in">
-    <h2 data-show="live">A Black Talks acaba em<br /><span class="final-t" data-timer>20:00:00</span></h2>
-    <h2 data-show="pre">A Black Talks começa em<br /><span class="final-t" data-timer>00:00:00</span></h2>
+    <h2 data-show="live">Aproveite enquanto a<br />Black Talks está no ar</h2>
+    <h2 data-show="pre">A Black Talks vem aí</h2>
     <h2 data-show="fim">A Black Talks terminou</h2>
-    <p data-show="live">Depois disso, os cupons deixam de valer e os cursos voltam ao preço normal.</p>
-    <p data-show="pre">De 23 a 30 de novembro: 50% OFF em qualquer curso virtual e o Atualiza Talks ME com o 1º mês por R$ 9,90.</p>
+    <p data-show="live">É por tempo limitado: quando a Black acabar, os cupons deixam de valer e os cursos voltam ao preço normal.</p>
+    <p data-show="pre">50% OFF em qualquer curso virtual e o Atualiza Talks ME com o 1º mês por R$ 9,90.</p>
     <p data-show="fim">Obrigado por participar! Fale com a nossa central para conhecer as condições atuais.</p>
     <a class="btn sem-cupom" href="#presente" data-show="live pre"><svg class="i"><use href="#i-gift"/></svg>Quero meus cupons <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
     <a class="btn so-ganhou" href="#cursos" data-show="live pre">Quero meu desconto <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
@@ -1056,7 +1032,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
     </div>
     <div class="ft-bot">
       <span>© 2026 Grupo Talks. Todos os direitos reservados.</span>
-      <span>Ofertas válidas de 23 a 30/11/2026 ou enquanto os cupons estiverem ativos.</span>
+      <span>Ofertas por tempo limitado, válidas enquanto os cupons estiverem ativos.</span>
     </div>
   </div>
 </footer>
@@ -1116,11 +1092,13 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
    BLACK TALKS · tudo o que muda fica aqui
    ================================================================== */
 var BLACK = {
-  inicio: '2026-11-23T00:00:00-03:00',   // começo da Black (horário de Brasília)
-  fim:    '2026-11-30T23:59:59-03:00',   // fim da Black
+  /* Desde 10/11/2026 a Black não divulga data nem tem contador: está no ar até alguém encerrar.
+     Para encerrar, preencha "fim" com a data e hora (ex.: '2026-12-01T00:00:00-03:00') ou ponha agora mesmo
+     e publique: a página passa a mostrar "A Black Talks terminou". Nenhuma das duas datas aparece no site. */
+  inicio: '',                            // vazio = já está no ar
+  fim:    '',                            // vazio = sem data para acabar
   cupom: 'BLACK50',                      // cupom dos cursos virtuais (criar igual no WooCommerce), liberado no cadastro do presente
   desconto: 50,                          // % de desconto do cupom nos cursos virtuais
-  timerHoras: 20,                        // contador de urgência: recomeça a cada 20h para cada visitante
   popupSegundos: 8,                      // tempo na página até o pop-up do presente aparecer (1 vez por visita)
   parcelas: 6,                           // "em até 6x sem juros"
   whats: '5585998302705',                // central de atendimento
@@ -1182,7 +1160,9 @@ var CURSOS = [
 var ATUALIZA = {
   preco: 'R$ 9,90',
   cupom: 'ATUALIZA990',  // cupom do 1º mês por R$ 9,90, liberado no cadastro do presente (vai na mensagem para a central)
-  lancamento: '2026-11-25T00:00:00-03:00',
+  /* valor depois do 1º mês: aparece só no site, em letras miúdas ao lado do R$ 9,90 (as artes falam só do 1º mês) */
+  mensal: 'R$ 299,90',
+  residente: 'R$ 199,90',
   landing: 'https://gtalksmkt.github.io/atualiza-talks-2027/',
   posicao: 0           // em que lugar o banner dele entra no carrossel (0 = primeiro; o do presente vem logo depois)
 };
@@ -1212,7 +1192,8 @@ var ATUALIZA = {
   /* ---------- Fase da Black (pre | live | fim) ---------- */
   var Q = new URLSearchParams(location.search);
   var PREVIEW = /^(pre|live|fim)$/.test(Q.get('preview') || '') ? Q.get('preview') : null;
-  var T0 = Date.parse(BLACK.inicio), T1 = Date.parse(BLACK.fim);
+  /* datas vazias: começo = já está no ar; fim = não acaba sozinha */
+  var T0 = BLACK.inicio ? Date.parse(BLACK.inicio) : 0, T1 = BLACK.fim ? Date.parse(BLACK.fim) : Infinity;
   function fase(){
     if(PREVIEW) return PREVIEW;
     var t = Date.now();
@@ -1228,8 +1209,9 @@ var ATUALIZA = {
   });
   $('#atLanding').href = ATUALIZA.landing;
   $('#atPreco').textContent = ATUALIZA.preco;
-  if(Date.now() >= Date.parse(ATUALIZA.lancamento) && PREVIEW !== 'pre') $('#atLanc').innerHTML = '<svg class="i"><use href="#i-star"/></svg>Inscrições abertas';
   /* textos que vêm da configuração */
+  $$('[data-at-depois]').forEach(function(el){ el.textContent = 'Depois, ' + ATUALIZA.mensal + '/mês · residentes: ' + ATUALIZA.residente + '/mês'; });
+  $$('[data-at-valores]').forEach(function(el){ el.textContent = ATUALIZA.mensal + ' por mês (' + ATUALIZA.residente + ' por mês para residentes)'; });
   $$('[data-cupom]').forEach(function(el){ el.textContent = BLACK.cupom; });
   $$('[data-cupom-at]').forEach(function(el){ el.textContent = ATUALIZA.cupom; });
   $$('[data-desc]').forEach(function(el){ el.textContent = BLACK.desconto + '%'; });
@@ -1271,7 +1253,7 @@ var ATUALIZA = {
     var um = itens.map(function(t){ return '<span>' + t + star + '</span>'; }).join('');
     return um + um + um + um;
   }
-  $('#tape1').innerHTML = fita(['Black Talks', 'Cadastre-se e ganhe', BLACK.desconto + '% OFF nos cursos virtuais', 'Atualiza Talks ME ' + ATUALIZA.preco, 'Comprou? Gire a roleta', 'Até 6 meses grátis', 'Só até 30/11']);
+  $('#tape1').innerHTML = fita(['Black Talks', 'Cadastre-se e ganhe', BLACK.desconto + '% OFF nos cursos virtuais', 'Atualiza Talks ME ' + ATUALIZA.preco, 'Comprou? Gire a roleta', 'Até 6 meses grátis', 'Já disponível']);
   $('#tape2').innerHTML = fita(['Atualiza Talks ME', '1º mês ' + ATUALIZA.preco, 'Emergências Pediátricas', 'Emergency POCUS 2.0', 'POCUS Cardíaco', 'Choque', 'Black Talks']);
 
   /* ---------- Carrossel ---------- */
@@ -1287,10 +1269,10 @@ var ATUALIZA = {
   slides.splice(Math.min(ATUALIZA.posicao, slides.length), 0, {
     html: '<a class="sl" href="#atualiza" aria-label="Atualiza Talks ME: 1º mês por ' + ATUALIZA.preco + '"><div class="atb"><div class="atb-in">' +
             '<div><div class="atb-brand"><svg class="atb-mk"><use href="#glyph"/></svg><span class="wm"><span>atualiza</span><b>talks <em>me</em></b></span></div>' +
-            '<span class="atb-k">Lançamento 25/11 · Black Talks</span></div>' +
+            '<span class="atb-k">Condição Black Talks</span></div>' +
             '<div class="atb-p"><small>1º mês</small><b>' + ATUALIZA.preco.replace('R$ ', 'R$') + '</b><i>na Black</i></div>' +
           '</div></div></a>',
-    cap: '<div class="car-cap-t"><b>Atualiza Talks ME</b><span>1º mês por <strong>' + ATUALIZA.preco + '</strong></span><em>condição exclusiva da Black</em></div><a class="btn btn-red" href="#atualiza">Quero esse</a>'
+    cap: '<div class="car-cap-t"><b>Atualiza Talks ME</b><span>1º mês por <strong>' + ATUALIZA.preco + '</strong></span><em class="cap-mi">depois ' + ATUALIZA.mensal + '/mês · residentes: ' + ATUALIZA.residente + '/mês</em></div><a class="btn btn-red" href="#atualiza">Quero esse</a>'
   });
   /* banner do presente e da roleta (somem depois que a Black acaba) */
   if(F !== 'fim'){
@@ -1361,30 +1343,9 @@ var ATUALIZA = {
     }).join('');
   }
 
-  /* ---------- Contadores ---------- */
-  var HMS = BLACK.timerHoras * 36e5;
-  function prazo(){
-    var t = Date.now(), d = +(store('bt_prazo') || 0);
-    if(!d || d <= t || d - t > HMS + 6e4){ d = t + HMS; store('bt_prazo', String(d)); }
-    return PREVIEW ? d : Math.min(d, T1);
-  }
-  var preAlvo = (T0 > Date.now()) ? T0 : Date.now() + 3 * 864e5;
-  var elD = $('#cdD'), elDu = $('#cdDu'), elDs = $('#cdDs'), elH = $('#cdH'), elM = $('#cdM'), elS = $('#cdS');
-  var timers = $$('[data-timer]');
-  function tick(){
-    var nf = fase();
-    if(nf !== F){ F = nf; document.body.setAttribute('data-fase', F); }
-    if(F === 'fim') return;
-    var alvo = F === 'pre' ? preAlvo : prazo();
-    var ms = Math.max(0, alvo - Date.now());
-    var s = Math.floor(ms / 1000), d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60), sec = s % 60;
-    var showD = d > 0;
-    elDu.hidden = elDs.hidden = !showD;
-    elD.textContent = pad(d); elH.textContent = pad(h); elM.textContent = pad(m); elS.textContent = pad(sec);
-    var txt = (showD ? d + 'd ' : '') + pad(h) + ':' + pad(m) + ':' + pad(sec);
-    timers.forEach(function(t){ t.textContent = txt; });
-  }
-  tick(); setInterval(tick, 1000);
+  /* ---------- Sem contador desde 10/11 ----------
+     Só confere a fase de vez em quando: se "fim" for preenchido, quem está com a página aberta vê o encerramento. */
+  setInterval(function(){ var nf = fase(); if(nf !== F){ F = nf; document.body.setAttribute('data-fase', F); } }, 30000);
 
   /* ---------- Copiar cupom ---------- */
   var toastEl = $('#toast'), toastT;

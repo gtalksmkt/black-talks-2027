@@ -1,6 +1,7 @@
 # Black Talks 2026
 
-Landing da Black Friday do Grupo Talks: de 23 a 30/11/2026. Quem faz um cadastro rápido no presente
+Landing da Black Friday do Grupo Talks. **Desde 10/11/2026 não divulga data nem tem contador**: está no ar
+até alguém encerrar (veja "Como a página se comporta"). Quem faz um cadastro rápido no presente
 ganha 2 cupons: **50% OFF em qualquer curso virtual** (`BLACK50`) e o **Atualiza Talks ME com o 1º mês
 por R$ 9,90** (`ATUALIZA990`). Quem compra tem direito a girar a roleta.
 
@@ -27,30 +28,31 @@ No ar: https://gtalksmkt.github.io/black-talks-2027/
 ## O que precisa existir fora do site
 
 - **WooCommerce** (emergencytalks.com.br): criar o cupom `BLACK50`, 50% de desconto, válido para os
-  4 cursos virtuais, de 23 a 30/11. Em 07/11 ele ainda não existia.
+  4 cursos virtuais, enquanto a Black estiver no ar. Em 07/11 ele ainda não existia.
 - **Central / time comercial**: aceitar o cupom `ATUALIZA990` (1º mês do Atualiza Talks ME por R$ 9,90)
   e conferir o pedido antes de entregar o prêmio da roleta.
-- **Planilha**: atualizar o Apps Script para a versão 2 (passo a passo no topo de `leads-planilha.gs`).
-  Sem isso, os cadastros do presente não chegam na planilha (os cupons aparecem para a pessoa mesmo assim).
+- **Planilha**: o Apps Script na versão 2 está no ar desde 09/11 (abrir o endereço /exec mostra `"versao": 2`).
 
 ## Onde mudar as coisas
 
 Tudo fica no começo do `<script>` do `index.html`:
 
-- `BLACK`: datas de início e fim, cupom dos cursos, % de desconto, horas do contador (20h), segundos até
-  o pop-up do presente, WhatsApp da central e mensagens
+- `BLACK`: início e fim (vazios = no ar e sem data para acabar; nenhuma data aparece no site), cupom dos
+  cursos, % de desconto, segundos até o pop-up do presente, WhatsApp da central e mensagens
 - `CURSOS`: nome, banner, preço cheio, descrição e link do carrinho de cada curso (o preço com desconto
   é calculado sozinho)
-- `ATUALIZA`: preço do 1º mês, cupom, data de lançamento, link da landing e posição do banner no carrossel
+- `ATUALIZA`: preço do 1º mês, cupom, valor depois do 1º mês (`mensal`, R$ 299,90) e para residentes
+  (`residente`, R$ 199,90), link da landing e posição do banner no carrossel. O valor depois do 1º mês
+  aparece só no site, em letras miúdas ao lado do R$ 9,90; as artes falam só do 1º mês.
 
 Trocar o nome de um cupom é só mudar ali: todos os textos da página acompanham.
 
 ## Como a página se comporta
 
-- **Antes de 23/11**: a barra mostra quanto falta para a Black começar. O presente já funciona (os cupons
-  valem a partir do dia 23).
-- **De 23 a 30/11**: contador de 20h que recomeça para cada visitante (nunca passa do dia 30, 23h59).
-- **Depois de 30/11**: aviso de encerrada, preços cheios, sem presente e sem roleta.
+- **No ar** (desde 10/11/2026): sem data e sem contador em lugar nenhum (barra do topo, hero e final da página).
+- **Para encerrar**: preencha `fim` em `BLACK` (index.html) e em `ROLETA` (js/roleta.js) com data e hora, por
+  exemplo `'2026-12-01T00:00:00-03:00'`, e publique. Dali em diante aparece o aviso de encerrada, preços
+  cheios, sem presente e sem roleta.
 - Os cupons ficam salvos no aparelho da pessoa: ao voltar, ela já vê os códigos.
 
 Para ver cada fase antes da hora: `?preview=pre`, `?preview=live` ou `?preview=fim` no fim do link.
