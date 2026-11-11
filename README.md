@@ -5,7 +5,31 @@ Landing da Black Friday do Grupo Talks. Não divulga data nem tem contador, mas 
 ganha 2 cupons: **50% OFF em qualquer curso virtual** (`BLACK50`) e o **Atualiza Talks ME com o 1º mês
 por R$ 9,90** (`ATUALIZA990`). Quem compra tem direito a girar a roleta.
 
-No ar: https://gtalksmkt.github.io/black-talks-2027/
+## Dois projetos, um em cada repositório
+
+| Projeto | Repositório | Endereço no site |
+|---|---|---|
+| Landing da Black | **gtalksmkt/black-talks-2027** (este) | https://emergencytalks.com.br/blacktalks/ |
+| Roleta | **gtalksmkt/black-talks-2027-roleta** | https://emergencytalks.com.br/blacktalks/roleta/ |
+
+Cada um tem o seu `index.html` na raiz e as suas cópias de `js/` e `img/`. **`js/roleta.js` existe nos dois:
+mudou prêmio, fatia, data de fim ou planilha, mude nos dois e publique os dois.**
+
+- Links entre as páginas usam as rotas do site: `/blacktalks/roleta/` e `/blacktalks/` (com `#cursos` etc.).
+  Na prévia do GitHub Pages essas rotas não existem; ali o `js/roleta.js` troca o link, só na hora do clique,
+  pela prévia correspondente (https://gtalksmkt.github.io/black-talks-2027/ e .../black-talks-2027-roleta/).
+- `roleta.html` neste repositório só redireciona links antigos (`roleta.html?pedido=N`) para a roleta nova,
+  mantendo o pedido.
+- **Formulários**: `<form>` com botão `type="submit"`, campos com `name` (`nome`, `email`, `tel`, `pedido`) e um
+  campo oculto `etapa`: `cadastro` no presente desta página e `liberacao_giro` na roleta. A plataforma captura o
+  envio antes do `preventDefault()` do nosso JS.
+- **Resultado do giro**: no site a plataforma injeta `window.LP_FORMS = {endpoint, slug, postId}`. Quando a
+  animação termina, a roleta manda `etapa: 'giro'` com nome, e-mail, WhatsApp, pedido, prêmio e código para esse
+  endpoint (função `enviarCRM` na roleta). A planilha continua recebendo também. Fora do site o objeto não
+  existe e nada é enviado. `window.__lpLoadedAt` é gravado no `<head>` das duas páginas (anti-spam da plataforma).
+- **Não colar GTM nem Meta Pixel no HTML**: a plataforma injeta os containers e remove snippets fixos.
+
+Prévias no GitHub Pages: https://gtalksmkt.github.io/black-talks-2027/ e https://gtalksmkt.github.io/black-talks-2027-roleta/
 
 ## O caminho de quem chega
 
@@ -13,17 +37,17 @@ No ar: https://gtalksmkt.github.io/black-talks-2027/
    e-mail e WhatsApp, autoriza o contato e os cupons aparecem na hora, com confete.
    - O pop-up do presente aparece depois de 8 segundos (1 vez por visita) e leva para essa seção.
    - Se a pessoa fecha o pop-up, fica o botão "Garanta seu presente" no canto da tela, que também leva para lá.
-   - Link direto para anúncios e posts: `https://gtalksmkt.github.io/black-talks-2027/#presente`
+   - Link direto para anúncios e posts: `https://emergencytalks.com.br/blacktalks/#presente`
 2. **Cursos virtuais**: o botão "Comprar com 50% OFF" coloca o curso no carrinho do site da Emergency
    Talks (`/carrinho/?add-to-cart=ID`) e copia o cupom. Quem ainda não pegou os cupons vai antes para o
    cadastro e, depois dele, ganha o botão "Continuar" com o curso que tinha escolhido.
 3. **Atualiza Talks ME**: o botão abre o WhatsApp da central com o cupom `ATUALIZA990` na mensagem.
-4. **Roleta** (`roleta.html`): só para quem comprou. A pessoa entra com nome, e-mail da compra, WhatsApp
+4. **Roleta** (repositório `black-talks-2027-roleta`, `/blacktalks/roleta/`): só para quem comprou. A pessoa entra com nome, e-mail da compra, WhatsApp
    e **número do pedido** (está no e-mail de confirmação do WooCommerce), gira uma vez e ganha de
    1 aula de degustação a 6 meses grátis do Atualiza Talks ME. Para resgatar, chama o time comercial no
    WhatsApp com o código do prêmio e o número do pedido: **o time confere o pedido antes de liberar**.
    - Para mandar a roleta para quem comprou, já com o pedido preenchido:
-     `https://gtalksmkt.github.io/black-talks-2027/roleta.html?pedido=NÚMERO`
+     `https://emergencytalks.com.br/blacktalks/roleta/?pedido=NÚMERO`
 
 ## O que precisa existir fora do site
 
@@ -50,7 +74,7 @@ Trocar o nome de um cupom é só mudar ali: todos os textos da página acompanha
 ## Como a página se comporta
 
 - **No ar**: sem data e sem contador em lugar nenhum (barra do topo, hero e final da página).
-- **Encerramento automático**: em 30/11/2026, 23h59, a página passa sozinha para o aviso de encerrada, preços cheios, sem presente e sem roleta. Para mudar o dia, troque `fim` em `BLACK` (index.html) e em `ROLETA` (js/roleta.js), por exemplo `'2026-12-01T00:00:00-03:00'`, e publique.
+- **Encerramento automático**: em 30/11/2026, 23h59, a página passa sozinha para o aviso de encerrada, preços cheios, sem presente e sem roleta. Para mudar o dia, troque `fim` em `BLACK` (index.html) e em `ROLETA` (js/roleta.js, nos dois repositórios), por exemplo `'2026-12-01T00:00:00-03:00'`, e publique.
 - Os cupons ficam salvos no aparelho da pessoa: ao voltar, ela já vê os códigos.
 
 Para ver cada fase antes da hora: `?preview=pre`, `?preview=live` ou `?preview=fim` no fim do link.
@@ -78,5 +102,5 @@ janela anônima.
 
 `img/atualiza-corredor.webp` (corredor de emergência em vermelho) vai por trás de tudo que fala do Atualiza:
 banner do Atualiza e da roleta no carrossel do topo, seção `#atualiza`, cupom do Atualiza no presente e no pop-up,
-seção da roleta, topo do `roleta.html` e as imagens de compartilhamento. No `index.html` ela entra pela variável
+seção da roleta, topo da roleta e as imagens de compartilhamento. No `index.html` ela entra pela variável
 CSS `--foto-at` (no `:root`): para trocar a foto, substitua o arquivo ou mude a variável.

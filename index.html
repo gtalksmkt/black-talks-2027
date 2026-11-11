@@ -643,6 +643,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
   .rv{opacity:1;transform:none}
 }
 </style>
+<script>window.__lpLoadedAt = Date.now();</script>
 </head>
 <body data-fase="live">
 
@@ -804,6 +805,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
             <h3>Libere seus 2 cupons</h3>
             <p>Leva 10 segundos.</p>
             <form class="f" id="prForm" novalidate>
+              <input type="hidden" name="etapa" value="cadastro" />
               <div class="fld" id="prNomeF">
                 <label for="prNome">Nome completo</label>
                 <input id="prNome" name="nome" type="text" autocomplete="name" placeholder="Seu nome" maxlength="80" required />
@@ -897,11 +899,11 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
         <p>Toda compra na Black Talks dá direito a um giro. Depois de comprar, entre na roleta com o número do seu pedido e descubra o seu prêmio: de 1 aula de degustação a 6 meses grátis.</p>
         <ul class="rl-chips" id="rlChips"></ul>
         <div class="rl-cta">
-          <a class="btn btn-red" href="roleta.html">Já comprei, quero girar <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-red" href="/blacktalks/roleta/">Já comprei, quero girar <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
           <span class="rl-lock"><svg class="i"><use href="#i-lock"/></svg>Liberada depois da compra</span>
         </div>
       </div>
-      <a class="rl-mini" href="roleta.html" aria-label="Ir para a roleta">
+      <a class="rl-mini" href="/blacktalks/roleta/" aria-label="Ir para a roleta">
         <span class="rl-pin" aria-hidden="true"><svg viewBox="0 0 60 78"><path d="M30 76 6 30A26 26 0 1 1 54 30Z" fill="#fff"/><path d="M30 66 12 30A19 19 0 1 1 48 30Z" fill="#D31C2B"/><circle cx="30" cy="27" r="7" fill="#fff"/></svg></span>
         <span class="rl-spin"><svg viewBox="-200 -200 400 400" data-roleta aria-hidden="true"></svg></span>
         <span class="rl-hub">GIRE</span>
@@ -975,7 +977,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
       </details>
       <details data-show="live pre">
         <summary>Como funciona a roleta?<svg class="i"><use href="#i-plus"/></svg></summary>
-        <div class="a"><p>A roleta é para quem comprou na Black Talks: toda compra dá direito a um giro. Depois de comprar, entre na <a href="roleta.html">página da roleta</a> com seu nome, o e-mail da compra, o WhatsApp e o número do pedido, que está no e-mail de confirmação. Os prêmios vão de 1 aula de degustação a 6 meses grátis do Atualiza Talks ME. Para resgatar, fale com o nosso time comercial pelo WhatsApp com o código do prêmio: a gente confere o pedido e libera.</p></div>
+        <div class="a"><p>A roleta é para quem comprou na Black Talks: toda compra dá direito a um giro. Depois de comprar, entre na <a href="/blacktalks/roleta/">página da roleta</a> com seu nome, o e-mail da compra, o WhatsApp e o número do pedido, que está no e-mail de confirmação. Os prêmios vão de 1 aula de degustação a 6 meses grátis do Atualiza Talks ME. Para resgatar, fale com o nosso time comercial pelo WhatsApp com o código do prêmio: a gente confere o pedido e libera.</p></div>
       </details>
       <details>
         <summary>E os outros cursos do Grupo Talks?<svg class="i"><use href="#i-plus"/></svg></summary>
@@ -1287,11 +1289,11 @@ var ATUALIZA = {
       cap: '<div class="car-cap-t"><b>Presente Black Talks</b><span><strong>' + BLACK.desconto + '% OFF</strong> nos cursos + Atualiza por <strong>' + ATUALIZA.preco + '</strong></span><em>cadastro grátis em 10 segundos</em></div><a class="btn btn-red" href="#presente">Quero</a>'
     });
     slides.push({
-      html: '<a class="sl" href="roleta.html" aria-label="Roleta Black Talks: comprou, gire e ganhe até 6 meses grátis do Atualiza Talks ME"><div class="rlb">' +
+      html: '<a class="sl" href="/blacktalks/roleta/" aria-label="Roleta Black Talks: comprou, gire e ganhe até 6 meses grátis do Atualiza Talks ME"><div class="rlb">' +
               '<div class="rlb-w"><svg viewBox="-200 -200 400 400" data-roleta></svg></div>' +
               '<div class="rlb-t"><span class="rlb-k">Roleta Black Talks</span><b>Comprou?<br />Gire e ganhe<br />até <em>6 meses</em></b><span class="rlb-s">grátis do Atualiza Talks ME</span><span class="rlb-pill">Para quem comprou na Black</span></div>' +
             '</div></a>',
-      cap: '<div class="car-cap-t"><b>Roleta Black Talks</b><span>Comprou? Ganhe até <strong>6 meses grátis</strong> do Atualiza Talks ME</span><em>liberada depois da compra</em></div><a class="btn btn-red" href="roleta.html">Girar</a>'
+      cap: '<div class="car-cap-t"><b>Roleta Black Talks</b><span>Comprou? Ganhe até <strong>6 meses grátis</strong> do Atualiza Talks ME</span><em>liberada depois da compra</em></div><a class="btn btn-red" href="/blacktalks/roleta/">Girar</a>'
     });
   }
 

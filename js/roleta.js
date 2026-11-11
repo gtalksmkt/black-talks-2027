@@ -1,6 +1,7 @@
 /* ==================================================================
    ROLETA BLACK TALKS · prêmios e fatias
-   Usado pela roleta.html e pela página principal (index.html).
+   Usado pela roleta (/blacktalks/roleta/) e pela página principal (/blacktalks/).
+   ATENÇÃO: existe uma cópia igual no repositório black-talks-2027-roleta; mude os dois juntos.
 
    Cada fatia da roda tem a MESMA chance de sair. Para mudar as chances,
    repita ou tire prêmios da lista FATIAS. O de 6 meses aparece uma vez só.
@@ -72,4 +73,24 @@ function desenharRoleta(svg, opt){
   h += '<circle r="50" fill="#050505" stroke="#D31C2B" stroke-width="5"/><circle r="38" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1"/>';
   svg.innerHTML = h;
   return svg.querySelector('.rl-rot');
+}
+
+/* ------------------------------------------------------------------
+   Links entre as páginas: no site são /blacktalks/ e /blacktalks/roleta/.
+   Na prévia do GitHub Pages essas rotas não existem, então só lá o link
+   é trocado na hora do clique pelo endereço da prévia (no site nada muda).
+   ------------------------------------------------------------------ */
+var PREVIAS_BLACK = {
+  '/blacktalks/roleta/': 'https://gtalksmkt.github.io/black-talks-2027-roleta/',
+  '/blacktalks/':        'https://gtalksmkt.github.io/black-talks-2027/'
+};
+if(/\.github\.io$/.test(location.hostname)){
+  ['click', 'auxclick'].forEach(function(ev){
+    document.addEventListener(ev, function(e){
+      var a = e.target && e.target.closest && e.target.closest('a[href^="/blacktalks/"]');
+      if(!a) return;
+      var m = a.getAttribute('href').match(/^(\/blacktalks\/(?:roleta\/)?)(.*)$/);
+      if(m) a.href = PREVIAS_BLACK[m[1]] + m[2];
+    }, true);
+  });
 }
