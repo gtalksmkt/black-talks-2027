@@ -1,7 +1,7 @@
 # Black Talks 2026
 
-Landing da Black Friday do Grupo Talks. **Desde 10/11/2026 não divulga data nem tem contador**: está no ar
-até alguém encerrar (veja "Como a página se comporta"). Quem faz um cadastro rápido no presente
+Landing da Black Friday do Grupo Talks. Não divulga data nem tem contador, mas **encerra sozinha em 30/11/2026, às 23h59**
+(horário de Brasília; veja "Como a página se comporta"). Quem faz um cadastro rápido no presente
 ganha 2 cupons: **50% OFF em qualquer curso virtual** (`BLACK50`) e o **Atualiza Talks ME com o 1º mês
 por R$ 9,90** (`ATUALIZA990`). Quem compra tem direito a girar a roleta.
 
@@ -37,7 +37,7 @@ No ar: https://gtalksmkt.github.io/black-talks-2027/
 
 Tudo fica no começo do `<script>` do `index.html`:
 
-- `BLACK`: início e fim (vazios = no ar e sem data para acabar; nenhuma data aparece no site), cupom dos
+- `BLACK`: início (vazio = já no ar) e fim (30/11/2026 23h59; nenhuma data aparece no site), cupom dos
   cursos, % de desconto, segundos até o pop-up do presente, WhatsApp da central e mensagens
 - `CURSOS`: nome, banner, preço cheio, descrição e link do carrinho de cada curso (o preço com desconto
   é calculado sozinho)
@@ -49,10 +49,8 @@ Trocar o nome de um cupom é só mudar ali: todos os textos da página acompanha
 
 ## Como a página se comporta
 
-- **No ar** (desde 10/11/2026): sem data e sem contador em lugar nenhum (barra do topo, hero e final da página).
-- **Para encerrar**: preencha `fim` em `BLACK` (index.html) e em `ROLETA` (js/roleta.js) com data e hora, por
-  exemplo `'2026-12-01T00:00:00-03:00'`, e publique. Dali em diante aparece o aviso de encerrada, preços
-  cheios, sem presente e sem roleta.
+- **No ar**: sem data e sem contador em lugar nenhum (barra do topo, hero e final da página).
+- **Encerramento automático**: em 30/11/2026, 23h59, a página passa sozinha para o aviso de encerrada, preços cheios, sem presente e sem roleta. Para mudar o dia, troque `fim` em `BLACK` (index.html) e em `ROLETA` (js/roleta.js), por exemplo `'2026-12-01T00:00:00-03:00'`, e publique.
 - Os cupons ficam salvos no aparelho da pessoa: ao voltar, ela já vê os códigos.
 
 Para ver cada fase antes da hora: `?preview=pre`, `?preview=live` ou `?preview=fim` no fim do link.

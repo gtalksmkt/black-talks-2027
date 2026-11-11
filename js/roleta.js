@@ -16,9 +16,9 @@ var ROLETA = {
   /* Endereço do Apps Script da planilha de cadastros (instruções em leads-planilha.gs).
      Enquanto estiver vazio, os dados da pessoa chegam só na mensagem de WhatsApp do resgate. */
   leadsUrl: 'https://script.google.com/macros/s/AKfycbySD1NLCA_rMPrCjmwcvqxZ3nDs--0bzZudLgcCiEXW495M4F25xEc_qXBOdMqMzuPg/exec',
-  /* sem data desde 10/11/2026: vazio = já no ar e sem data para acabar (para encerrar, preencha fim com data e hora) */
+  /* sem data na página, mas a roleta encerra sozinha em "fim", igual à index.html */
   inicio: '',
-  fim:    '',
+  fim:    '2026-11-30T23:59:59-03:00',   // mesma data da index.html
   produto: 'Atualiza Talks ME'
 };
 

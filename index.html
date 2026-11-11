@@ -1092,11 +1092,11 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
    BLACK TALKS · tudo o que muda fica aqui
    ================================================================== */
 var BLACK = {
-  /* Desde 10/11/2026 a Black não divulga data nem tem contador: está no ar até alguém encerrar.
-     Para encerrar, preencha "fim" com a data e hora (ex.: '2026-12-01T00:00:00-03:00') ou ponha agora mesmo
-     e publique: a página passa a mostrar "A Black Talks terminou". Nenhuma das duas datas aparece no site. */
+  /* A Black não mostra data nem contador na página, mas encerra sozinha em "fim" (30/11/2026, 23h59, horário de Brasília).
+     Para mudar o dia de encerramento, troque "fim" (ex.: '2026-12-01T00:00:00-03:00') e publique.
+     Depois do fim a página mostra "A Black Talks terminou", some o presente e a roleta e os preços voltam ao normal. */
   inicio: '',                            // vazio = já está no ar
-  fim:    '',                            // vazio = sem data para acabar
+  fim:    '2026-11-30T23:59:59-03:00',   // a Black encerra sozinha: depois disso some o presente e a roleta e os preços voltam ao normal
   cupom: 'BLACK50',                      // cupom dos cursos virtuais (criar igual no WooCommerce), liberado no cadastro do presente
   desconto: 50,                          // % de desconto do cupom nos cursos virtuais
   popupSegundos: 8,                      // tempo na página até o pop-up do presente aparecer (1 vez por visita)
