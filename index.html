@@ -364,47 +364,9 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 .at-sec .at-l h2{font-size:clamp(2.4rem,4.6vw,4.2rem)}
 .at-sec .at-price{padding:34px 28px;border:2px solid rgba(232,48,63,.5)}
 .at-sec .at-val b{font-size:clamp(5rem,9vw,7.2rem);color:#fff;text-shadow:0 0 50px rgba(232,48,63,.5)}
-.at-rl{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;padding:12px 14px;border-radius:12px;background:rgba(211,28,43,.12);border:1px dashed rgba(232,48,63,.6);font-size:.88rem;color:var(--text);transition:background .2s}
-.at-rl:hover{background:rgba(211,28,43,.25)}
-.at-rl b{color:#fff}
-.at-rl .i{color:var(--red-hi);flex:none}
-
-/* ===== Roleta ===== */
-.rl-box{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,4vw,60px);align-items:center;padding:clamp(28px,4.4vw,60px);border-radius:28px;overflow:hidden;
-  background:linear-gradient(90deg,rgba(10,10,11,.92) 0%,rgba(10,10,11,.74) 50%,rgba(10,10,11,.55) 100%),var(--foto-at) 60% 45%/cover no-repeat,#0A0A0B;border:1px solid rgba(232,48,63,.35)}
-.rl-txt h2{font-size:clamp(2.3rem,4.4vw,3.8rem)}
-.rl-txt > p{margin-top:16px;color:var(--muted);font-size:1.05rem;max-width:34em}
-.rl-chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 26px}
-.rl-chips li{padding:6px 12px;border-radius:999px;border:1px solid var(--line2);background:rgba(255,255,255,.03);font-size:.82rem;font-weight:700}
-.rl-chips li.top{background:#fff;color:var(--red);border-color:#fff}
-.rl-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
-.rl-note{font-size:.82rem;color:var(--dim);font-weight:600}
-.rl-mini{position:relative;display:block;width:min(100%,400px);aspect-ratio:1;margin:0 auto;filter:drop-shadow(0 30px 50px rgba(0,0,0,.55)) drop-shadow(0 0 50px rgba(211,28,43,.35));transition:transform .3s var(--ease)}
-.rl-mini:hover{transform:scale(1.03) rotate(-2deg)}
-.rl-spin{position:absolute;inset:0;animation:spin 26s linear infinite}
-.rl-spin svg{width:100%;height:100%;display:block}
-.rl-pin{position:absolute;left:50%;top:-4.5%;z-index:2;width:11%;margin-left:-5.5%}
-.rl-pin svg{display:block;width:100%;height:auto;filter:drop-shadow(0 4px 6px rgba(0,0,0,.5))}
-.rl-hub{position:absolute;left:50%;top:50%;z-index:2;width:22%;height:22%;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#FF4A59,#B70412);color:#fff;font-family:var(--display);font-weight:900;font-style:italic;font-size:clamp(1rem,2.2vw,1.4rem);box-shadow:0 0 0 4px #050505,0 0 0 7px rgba(255,255,255,.9);animation:hubP 1.4s ease-in-out infinite}
-@keyframes hubP{50%{box-shadow:0 0 0 4px #050505,0 0 0 7px rgba(255,255,255,.9),0 0 0 20px rgba(232,48,63,.25)}}
-@keyframes spin{to{transform:rotate(360deg)}}
-.rl-l{fill:#fff;animation:luz 1.1s steps(1) infinite}
-.rl-l.b{animation-delay:.55s}
-@keyframes luz{50%{fill:#4A0610}}
-/* banner da roleta no carrossel */
-.rlb{position:absolute;inset:0;container-type:inline-size;background:linear-gradient(270deg,rgba(5,5,5,.9) 0%,rgba(5,5,5,.62) 50%,rgba(5,5,5,.45) 100%),var(--foto-at) 45% 45%/cover no-repeat,#050505;overflow:hidden}
-.rlb::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 2px,transparent 2px 18px)}
-.rlb-w{position:absolute;left:-12cqw;top:50%;width:66cqw;height:66cqw;margin-top:-33cqw;animation:spin 22s linear infinite;filter:drop-shadow(0 0 4cqw rgba(232,48,63,.45))}
-.rlb-w svg{width:100%;height:100%;display:block}
-.rlb-t{position:absolute;right:6cqw;top:50%;transform:translateY(-50%);width:42cqw;text-align:left}
-.rlb-k{display:block;font-size:2.3cqw;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--red-text)}
-.rlb-t b{display:block;margin-top:1.6cqw;font-family:var(--display);font-weight:900;font-style:italic;text-transform:uppercase;color:#fff;font-size:7.4cqw;line-height:.88}
-.rlb-t b em{font-style:italic;color:var(--red-hi)}
-.rlb-s{display:block;margin-top:1.4cqw;font-size:2.6cqw;font-weight:700;color:#fff}
-.rlb-pill{display:inline-block;margin-top:3cqw;padding:1.3cqw 3cqw;border-radius:99cqw;background:var(--red);color:#fff;font-size:2.4cqw;font-weight:800;letter-spacing:.04em}
 
 /* ===== Passos ===== */
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:s}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
 .step{position:relative;padding:28px 26px;border-radius:20px;background:var(--surface);border:1px solid var(--line);overflow:hidden}
 .step::before{counter-increment:s;content:counter(s);position:absolute;right:16px;top:-14px;font-family:var(--display);font-weight:900;font-style:italic;font-size:7.5rem;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(232,48,63,.28)}
 .step-ic{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:rgba(211,28,43,.14);border:1px solid rgba(232,48,63,.35);color:var(--red-hi);font-size:1.5rem;margin-bottom:18px}
@@ -535,8 +497,6 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 .mtk > span i .i{color:var(--red-text)}
 .gm-no{display:block;margin:12px auto 0;padding:6px 12px;font-size:.86rem;font-weight:600;color:var(--dim);text-decoration:underline;text-underline-offset:3px}
 .gm-no:hover{color:#fff}
-.rl-lock{display:inline-flex;align-items:center;gap:8px;margin-top:4px;padding:7px 12px;border-radius:10px;background:rgba(255,255,255,.05);border:1px solid var(--line2);font-size:.84rem;font-weight:700;color:#fff}
-.rl-lock .i{color:var(--red-text)}
 .pop{animation:pop .6s var(--spring) both}
 .pop2{animation:pop .6s var(--spring) .12s both}
 .pop3{animation:pop .6s var(--spring) .24s both}
@@ -556,6 +516,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 @media (max-width:1060px){
   .nav{display:none}
   .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps .step:last-child:nth-child(odd){grid-column:1/-1}
 }
 @media (max-width:920px){
   .hero{padding-top:6px}
@@ -567,9 +528,6 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
   .car-nav{opacity:1}
   .at-box{grid-template-columns:minmax(0,1fr)}
   .at-sec .at-box{background:linear-gradient(180deg,rgba(10,10,11,.55) 0%,rgba(10,10,11,.86) 38%,rgba(10,10,11,.94) 100%),var(--foto-at) 60% 0/auto 520px no-repeat,#0A0A0B}
-  .rl-box{grid-template-columns:minmax(0,1fr)}
-  .rl-box{background:linear-gradient(180deg,rgba(10,10,11,.6) 0%,rgba(10,10,11,.86) 45%,rgba(10,10,11,.94) 100%),var(--foto-at) 55% 0/auto 520px no-repeat,#0A0A0B}
-  .rl-mini{width:min(86%,340px);grid-row:1}
   .pr-box{grid-template-columns:minmax(0,1fr)}
   .pr-l{text-align:center}
   .pr-l > p{margin-left:auto;margin-right:auto}
@@ -711,7 +669,6 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
       <a href="#presente" data-show="live pre">Presente</a>
       <a href="#atualiza">Atualiza Talks ME</a>
       <a href="#cursos">Cursos virtuais</a>
-      <a href="#roleta" data-show="live pre">Roleta</a>
       <a href="#como">Como funciona</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
@@ -867,7 +824,6 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
           <span class="at-note" data-show="live pre">O valor já vem aplicado na página de inscrição, sem cupom</span>
           <a class="btn btn-red btn-block" href="#" data-at-buy>Quero o 1º mês por R$ 9,90 <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost btn-block" id="atLanding" href="#" target="_blank" rel="noopener">Conhecer o Atualiza Talks ME <svg class="i"><use href="#i-ext"/></svg></a>
-          <a class="at-rl" href="#roleta" data-show="live pre"><svg class="i"><use href="#i-gift"/></svg><span>Comprou na Black? <b>Gire a roleta</b> e ganhe até 6 meses grátis</span><svg class="i"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
     </div>
@@ -888,35 +844,12 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
   </div>
 </section>
 
-<!-- ===== Roleta (só para quem comprou) ===== -->
-<section class="sec" id="roleta" style="padding-top:0" data-show="live pre">
-  <div class="wrap">
-    <div class="rl-box rv">
-      <div class="rl-txt">
-        <span class="eyebrow">Roleta · só para quem comprou</span>
-        <h2>Comprou? Gire a roleta e ganhe até <span class="red">6 meses grátis</span> do Atualiza Talks ME</h2>
-        <p>Toda compra na Black Talks dá direito a um giro. Depois de comprar, entre na roleta com o número do seu pedido e descubra o seu prêmio: de 1 aula de degustação a 6 meses grátis.</p>
-        <ul class="rl-chips" id="rlChips"></ul>
-        <div class="rl-cta">
-          <a class="btn btn-red" href="/blacktalks/roleta/">Já comprei, quero girar <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
-          <span class="rl-lock"><svg class="i"><use href="#i-lock"/></svg>Liberada depois da compra</span>
-        </div>
-      </div>
-      <a class="rl-mini" href="/blacktalks/roleta/" aria-label="Ir para a roleta">
-        <span class="rl-pin" aria-hidden="true"><svg viewBox="0 0 60 78"><path d="M30 76 6 30A26 26 0 1 1 54 30Z" fill="#fff"/><path d="M30 66 12 30A19 19 0 1 1 48 30Z" fill="#D31C2B"/><circle cx="30" cy="27" r="7" fill="#fff"/></svg></span>
-        <span class="rl-spin"><svg viewBox="-200 -200 400 400" data-roleta aria-hidden="true"></svg></span>
-        <span class="rl-hub">GIRE</span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ===== Como funciona ===== -->
 <section class="sec" id="como" style="padding-top:0">
   <div class="wrap">
     <div class="sec-h rv">
       <span class="eyebrow">Como funciona</span>
-      <h2>Seu desconto em <span class="red">4 passos</span></h2>
+      <h2>Seu desconto em <span class="red">3 passos</span></h2>
     </div>
     <div class="steps">
       <div class="step rv">
@@ -933,11 +866,6 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
         <span class="step-ic"><svg class="i"><use href="#i-tag"/></svg></span>
         <h3>Use o cupom</h3>
         <p>No carrinho, cole o cupom no campo "Código do cupom" e clique em aplicar. O valor cai pela metade.</p>
-      </div>
-      <div class="step rv">
-        <span class="step-ic"><svg class="i"><use href="#i-star"/></svg></span>
-        <h3>Gire a roleta</h3>
-        <p>Comprou? Use o número do pedido para girar a roleta e ganhar até 6 meses grátis do Atualiza Talks ME.</p>
       </div>
     </div>
     <div style="text-align:center;margin-top:30px" class="rv sem-cupom" data-show="live pre">
@@ -973,10 +901,6 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
       <details>
         <summary>Preciso de cupom para o Atualiza Talks ME?<svg class="i"><use href="#i-plus"/></svg></summary>
         <div class="a"><p>Não. Na página de inscrição do <a href="#" data-at-buy>Atualiza Talks ME</a>, o 1º mês já aparece por R$ 9,90, automaticamente. Depois, o valor é de <span data-at-valores>R$ 299,90 por mês (R$ 199,90 por mês para residentes)</span>. O ATUALIZA990 que aparece no presente é só ilustrativo: você não precisa digitar nada.</p></div>
-      </details>
-      <details data-show="live pre">
-        <summary>Como funciona a roleta?<svg class="i"><use href="#i-plus"/></svg></summary>
-        <div class="a"><p>A roleta é para quem comprou na Black Talks: toda compra dá direito a um giro. Depois de comprar, entre na <a href="/blacktalks/roleta/">página da roleta</a> com seu nome, o e-mail da compra, o WhatsApp e o número do pedido, que está no e-mail de confirmação. Os prêmios vão de 1 aula de degustação a 6 meses grátis do Atualiza Talks ME. Para resgatar, fale com o nosso time comercial pelo WhatsApp com o código do prêmio: a gente confere o pedido e libera.</p></div>
       </details>
       <details>
         <summary>E os outros cursos do Grupo Talks?<svg class="i"><use href="#i-plus"/></svg></summary>
@@ -1087,7 +1011,6 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 <canvas id="confetti" aria-hidden="true"></canvas>
 <div class="toast" id="toast" role="status" aria-live="polite"><svg class="i"><use href="#i-check-c"/></svg><span></span></div>
 
-<script src="js/roleta.js"></script>
 <script>
 /* ==================================================================
    BLACK TALKS · tudo o que muda fica aqui
@@ -1095,9 +1018,9 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
 var BLACK = {
   /* A Black não mostra data nem contador na página, mas encerra sozinha em "fim" (30/11/2026, 23h59, horário de Brasília).
      Para mudar o dia de encerramento, troque "fim" (ex.: '2026-12-01T00:00:00-03:00') e publique.
-     Depois do fim a página mostra "A Black Talks terminou", some o presente e a roleta e os preços voltam ao normal. */
+     Depois do fim a página mostra "A Black Talks terminou", some o presente e os preços voltam ao normal. */
   inicio: '',                            // vazio = já está no ar
-  fim:    '2026-11-30T23:59:59-03:00',   // a Black encerra sozinha: depois disso some o presente e a roleta e os preços voltam ao normal
+  fim:    '2026-11-30T23:59:59-03:00',   // a Black encerra sozinha: depois disso some o presente e os preços voltam ao normal
   cupom: 'BLACK50',                      // cupom dos cursos virtuais (criar igual no WooCommerce), liberado no cadastro do presente
   desconto: 50,                          // % de desconto do cupom nos cursos virtuais
   popupSegundos: 8,                      // tempo na página até o pop-up do presente aparecer (1 vez por visita)
@@ -1168,7 +1091,8 @@ var ATUALIZA = {
   inscricao: 'https://emergencytalks.com.br/produto/atualiza-talks/#inscricao',  // para onde vão os botões vermelhos do R$ 9,90 (página de inscrição do Atualiza)
   posicao: 0           // em que lugar o banner dele entra no carrossel (0 = primeiro; o do presente vem logo depois)
 };
-/* Os cadastros do presente vão para a mesma planilha da roleta (endereço em js/roleta.js, campo leadsUrl) */
+/* Os cadastros do presente vão para a planilha "Roleta Black Talks · cadastros", aba Presente (Apps Script, ver leads-planilha.gs) */
+var LEADS_URL = 'https://script.google.com/macros/s/AKfycbySD1NLCA_rMPrCjmwcvqxZ3nDs--0bzZudLgcCiEXW495M4F25xEc_qXBOdMqMzuPg/exec';
 
 /* ==================================================================
    Daqui para baixo é o funcionamento da página
@@ -1256,7 +1180,7 @@ var ATUALIZA = {
     var um = itens.map(function(t){ return '<span>' + t + star + '</span>'; }).join('');
     return um + um + um + um;
   }
-  $('#tape1').innerHTML = fita(['Black Talks', 'Cadastre-se e ganhe', BLACK.desconto + '% OFF nos cursos virtuais', 'Atualiza Talks ME ' + ATUALIZA.preco, 'Comprou? Gire a roleta', 'Até 6 meses grátis', 'Já disponível']);
+  $('#tape1').innerHTML = fita(['Black Talks', 'Cadastre-se e ganhe', BLACK.desconto + '% OFF nos cursos virtuais', 'Atualiza Talks ME ' + ATUALIZA.preco, 'Já disponível']);
   $('#tape2').innerHTML = fita(['Atualiza Talks ME', '1º mês ' + ATUALIZA.preco, 'Emergências Pediátricas', 'Emergency POCUS 2.0', 'POCUS Cardíaco', 'Choque', 'Black Talks']);
 
   /* ---------- Carrossel ---------- */
@@ -1277,7 +1201,7 @@ var ATUALIZA = {
           '</div></div></a>',
     cap: '<div class="car-cap-t"><b>Atualiza Talks ME</b><span>1º mês por <strong>' + ATUALIZA.preco + '</strong></span><em class="cap-mi">depois ' + ATUALIZA.mensal + '/mês · residentes: ' + ATUALIZA.residente + '/mês</em></div><a class="btn btn-red" href="#atualiza">Quero esse</a>'
   });
-  /* banner do presente e da roleta (somem depois que a Black acaba) */
+  /* banner do presente (some depois que a Black acaba) */
   if(F !== 'fim'){
     slides.splice(Math.min(ATUALIZA.posicao + 1, slides.length), 0, {
       html: '<a class="sl" href="#presente" aria-label="Presente Black Talks: cadastre-se e ganhe ' + BLACK.desconto + '% OFF nos cursos virtuais e o Atualiza Talks ME por ' + ATUALIZA.preco + '"><div class="prb">' +
@@ -1288,13 +1212,6 @@ var ATUALIZA = {
               '</div>' +
             '</div></a>',
       cap: '<div class="car-cap-t"><b>Presente Black Talks</b><span><strong>' + BLACK.desconto + '% OFF</strong> nos cursos + Atualiza por <strong>' + ATUALIZA.preco + '</strong></span><em>cadastro grátis em 10 segundos</em></div><a class="btn btn-red" href="#presente">Quero</a>'
-    });
-    slides.push({
-      html: '<a class="sl" href="/blacktalks/roleta/" aria-label="Roleta Black Talks: comprou, gire e ganhe até 6 meses grátis do Atualiza Talks ME"><div class="rlb">' +
-              '<div class="rlb-w"><svg viewBox="-200 -200 400 400" data-roleta></svg></div>' +
-              '<div class="rlb-t"><span class="rlb-k">Roleta Black Talks</span><b>Comprou?<br />Gire e ganhe<br />até <em>6 meses</em></b><span class="rlb-s">grátis do Atualiza Talks ME</span><span class="rlb-pill">Para quem comprou na Black</span></div>' +
-            '</div></a>',
-      cap: '<div class="car-cap-t"><b>Roleta Black Talks</b><span>Comprou? Ganhe até <strong>6 meses grátis</strong> do Atualiza Talks ME</span><em>liberada depois da compra</em></div><a class="btn btn-red" href="/blacktalks/roleta/">Girar</a>'
     });
   }
 
@@ -1336,15 +1253,6 @@ var ATUALIZA = {
   });
   track.addEventListener('click', function(e){ if(moved){ e.preventDefault(); moved = false; } }, true);
   go(0);
-
-  /* ---------- Roleta (desenho e prêmios vêm de js/roleta.js) ---------- */
-  if(window.desenharRoleta){
-    $$('svg[data-roleta]').forEach(function(s){ desenharRoleta(s, {luzes: true}); });
-    var ordemR = ['aula', 'm1', 'm2', 'm3', 'm4', 'm5', 'm6'];
-    $('#rlChips').innerHTML = ordemR.filter(function(k){ return FATIAS.indexOf(k) > -1; }).map(function(k){
-      return '<li' + (PREMIOS[k].destaque ? ' class="top"' : '') + '>' + PREMIOS[k].nome + '</li>';
-    }).join('');
-  }
 
   /* ---------- Sem contador desde 10/11 ----------
      Só confere a fase de vez em quando: se "fim" for preenchido, quem está com a página aberta vê o encerramento. */
@@ -1514,7 +1422,7 @@ var ATUALIZA = {
   }
   function primeiroNome(s){ return String(s || '').trim().split(/\s+/)[0] || ''; }
   function enviar(dados){
-    var url = window.ROLETA && ROLETA.leadsUrl;
+    var url = LEADS_URL;
     if(!url) return Promise.resolve(null);
     var ctrl = window.AbortController ? new AbortController() : null;
     var to = setTimeout(function(){ if(ctrl) ctrl.abort(); }, 8000);
