@@ -864,8 +864,7 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
           <span class="at-pl">Condição Black Talks</span>
           <div class="at-val"><small>1º mês por</small><b id="atPreco">R$ 9,90</b></div>
           <span class="at-depois" data-at-depois>Depois, R$ 299,90/mês · residentes: R$ 199,90/mês</span>
-          <span class="at-note sem-cupom" data-show="live pre">Com o cupom do presente, na página de inscrição</span>
-          <span class="at-note so-ganhou" data-show="live pre">Seu cupom: <b class="cup-inline" data-cupom-at></b> · use na página de inscrição</span>
+          <span class="at-note" data-show="live pre">O valor já vem aplicado na página de inscrição, sem cupom</span>
           <a class="btn btn-red btn-block" href="#" data-at-buy>Quero o 1º mês por R$ 9,90 <svg class="i i-arrow"><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost btn-block" id="atLanding" href="#" target="_blank" rel="noopener">Conhecer o Atualiza Talks ME <svg class="i"><use href="#i-ext"/></svg></a>
           <a class="at-rl" href="#roleta" data-show="live pre"><svg class="i"><use href="#i-gift"/></svg><span>Comprou na Black? <b>Gire a roleta</b> e ganhe até 6 meses grátis</span><svg class="i"><use href="#i-arrow"/></svg></a>
@@ -972,8 +971,8 @@ body.ganhou .tk{border-color:rgba(232,48,63,.6);box-shadow:0 20px 50px -24px rgb
         <div class="a"><p>Com os cupons liberados, clique em <b>Comprar com <span data-desc>50%</span> OFF</b> no curso que você quer. O cupom é copiado sozinho e você vai direto para o carrinho, com o curso dentro. Lá, cole o cupom no campo <b>Código do cupom</b>, clique em aplicar e o valor cai pela metade.</p></div>
       </details>
       <details>
-        <summary>O cupom vale para o Atualiza Talks ME?<svg class="i"><use href="#i-plus"/></svg></summary>
-        <div class="a"><p>O Atualiza Talks ME tem um cupom só dele, que também vem no presente: o 1º mês por R$ 9,90. Depois, o valor é de <span data-at-valores>R$ 299,90 por mês (R$ 199,90 por mês para residentes)</span>. Com o cupom em mãos, <a href="#" data-at-buy>faça a inscrição na página do Atualiza Talks ME</a> e use o cupom lá.</p></div>
+        <summary>Preciso de cupom para o Atualiza Talks ME?<svg class="i"><use href="#i-plus"/></svg></summary>
+        <div class="a"><p>Não. Na página de inscrição do <a href="#" data-at-buy>Atualiza Talks ME</a>, o 1º mês já aparece por R$ 9,90, automaticamente. Depois, o valor é de <span data-at-valores>R$ 299,90 por mês (R$ 199,90 por mês para residentes)</span>. O ATUALIZA990 que aparece no presente é só ilustrativo: você não precisa digitar nada.</p></div>
       </details>
       <details data-show="live pre">
         <summary>Como funciona a roleta?<svg class="i"><use href="#i-plus"/></svg></summary>
@@ -1211,7 +1210,7 @@ var ATUALIZA = {
     a.target = '_blank'; a.rel = 'noopener';
   });
   $('#atLanding').href = ATUALIZA.landing;
-  $$('[data-at-buy]').forEach(function(a){ a.href = ATUALIZA.inscricao; });
+  $$('[data-at-buy]').forEach(function(a){ a.href = ATUALIZA.inscricao; a.target = '_blank'; a.rel = 'noopener'; });
   $('#atPreco').textContent = ATUALIZA.preco;
   /* textos que vêm da configuração */
   $$('[data-at-depois]').forEach(function(el){ el.textContent = 'Depois, ' + ATUALIZA.mensal + '/mês · residentes: ' + ATUALIZA.residente + '/mês'; });
@@ -1391,9 +1390,6 @@ var ATUALIZA = {
       setTimeout(function(){ location.href = href; }, 900);
       return;
     }
-    /* Atualiza Talks ME: sem cadastro, vai antes para o presente; com cupom, copia o ATUALIZA990 e abre a página de inscrição */
-    var a = e.target.closest('[data-at-buy]');
-    if(a){ e.preventDefault(); if(!ganhou){ irPresente('atualiza'); return; } var h = a.href; copiar(ATUALIZA.cupom, function(){ toast('Cupom ' + ATUALIZA.cupom + ' copiado! Levando você à inscrição…'); }); setTimeout(function(){ location.href = h; }, 900); }
   });
 
   /* ---------- Confete ---------- */
