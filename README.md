@@ -41,7 +41,7 @@ Prévias no GitHub Pages: https://gtalksmkt.github.io/black-talks-2027/ e https:
 2. **Cursos virtuais**: o botão "Comprar com 50% OFF" coloca o curso no carrinho do site da Emergency
    Talks (`/carrinho/?add-to-cart=ID`) e copia o cupom. Quem ainda não pegou os cupons vai antes para o
    cadastro e, depois dele, ganha o botão "Continuar" com o curso que tinha escolhido.
-3. **Atualiza Talks ME**: o botão abre o WhatsApp da central com o cupom `ATUALIZA990` na mensagem.
+3. **Atualiza Talks ME**: os botões vermelhos do R$ 9,90 levam à página de inscrição do Atualiza (`ATUALIZA.inscricao` = https://emergencytalks.com.br/produto/atualiza-talks/#inscricao). Quem ainda não pegou os cupons vai antes para o cadastro; depois, o clique copia o `ATUALIZA990` e abre a página. Desde 19/11/2026 não vai mais para o WhatsApp.
 4. **Roleta** (repositório `black-talks-2027-roleta`, `/blacktalks/roleta/`): só para quem comprou. A pessoa entra com nome, e-mail da compra, WhatsApp
    e **número do pedido** (está no e-mail de confirmação do WooCommerce), gira uma vez e ganha de
    1 aula de degustação a 6 meses grátis do Atualiza Talks ME. Para resgatar, chama o time comercial no
